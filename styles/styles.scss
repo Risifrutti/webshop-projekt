@@ -25,11 +25,16 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 0px;
-    padding-bottom: 20px;
+    align-items: center;
+    padding-bottom: 5px;
     border-bottom: solid 2px $darkblue;
 
-    #hamburgerMenuIcon {
+    @include for-small-screen {
+        justify-content: space-between;
+    }
+    
+
+    .hideHamburger {
         @include for-small-screen {
             display: none;
         } 
@@ -37,11 +42,20 @@ body {
 
     #headerLogo {
         width: 150px;
+        @include for-small-screen{
+            width: 225px;
+        }
     }
 
     .headerIcons {
         width: auto;
         height: 35px;
+    }
+
+    .headerCart {
+        @include for-small-screen {
+            margin-left: 50px;
+        }
     }
 }
 
@@ -51,12 +65,22 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
+    @include for-small-screen {
+        margin: 60px;
+    }
 
     a {
         font-size: 20px;
         font-family: Roboto, "sans-serif";
         font-weight: 400;
         color: $darkblue;
+    }
+}
+
+.headerHomeLink{
+    @include for-small-screen {
+        margin-right: 50px;
     }
 }
 
@@ -86,7 +110,7 @@ main {
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 450px;
+    height: 390px;
 
     @include for-small-screen{
         flex-direction: row;
@@ -107,9 +131,11 @@ main {
         width: auto;
         height: 80px;
         padding: 10px;
+        padding-bottom: 40px;
         @include for-small-screen{
             padding-left: 40px;
             padding-right: 40px;
+            padding-bottom: 0px;
         }
     }
     .footerIcons img {
@@ -121,6 +147,7 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        align-items: center;
         padding-bottom: 15px;
         @include for-small-screen{
             flex-direction: row;

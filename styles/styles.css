@@ -40,13 +40,23 @@ body {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 0px;
-  padding-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 5px;
   border-bottom: solid 2px #424D55;
 }
 
 @media (min-width: 769px) {
-  .header #hamburgerMenuIcon {
+  .header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 769px) {
+  .header .hideHamburger {
     display: none;
   }
 }
@@ -55,9 +65,21 @@ body {
   width: 150px;
 }
 
+@media (min-width: 769px) {
+  .header #headerLogo {
+    width: 225px;
+  }
+}
+
 .header .headerIcons {
   width: auto;
   height: 35px;
+}
+
+@media (min-width: 769px) {
+  .header .headerCart {
+    margin-left: 50px;
+  }
 }
 
 /*Div:ar i header*/
@@ -77,11 +99,23 @@ body {
           align-items: center;
 }
 
+@media (min-width: 769px) {
+  .headerElements {
+    margin: 60px;
+  }
+}
+
 .headerElements a {
   font-size: 20px;
   font-family: Roboto, "sans-serif";
   font-weight: 400;
   color: #424D55;
+}
+
+@media (min-width: 769px) {
+  .headerHomeLink {
+    margin-right: 50px;
+  }
 }
 
 .hideHeaderElements {
@@ -120,7 +154,7 @@ main {
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 450px;
+  height: 390px;
 }
 
 @media (min-width: 769px) {
@@ -162,12 +196,14 @@ main {
   width: auto;
   height: 80px;
   padding: 10px;
+  padding-bottom: 40px;
 }
 
 @media (min-width: 769px) {
   .footer #footerLogo {
     padding-left: 40px;
     padding-right: 40px;
+    padding-bottom: 0px;
   }
 }
 
@@ -187,6 +223,9 @@ main {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 15px;
 }
 
