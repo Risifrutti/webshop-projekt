@@ -1,4 +1,5 @@
-@import 'variables.scss';
+@import 'partials/_variables.scss';
+@import 'partials/_mixins.scss';
 
 /*Styling for body*/
 body {
@@ -17,6 +18,7 @@ body {
 .site-wrapper {
 }
 
+
 /* Styling for header */
 .header {
     padding-top: 20px;
@@ -26,7 +28,13 @@ body {
     margin: 0px;
     padding-bottom: 20px;
     border-bottom: solid 2px $darkblue;
-    
+
+    #hamburgerMenuIcon {
+        @include for-small-screen {
+            display: none;
+        } 
+    }
+
     #headerLogo {
         width: 150px;
     }
@@ -52,6 +60,13 @@ body {
     }
 }
 
+.hideHeaderElements {
+    display: none;
+    @include for-small-screen{
+        display: block;
+    }
+}
+
 /*Page Href text styling*/
 .noLinkStyle {
     text-decoration: none;
@@ -71,15 +86,65 @@ main {
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 350px;
+    height: 450px;
 
-    img {
-        background: $darkblue;
+    @include for-small-screen{
+        flex-direction: row;
+        height: 150px;
+        justify-content: space-between;
+        
     }
+    .retroIcons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include for-small-screen{ 
+            flex-direction: row;
+        }
+    }
+
+    #footerLogo {
+        width: auto;
+        height: 80px;
+        padding: 10px;
+        @include for-small-screen{
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+    .footerIcons img {
+        margin: 5px;
+        width: auto;
+        height: 30px;
+    }
+    .navFooter {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-bottom: 15px;
+        @include for-small-screen{
+            flex-direction: row;
+            padding-right: 20px;
+            justify-content: space-between;
+            
+        }
+        a {
+            padding: 10px;
+            color: $white;
+            /*Fixa typsnitt*/
+            font-family: 'Roboto'; 
+            @include for-small-screen{
+                margin: 20px;
+                font-size: 18px;
+            }
+        }
+    }
+
+}
+
+.footer > * {
+    margin: 15px;
 }
 
 
-/**/
-.hidden {
-    display: none;
-}
+
