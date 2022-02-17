@@ -262,9 +262,82 @@ main {
   margin: 15px;
 }
 
+.product-list-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-list-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 769px) {
+  .product-list-wrapper {
+    max-width: 1000px;
+    margin: 20px;
+  }
+}
+
+@media (min-wdith: 1025px) {
+  .product-list-wrapper {
+    max-width: 1200px;
+  }
+}
+
+.product-article {
+  height: 250px;
+  width: 170px;
+  background: #E8DBCE;
+  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 769px) {
+  .product-article {
+    height: 380px;
+    width: 240px;
+  }
+}
+
+.product-image {
+  height: 130px;
+}
+
+@media (min-width: 769px) {
+  .product-image {
+    height: 240px;
+  }
+}
+
+.articleIcon {
+  height: 20px;
+}
+
 /*Product site styling*/
 .productCard {
-  background: #CFA48D;
+  background: #E8DBCE;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -276,27 +349,42 @@ main {
       -ms-flex-align: center;
           align-items: center;
   color: #424D55;
-  padding-top: 40px;
-  padding-right: 20px;
-  padding-bottom: 3px;
-  padding-left: 30px;
+  padding: 40px 30px 30px 30px;
+  /*To have arrows (increment/decrement) visible for amount of porduct changing*/
 }
 
 @media (min-width: 769px) {
   .productCard {
+    background: #F9F5F2;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
   }
-  .productCard .productInfo {
-    text-align: start;
-  }
-  .productCard .twoElements {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+}
+
+.productCard .textInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 769px) {
+  .productCard .textInfo {
+    /*background: $beige;*/
+    padding: 0px 0px 0px 10px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -305,30 +393,31 @@ main {
   height: 250px;
 }
 
-.productCard .productInfo {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media (min-wdith: 1025px) {
-  .productCard .productInfo {
-    text-align: center;
+@media (min-width: 769px) {
+  .productCard .productImg {
+    height: 350px;
+    background: #E8DBCE;
+    padding: 20px;
   }
 }
 
 .productCard .productName {
   font-size: 20px;
+  text-align: center;
 }
 
-@media (min-wdith: 1025px) {
+@media (min-width: 769px) {
   .productCard .productName {
-    text-align: center;
+    font-size: 28px;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
   }
 }
 
 .productCard .price {
   font-size: 18px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .productCard .productDescriptionText {
@@ -337,11 +426,9 @@ main {
 }
 
 .productCard .quantity {
-  /*position: absolute;*/
-  /*right: 30px;*/
-  width: 60px;
+  border-radius: 1px #F9F5F2;
   border-radius: 5px;
-  border: 1px solid #F9F5F2;
+  width: 60px;
 }
 
 .productCard .addToCartButton {
@@ -351,6 +438,13 @@ main {
   color: #F9F5F2;
   padding: 8px 100px;
   font-size: 18px;
+  -webkit-box-shadow: 0px 8px 5px #424D55;
+          box-shadow: 0px 8px 5px #424D55;
+}
+
+.productCard input[type=number]::-webkit-inner-spin-button,
+.productCard input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
 }
 
 /*End of product site styling*/
