@@ -168,5 +168,24 @@ main {
     margin: 15px;
 }
 
+/*Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
+
+.cartAndPayContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .shoppingCartH2 {
+        font-family: Roboto, "sans-serif";
+        font-size: 22px;
+        text-decoration: underline;
+        color: $darkblue;
+    }
+}
+
+.cartContent {
+    background-color: $beige;
+}
+
 
 
