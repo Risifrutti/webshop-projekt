@@ -44,14 +44,21 @@
     <main class="cartAndPayContent">
         <h2 class="shoppingCartH2">Shopping Cart</h2>
         <article class="cartContent">
-            <h3>Products</h3>
+            <h3 class="productsHeadingInCart">Products</h3>
             <hr>
             <section class="cartProductInfo">
-                <img src="#" alt="The product image">
-                <h4>Product name</h4>
-                <div>
-                    <input type="number">
-                    <img src="#" alt="Delete product icon">
+
+                <div class="productImgAndProdNameCart">
+                    <div class="wrapperForProductImgCart">
+                        <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="The product image" class="productImageInCart">
+                    </div>
+                
+                    <h4 class="cartProductNameHeading">Product name</h4>
+                </div>
+
+                <div class="inputQuantityAndDeleteButtonWrapper">
+                    <input type="number" class="inputQuantityInCart" id="inputQuantity">
+                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="Delete product icon" class="deleteProdIconInCart">
                 </div>
                 <h4>Price</h4>
                 <hr>
