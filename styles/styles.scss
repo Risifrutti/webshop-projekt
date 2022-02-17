@@ -172,17 +172,23 @@ main {
 
 .product-list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 
-.product {
+.product-article {
     height: 250px;
     width: 150px;
     background: $beige;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .product-image {
-    height: 150px;
+    height: 130px;
 }
 
 
