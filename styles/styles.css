@@ -609,6 +609,9 @@ main {
   font-size: 15px;
   margin: 0px;
   padding-right: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .cartTotalPriceSection {
