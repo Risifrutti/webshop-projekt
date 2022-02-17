@@ -169,4 +169,50 @@ main {
 }
 
 
+/* Main content in the home page */
+#welcomeText {
+    font-family: rock salt;
+    font-size: 18px;
+    border: 2px outset;
+    text-align: center;
+    padding: 30px;
+}
 
+#categoryBooks {
+    position: relative;
+    text-align: center;
+    color: black;
+    font-family: viga;
+    font-size: 20px;
+}
+
+#categoryCassettes {
+    position: relative;
+    text-align: center;
+    color: black;
+    font-family: viga;
+    font-size: 20px;
+    
+}
+
+#categoryVHS {
+    position: relative;
+    text-align: center;
+    color: black;
+    font-family: viga;
+    font-size: 20px;
+}
+
+.categoryText {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
+.homepageImages {
+    width: 100%;
+    height: 100%;
+    opacity: 75%;
+}
