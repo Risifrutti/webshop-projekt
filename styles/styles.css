@@ -413,6 +413,8 @@ main {
             flex-direction: row;
     -webkit-column-gap: 40px;
             column-gap: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
   }
 }
 
@@ -474,6 +476,12 @@ main {
 .productCard .productDescriptionText {
   font-size: 16px;
   text-align: center;
+}
+
+@media (min-width: 769px) {
+  .productCard .productDescriptionText {
+    text-align: left;
+  }
 }
 
 .productCard .quantity {
@@ -703,4 +711,60 @@ main {
 }
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
+/*Sign in & registration/become a member popup form*/
+.popupForm {
+  background: #E8DBCE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popupForm .closeIcon {
+  width: auto;
+  height: 20px;
+  float: right;
+  padding: 8px;
+  margin-bottom: 30px;
+}
+
+.popupForm .centerText {
+  text-align: center;
+}
+
+.popupForm .litleText {
+  font-size: 14px;
+}
+
+.popupForm .inputSignin {
+  border: 1px solid #424D55;
+  border-radius: 2px;
+  padding: 4px;
+}
+
+.popupForm #formBtn {
+  height: auto;
+  width: 170px;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 4px;
+}
+
+.popupForm .signInBtn {
+  background: #424D55;
+  color: #E8DBCE;
+}
+
+.popupForm .becomeMemberBtn {
+  background: #CFA48D;
+  color: #424D55;
+}
+
+/*End of Sign in & registration/become a member popup form*/
 /*# sourceMappingURL=styles.css.map */
