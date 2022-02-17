@@ -231,3 +231,88 @@ main {
 
 }
 /*End of product site styling*/////////////////////////
+
+/*Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
+
+.cartAndPayContent { /*Hela sidan förutom header & footer*/ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .shoppingCartH2 { /*H2 högst upp*/
+        font-family: Roboto, "sans-serif";
+        font-size: 22px;
+        font-weight: 400;
+        text-decoration: underline;
+        color: $darkblue;
+        margin: 20px 0px 20px 0px; 
+    }
+}
+
+.cartContent { /*Den beiga boxen*/
+    background-color: $beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .productsHeadingInCart { /*h3:an i beiga rutan högst upp*/
+        font-family: Roboto, "sans-serif";
+        color: $darkblue;
+        font-weight: 400;
+        margin: 15px 0px 0px 0px;
+    }
+
+    hr { /*De horisentella linjerna*/
+        width: 80%;
+        border: solid 0.1px $darkblue;
+    }
+}
+
+.productImgAndProdNameCart { /*Wrappar runt bilden och produktnamn*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px 5px 30px 5px;
+
+    .wrapperForProductImgCart { /*Det vita runt bilden*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        height: 110px;
+        width: 110px;
+    }
+
+    .productImageInCart { /*Produktbilden*/
+        width: auto;
+        height: 70px;
+    }
+
+    .cartProductNameHeading { /*Produktnamn*/
+        font-family: Roboto, "sans-serif";
+        font-weight: 400;
+        color: $darkblue;
+        font-size: 15px;
+        overflow-wrap: break-word;
+        max-width: 100px;
+    }
+}
+
+.inputQuantityAndDeleteButtonWrapper {
+
+    .inputQuantityInCart { /*Input antal produkter*/
+        width: 15%;
+        background-color: $white;
+        border: none;
+        color: $darkblue;
+        font-family: Roboto, "sans-serif";
+    }
+    
+    .deleteProdIconInCart { /*Delete knapp (krysset)*/
+        width: auto;
+        height: 17px;
+    }
+}
+
+/*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/////////////////
