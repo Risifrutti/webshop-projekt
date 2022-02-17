@@ -165,18 +165,25 @@ main {
     margin: 15px;
 }
 
-// -----------Product list-----------
+// --------------------Product list-------------------------
+
+
+//main for the productlist page
 .product-list-main{
     display: flex;
     justify-content: center;
 }
 
+
+//Wraps all the articles
 .product-list-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
     margin-bottom:50px;
+
+    
 
     @include for-small-screen{
     max-width: 1000px;
@@ -188,34 +195,71 @@ main {
     }
 }
 
+//A single article/product
 .product-article {
     height: 250px;
     width: 170px;
     background: $beige;
     margin: 5px;
+    margin-bottom: 15px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    @include roboto-text(12px);
 
     @include for-small-screen{
         height: 380px;
         width: 240px;
+        margin-bottom: 30px;
+        @include roboto-text(14px);
     }
 }
 
+//Where the productname and price are
+.product-info {
+    margin-left:10px;
+
+    @include for-small-screen{
+        margin: 10px;
+    }
+
+    h3 {
+        @include roboto-text(13px);
+        margin: 0;
+        margin-top: 5px;
+
+        @include for-small-screen{
+            @include roboto-text(16px);
+        }
+    }
+}
+
+//Placeholder for the product image
 .product-image {
-    height: 130px;
+    border: 1px solid $darkblue;
+    height: 180px;
+    width:100%;
 
     @include for-small-screen {
         height: 240px;
     }
 }
 
-
+//The put in cart icon
 .articleIcon {
     height: 20px;
+    margin-right:5px;
+    margin-bottom:5px;
+    align-self: flex-end;
+
+    @include for-small-screen {
+        height: 30px;
+        margin: 10px;
+
+    }
 }
 
+//--------------End of pruductlist---------------------
 
 /*Product site styling*/////////////////////////////////
 .productCard {

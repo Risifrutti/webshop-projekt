@@ -302,6 +302,7 @@ main {
   width: 170px;
   background: #E8DBCE;
   margin: 5px;
+  margin-bottom: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,20 +310,59 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 12px;
 }
 
 @media (min-width: 769px) {
   .product-article {
     height: 380px;
     width: 240px;
+    margin-bottom: 30px;
+    font-family: Roboto, "sans-serif";
+    color: #424D55;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+.product-info {
+  margin-left: 10px;
+}
+
+@media (min-width: 769px) {
+  .product-info {
+    margin: 10px;
+  }
+}
+
+.product-info h3 {
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 13px;
+  margin: 0;
+  margin-top: 5px;
+}
+
+@media (min-width: 769px) {
+  .product-info h3 {
+    font-family: Roboto, "sans-serif";
+    color: #424D55;
+    font-weight: 400;
+    font-size: 16px;
   }
 }
 
 .product-image {
-  height: 130px;
+  border: 1px solid #424D55;
+  height: 180px;
+  width: 100%;
 }
 
 @media (min-width: 769px) {
@@ -333,6 +373,17 @@ main {
 
 .articleIcon {
   height: 20px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+@media (min-width: 769px) {
+  .articleIcon {
+    height: 30px;
+    margin: 10px;
+  }
 }
 
 /*Product site styling*/
