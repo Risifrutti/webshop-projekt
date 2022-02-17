@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Color theme for webshop */
 /* Roboto regular */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
@@ -258,4 +259,63 @@ main {
 .footer > * {
   margin: 15px;
 }
+
+/*Product site styling*/
+.productCard {
+  background: #CFA48D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #424D55;
+  /*top, right, bottom, left*/
+  /*padding: 40px, 20px, 20px, 20px; funkade ej, körde separat*/
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-bottom: 3px;
+  padding-left: 30px;
+}
+
+.productCard .productImg {
+  width: auto;
+  height: 250px;
+}
+
+.productCard .productName {
+  font-size: 20px;
+}
+
+.productCard .price {
+  font-size: 18px;
+}
+
+.productCard .productDescriptionText {
+  font-size: 16px;
+  text-align: center;
+}
+
+.productCard .quantity {
+  position: absolute;
+  right: 30px;
+  width: 60px;
+  border-radius: 5px;
+  border: 1px solid #F9F5F2;
+}
+
+.productCard .addToCartButton {
+  background: #08B519;
+  border-radius: 5px;
+  border: none;
+  color: #F9F5F2;
+  padding: 10px 144px;
+  font-size: 18px;
+}
+
+/*End of product site styling*/
 /*# sourceMappingURL=styles.css.map */
