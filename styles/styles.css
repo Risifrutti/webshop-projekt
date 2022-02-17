@@ -314,7 +314,7 @@ main {
   font-family: Roboto, "sans-serif";
   color: #424D55;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 @media (min-width: 769px) {
@@ -325,7 +325,7 @@ main {
     font-family: Roboto, "sans-serif";
     color: #424D55;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -333,15 +333,32 @@ main {
   margin-left: 10px;
 }
 
+@media (min-width: 769px) {
+  .product-info {
+    margin: 10px;
+  }
+}
+
 .product-info h3 {
   font-family: Roboto, "sans-serif";
   color: #424D55;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 13px;
+  margin: 0;
+  margin-top: 5px;
+}
+
+@media (min-width: 769px) {
+  .product-info h3 {
+    font-family: Roboto, "sans-serif";
+    color: #424D55;
+    font-weight: 400;
+    font-size: 16px;
+  }
 }
 
 .product-image {
-  background: gray;
+  border: 1px solid #424D55;
   height: 180px;
   width: 100%;
 }
@@ -358,6 +375,13 @@ main {
   margin-bottom: 5px;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+@media (min-width: 769px) {
+  .articleIcon {
+    height: 30px;
+    margin: 10px;
+  }
 }
 
 /*Product site styling*/
