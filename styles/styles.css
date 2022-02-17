@@ -347,27 +347,37 @@ main {
       -ms-flex-align: center;
           align-items: center;
   color: #424D55;
-  padding-top: 40px;
-  padding-right: 20px;
-  padding-bottom: 3px;
-  padding-left: 30px;
+  padding: 40px 30px 30px 30px;
 }
 
 @media (min-width: 769px) {
   .productCard {
+    background: #F9F5F2;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
   }
-  .productCard .productInfo {
-    text-align: start;
-  }
-  .productCard .twoElements {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+}
+
+.productCard .textInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 769px) {
+  .productCard .textInfo {
+    background: orchid;
   }
 }
 
@@ -376,30 +386,28 @@ main {
   height: 250px;
 }
 
-.productCard .productInfo {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media (min-wdith: 1025px) {
-  .productCard .productInfo {
-    text-align: center;
+@media (min-width: 769px) {
+  .productCard .productImg {
+    height: 350px;
   }
 }
 
 .productCard .productName {
   font-size: 20px;
+  text-align: center;
 }
 
-@media (min-wdith: 1025px) {
+@media (min-width: 769px) {
   .productCard .productName {
-    text-align: center;
+    font-size: 28px;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
   }
 }
 
 .productCard .price {
   font-size: 18px;
+  text-align: center;
 }
 
 .productCard .productDescriptionText {
@@ -408,11 +416,9 @@ main {
 }
 
 .productCard .quantity {
-  /*position: absolute;*/
-  /*right: 30px;*/
-  width: 60px;
+  border-radius: 1px #F9F5F2;
   border-radius: 5px;
-  border: 1px solid #F9F5F2;
+  width: 60px;
 }
 
 .productCard .addToCartButton {
