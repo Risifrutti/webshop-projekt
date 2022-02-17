@@ -168,5 +168,23 @@ main {
     margin: 15px;
 }
 
+// -----------Product list-----------
+
+.product-list {
+    display: flex;
+
+}
+
+.product {
+    height: 250px;
+    width: 150px;
+    background: $beige;
+}
+
+.product-image {
+    height: 150px;
+}
+
+
 
 

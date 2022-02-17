@@ -258,4 +258,20 @@ main {
 .footer > * {
   margin: 15px;
 }
+
+.product-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product {
+  height: 250px;
+  width: 150px;
+  background: #E8DBCE;
+}
+
+.product-image {
+  height: 150px;
+}
 /*# sourceMappingURL=styles.css.map */
