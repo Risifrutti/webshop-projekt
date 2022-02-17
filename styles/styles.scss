@@ -349,6 +349,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 40px;
     padding-bottom: 40px;
 
     .shoppingCartH2 { /*H2 högst upp*/
@@ -367,9 +368,47 @@ main {
     padding: 10px;
     padding-bottom: 40px;
 
-    .cartProductHeading { /*h3:an i beiga rutan högst upp*/
-        @include roboto-text(20px);
-        margin: 15px 0px 0px 0px;
+    @include for-small-screen {
+        width: 60%;
+    }
+
+    .cartHeadings {/*Wrappar alla h3:or*/
+
+        @include for-small-screen{
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .cartProductHeading { /*Alla h3:or*/
+            @include roboto-text(20px);
+        }
+
+        :first-child {
+
+            @include for-small-screen {
+                width: 40%;
+            }
+        }
+    
+        .cartQuantityHeading { /*Quantity h3:a*/
+            display: none;
+    
+            @include for-small-screen {
+                display:block;
+            }
+        }
+    
+        .cartPriceHeading { /*Price h3:a*/
+            display: none;
+    
+            @include for-small-screen {
+                display: block;
+                justify-self: flex-end;
+            }
+        }
+
     }
 
     hr { /*De horisentella linjerna*/
@@ -380,11 +419,17 @@ main {
 }
 
 .cartTheProduct { /*Sektionen från ena linjen till nedersta linjen*/
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 15px 0px 15px 0px;
+
+    @include for-small-screen {
+        align-items: flex-start;
+        margin-top: 20px;
+    }
 
     .wrapperForProductImgCart { /*Det vita runt bilden*/
         display: flex;
@@ -394,7 +439,6 @@ main {
         background-color: $white;
         height: 110px;
         width: 95px;
-        margin: 10px 0px 0px 15px;
 
         .productImageInCart { /*Produktbilden*/
             width: auto;
@@ -406,8 +450,7 @@ main {
         @include roboto-text(15px);
         overflow-wrap: break-word;
         max-width: 100px;
-        margin-top: 10px;
-        padding-right: 20px;
+        margin-top: 0px;
     }
 
     .inputQuantityAndDeleteButtonWrapper { /*Wrappar input antal och delete ikon*/
@@ -415,7 +458,11 @@ main {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin: 15px;
+        margin: 15px 0px;
+
+        @include for-small-screen{
+            margin-top: 0px;
+        }
         
         .inputQuantityInCart { /*Input antal produkter*/
             width: 60px;
@@ -436,7 +483,11 @@ main {
     .priceHeadingInCart { /*Pris*/
         @include roboto-text(15px);
         margin: 0px;
-        padding-right: 20px;
+        align-self: center;
+
+        @include for-small-screen {
+            align-self: flex-start;
+        }
     }
     
 
@@ -446,16 +497,22 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 90%;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    @include for-small-screen {
+        justify-content: flex-end;
+    }
 
     p { /*Total och product price*/
         @include roboto-text(15px);
-        width: 50%;
     }
 
     :nth-child(2) {
-        text-align: end
+        @include for-small-screen {
+            padding-left: 20px;
+        }
     }
 
 }
