@@ -300,6 +300,7 @@ main {
   width: 170px;
   background: #E8DBCE;
   margin: 5px;
+  margin-bottom: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -310,12 +311,21 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 13px;
 }
 
 @media (min-width: 769px) {
   .product-article {
     height: 380px;
     width: 240px;
+    margin-bottom: 30px;
+    font-family: Roboto, "sans-serif";
+    color: #424D55;
+    font-weight: 400;
+    font-size: 16px;
   }
 }
 
