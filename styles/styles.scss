@@ -188,7 +188,7 @@ main {
         flex-direction: column;
         align-items: center;
         @include for-small-screen {
-            background: red;
+            background: orchid;
         }
 
     }
@@ -204,6 +204,7 @@ main {
         text-align: center;
         @include for-small-screen {
             font-size: 28px;
+            align-content: flex-start;
         }
     }
     .price {
