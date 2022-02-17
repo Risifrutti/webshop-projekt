@@ -233,6 +233,8 @@ main {
         background: $white;
         flex-direction: row;
         column-gap: 40px;
+        padding-left: 150px;
+        padding-right: 150px;
     }
 
     .textInfo {
@@ -272,6 +274,9 @@ main {
     .productDescriptionText {
         font-size: 16px;
         text-align: center;
+        @include for-small-screen {
+            text-align: left;
+        }
     }
     .quantity {
         border-radius: 1px $white;
@@ -381,3 +386,51 @@ main {
 }
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/////////////////
+
+/*Sign in & registration/become a member popup form*///////////////////////////////////
+.popupForm {
+    background: $beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .closeIcon {
+        width: auto;
+        height: 20px;
+        float: right;
+        padding: 8px;
+        margin-bottom: 30px;
+    }
+
+    .centerText {
+        text-align: center;
+    }
+    .litleText {
+        font-size: 14px;
+    }
+
+    .inputSignin {
+        border: 1px solid $darkblue;
+        border-radius: 2px;
+        padding: 4px;
+    }
+    #formBtn {
+        height: auto;
+        width: 170px;
+        border: 1px solid black;
+        border-radius: 2px;
+        padding: 4px;
+    }
+    .signInBtn {
+        background: $darkblue;
+        color: $beige;
+    }
+    .becomeMemberBtn {
+        background: $brown;
+        color: $darkblue;
+    }
+}
+
+
+
+/*End of Sign in & registration/become a member popup form*///////////////////////////
