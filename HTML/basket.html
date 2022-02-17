@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/webshop-projekt/styles/styles.css">
+    <title>Shopping Cart</title>
 </head>
 
 <body>
@@ -31,29 +32,45 @@
             <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle hideHeaderElements">Sign
                 in</a>
 
-            <img src="/webshop-projekt/pictures/Icons/shoppingCart-icon.png" alt="shopping cart"
+            <a href="/webshop-projekt/HTML/basket.html">
+                <img src="/webshop-projekt/pictures/Icons/shoppingCart-icon.png" alt="shopping cart"
                 class="headerIcons headerCart">
+            </a>
 
 
         </div>
     </header>
 
-    <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ab! Adipisci, vero perferendis. Dolor magni
-            sit ad, cum repellendus quo nisi inventore hic impedit assumenda quae, dignissimos, voluptatibus fuga
-            dolores.
-            Blanditiis deserunt, fugit debitis accusamus explicabo doloribus. Facilis inventore adipisci laborum quasi
-            voluptates nulla recusandae dolor? Voluptas sit fuga recusandae, facilis libero quae a temporibus atque aut
-            quas, laudantium numquam.
-            Ex, nostrum nemo distinctio tempore esse sint? Itaque beatae delectus laboriosam laborum, eligendi ipsa?
-            Fugiat quisquam ipsum sequi, aut cupiditate ducimus repellendus temporibus. Nemo nisi quos recusandae,
-            deserunt fuga necessitatibus!
-            Deserunt beatae reiciendis odio et placeat quaerat impedit aperiam modi dolorem similique. Optio ullam
-            nesciunt esse reiciendis aut nulla molestias consectetur placeat assumenda. Veniam distinctio deleniti
-            totam! Assumenda, dolores necessitatibus.
-            Illo libero est, laudantium provident minima unde aspernatur quasi recusandae a pariatur maxime cum
-            voluptatum doloremque cumque saepe, mollitia expedita, quos aliquid eius ipsam? Deleniti nam voluptatem et
-            eligendi maiores.</p>
+    <main class="cartAndPayContent">
+        <h2 class="shoppingCartH2">Shopping Cart</h2>
+        <article class="cartContent">
+            <h3 class="productsHeadingInCart">Products</h3>
+            <hr>
+            <section class="cartProductInfo">
+
+                <div class="productImgAndProdNameCart">
+                    <div class="wrapperForProductImgCart">
+                        <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="The product image" class="productImageInCart">
+                    </div>
+                
+                    <h4 class="cartProductNameHeading">Product name</h4>
+                </div>
+
+                <div class="inputQuantityAndDeleteButtonWrapper">
+                    <input type="number" class="inputQuantityInCart" id="inputQuantity">
+                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="Delete product icon" class="deleteProdIconInCart">
+                </div>
+                <h4>Price</h4>
+                <hr>
+            </section>
+            <section>
+                <p>Total:</p>
+                <p>$Product price</p>
+            </section>
+            <section>
+                <button>Pay</button>
+            </section>
+        </article>
     </main>
 
     <footer class="footer">
@@ -77,5 +94,3 @@
 
     <script src=""></script>
 </body>
-
-</html>

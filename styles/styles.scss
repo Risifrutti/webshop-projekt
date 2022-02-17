@@ -220,5 +220,151 @@ main {
 }
 
 
+/*Product site styling*/////////////////////////////////
+.productCard {
+    background: $brown;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $darkblue;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 3px;
+    padding-left: 30px;
+    
+    @include for-small-screen {
+            flex-direction: row;
 
+            .productInfo {
+                text-align: start;
+            }
+            .twoElements {
+                flex-direction: row;
+            }
+    }
+    .productImg {
+        width: auto;
+        height: 250px;
+    }
+    .productInfo {
+        align-items: center;
+        @include for-large-screen{
+            text-align: center;
+        }
+    }
+    .productName {
+        font-size: 20px;
+        @include for-large-screen{
+            text-align: center;
+        }
+    }
+    .price {
+        font-size: 18px;
+    }
+    .productDescriptionText {
+        font-size: 16px;
+        text-align: center;
+    }
+    .quantity{
+        /*position: absolute;*/
+        /*right: 30px;*/
+        width: 60px;
+        border-radius: 5px;
+        border: 1px solid $white;
+    }
+    .addToCartButton {
+        background: $green;
+        border-radius: 5px;
+        border: none;
+        color: $white;
+        padding: 8px 100px;
+        font-size: 18px;
+    }
 
+}
+/*End of product site styling*/////////////////////////
+
+/*Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
+
+.cartAndPayContent { /*Hela sidan förutom header & footer*/ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .shoppingCartH2 { /*H2 högst upp*/
+        font-family: Roboto, "sans-serif";
+        font-size: 22px;
+        font-weight: 400;
+        text-decoration: underline;
+        color: $darkblue;
+        margin: 20px 0px 20px 0px; 
+    }
+}
+
+.cartContent { /*Den beiga boxen*/
+    background-color: $beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .productsHeadingInCart { /*h3:an i beiga rutan högst upp*/
+        font-family: Roboto, "sans-serif";
+        color: $darkblue;
+        font-weight: 400;
+        margin: 15px 0px 0px 0px;
+    }
+
+    hr { /*De horisentella linjerna*/
+        width: 80%;
+        border: solid 0.1px $darkblue;
+    }
+}
+
+.productImgAndProdNameCart { /*Wrappar runt bilden och produktnamn*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px 5px 30px 5px;
+
+    .wrapperForProductImgCart { /*Det vita runt bilden*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        height: 110px;
+        width: 110px;
+    }
+
+    .productImageInCart { /*Produktbilden*/
+        width: auto;
+        height: 70px;
+    }
+
+    .cartProductNameHeading { /*Produktnamn*/
+        font-family: Roboto, "sans-serif";
+        font-weight: 400;
+        color: $darkblue;
+        font-size: 15px;
+        overflow-wrap: break-word;
+        max-width: 100px;
+    }
+}
+
+.inputQuantityAndDeleteButtonWrapper {
+
+    .inputQuantityInCart { /*Input antal produkter*/
+        width: 15%;
+        background-color: $white;
+        border: none;
+        color: $darkblue;
+        font-family: Roboto, "sans-serif";
+    }
+    
+    .deleteProdIconInCart { /*Delete knapp (krysset)*/
+        width: auto;
+        height: 17px;
+    }
+}
+
+/*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/////////////////
