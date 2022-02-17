@@ -520,6 +520,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 40px;
   padding-bottom: 40px;
 }
 
@@ -551,13 +552,67 @@ main {
   padding-bottom: 40px;
 }
 
-.cartContent .cartProductHeading {
-  /*h3:an i beiga rutan högst upp*/
+@media (min-width: 769px) {
+  .cartContent {
+    width: 60%;
+  }
+}
+
+.cartContent .cartHeadings {
+  /*Wrappar alla h3:or*/
+}
+
+@media (min-width: 769px) {
+  .cartContent .cartHeadings {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.cartContent .cartHeadings .cartProductHeading {
+  /*Alla h3:or*/
   font-family: Roboto, "sans-serif";
   color: #424D55;
   font-weight: 400;
   font-size: 20px;
-  margin: 15px 0px 0px 0px;
+}
+
+@media (min-width: 769px) {
+  .cartContent .cartHeadings :first-child {
+    width: 40%;
+  }
+}
+
+.cartContent .cartHeadings .cartQuantityHeading {
+  /*Quantity h3:a*/
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .cartContent .cartHeadings .cartQuantityHeading {
+    display: block;
+  }
+}
+
+.cartContent .cartHeadings .cartPriceHeading {
+  /*Price h3:a*/
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .cartContent .cartHeadings .cartPriceHeading {
+    display: block;
+    justify-self: flex-end;
+  }
 }
 
 .cartContent hr {
@@ -569,7 +624,7 @@ main {
 
 .cartTheProduct {
   /*Sektionen från ena linjen till nedersta linjen*/
-  width: 100%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -582,6 +637,16 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 15px 0px 15px 0px;
+}
+
+@media (min-width: 769px) {
+  .cartTheProduct {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 20px;
+  }
 }
 
 .cartTheProduct .wrapperForProductImgCart {
@@ -602,7 +667,6 @@ main {
   background-color: #F9F5F2;
   height: 110px;
   width: 95px;
-  margin: 10px 0px 0px 15px;
 }
 
 .cartTheProduct .wrapperForProductImgCart .productImageInCart {
@@ -619,8 +683,7 @@ main {
   font-size: 15px;
   overflow-wrap: break-word;
   max-width: 100px;
-  margin-top: 10px;
-  padding-right: 20px;
+  margin-top: 0px;
 }
 
 .cartTheProduct .inputQuantityAndDeleteButtonWrapper {
@@ -638,7 +701,13 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 15px;
+  margin: 15px 0px;
+}
+
+@media (min-width: 769px) {
+  .cartTheProduct .inputQuantityAndDeleteButtonWrapper {
+    margin-top: 0px;
+  }
 }
 
 .cartTheProduct .inputQuantityAndDeleteButtonWrapper .inputQuantityInCart {
@@ -667,10 +736,16 @@ main {
   font-weight: 400;
   font-size: 15px;
   margin: 0px;
-  padding-right: 20px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+@media (min-width: 769px) {
+  .cartTheProduct .priceHeadingInCart {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
 }
 
 .cartTotalPriceSection {
@@ -684,8 +759,19 @@ main {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 90%;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 769px) {
+  .cartTotalPriceSection {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 .cartTotalPriceSection p {
@@ -694,11 +780,12 @@ main {
   color: #424D55;
   font-weight: 400;
   font-size: 15px;
-  width: 50%;
 }
 
-.cartTotalPriceSection :nth-child(2) {
-  text-align: end;
+@media (min-width: 769px) {
+  .cartTotalPriceSection :nth-child(2) {
+    padding-left: 20px;
+  }
 }
 
 .cartCheckoutButton {
