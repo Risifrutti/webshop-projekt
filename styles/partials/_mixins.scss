@@ -1,3 +1,5 @@
+/*Mixins for media queries*/
+
 @mixin for-tablet {
   @media (min-width:481px){
     @content;
@@ -15,3 +17,13 @@
     @content;
   }
 }
+
+/*Mixins for text*/
+
+@mixin roboto-text($size) {
+  font-family: Roboto, "sans-serif";
+  color: $darkblue;
+  font-weight: 400;
+  font-size: $size;
+}
+

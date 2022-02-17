@@ -66,10 +66,7 @@ body {
     }
 
     a {
-        font-size: 20px;
-        font-family: Roboto, "sans-serif";
-        font-weight: 400;
-        color: $darkblue;
+        @include roboto-text(20px);
     }
 }
 
@@ -168,6 +165,264 @@ main {
     margin: 15px;
 }
 
+// -----------Product list-----------
+.product-list-main{
+    display: flex;
+    justify-content: center;
+}
+
+.product-list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom:50px;
+
+    @include for-small-screen{
+    max-width: 1000px;
+    margin: 20px;
+    }
+
+    @include for-large-screen{
+        max-width:1200px;
+    }
+}
+
+.product-article {
+    height: 250px;
+    width: 170px;
+    background: $beige;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include for-small-screen{
+        height: 380px;
+        width: 240px;
+    }
+}
+
+.product-image {
+    height: 130px;
+
+    @include for-small-screen {
+        height: 240px;
+    }
+}
+
+
+.articleIcon {
+    height: 20px;
+}
+
+
+/*Product site styling*/////////////////////////////////
+.productCard {
+    background: $beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $darkblue;
+    padding: 40px 30px 30px 30px;
+
+    @include for-small-screen {
+        background: $white;
+        flex-direction: row;
+        column-gap: 40px;
+    }
+
+    .textInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include for-small-screen {
+            /*background: $beige;*/
+            padding: 0px 0px 0px 10px;
+            align-items: flex-start;
+        }
+
+    }
+    .productImg {
+        width: auto;
+        height: 250px;
+        @include for-small-screen {
+            height: 350px;
+            background: $beige;
+            padding: 20px;
+        }
+    }
+    .productName {
+        font-size: 20px;
+        text-align: center;
+        @include for-small-screen {
+            font-size: 28px;
+            align-content: flex-start;
+        }
+    }
+    .price {
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .productDescriptionText {
+        font-size: 16px;
+        text-align: center;
+    }
+    .quantity {
+        border-radius: 1px $white;
+        border-radius: 5px;
+        width: 60px;
+        
+    }
+    .addToCartButton {
+        background: $green;
+        border-radius: 5px;
+        border: none;
+        color: $white;
+        padding: 8px 100px;
+        font-size: 18px;
+        box-shadow: 0px 8px 5px $darkblue;
+    }
+    /*To have arrows (increment/decrement) visible for amount of porduct changing*/
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button {
+        opacity: 1
+    }
+
+}
+/*End of product site styling*/////////////////////////
+
+/*Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
+
+.cartAndPayContent { /*Hela sidan förutom header & footer*/ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+
+    .shoppingCartH2 { /*H2 högst upp*/
+        @include roboto-text(22px);
+        text-decoration: underline;
+        margin: 20px 0px 20px 0px; 
+    }
+}
+
+.cartContent { /*Den beiga boxen*/
+    background-color: $beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 10px;
+    padding-bottom: 40px;
+
+    .cartProductHeading { /*h3:an i beiga rutan högst upp*/
+        @include roboto-text(20px);
+        margin: 15px 0px 0px 0px;
+    }
+
+    hr { /*De horisentella linjerna*/
+        width: 90%;
+        border-top: 1px solid $darkblue;
+        border-bottom: none;
+    }
+}
+
+.cartTheProduct { /*Sektionen från ena linjen till nedersta linjen*/
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .wrapperForProductImgCart { /*Det vita runt bilden*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        height: 110px;
+        width: 95px;
+        margin: 10px 0px 0px 15px;
+
+        .productImageInCart { /*Produktbilden*/
+            width: auto;
+            height: 70px;
+        }
+    }
+
+    .cartProductNameHeading { /*Produktnamn*/
+        @include roboto-text(15px);
+        overflow-wrap: break-word;
+        max-width: 100px;
+        margin-top: 10px;
+        padding-right: 20px;
+    }
+
+    .inputQuantityAndDeleteButtonWrapper { /*Wrappar input antal och delete ikon*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px;
+        
+        .inputQuantityInCart { /*Input antal produkter*/
+            width: 60px;
+            height: 20px;
+            background-color: $white;
+            border: none;
+            margin-right: 12px;
+            @include roboto-text(12px);
+        }
+            
+        .deleteProdIconInCart { /*Delete knapp (krysset)*/
+            width: auto;
+            height: 20px;
+        }
+    }
+
+
+    .priceHeadingInCart { /*Pris*/
+        @include roboto-text(15px);
+        margin: 0px;
+        padding-right: 20px;
+    }
+    
+
+}
+
+.cartTotalPriceSection { /*Wrapper runt total och product price*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    padding-bottom: 30px;
+
+    p { /*Total och product price*/
+        @include roboto-text(15px);
+        width: 50%;
+    }
+
+    :nth-child(2) {
+        text-align: end
+    }
+
+}
+
+.cartCheckoutButton {
+    width: 170px;
+    height: 30px;
+    background-color: $green;
+    border: none;
+    font-family: Viga, "sans-serif";
+    color: $white;
+    font-size: 15px;
+    box-shadow: 1px 1px 4px $darkblue;
+}
+
+/*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/////////////////
 
 /* Main content in the home page */
 #welcomeText {
