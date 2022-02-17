@@ -335,7 +335,7 @@ main {
 
 /*Product site styling*/
 .productCard {
-  background: #CFA48D;
+  background: #E8DBCE;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -348,6 +348,7 @@ main {
           align-items: center;
   color: #424D55;
   padding: 40px 30px 30px 30px;
+  /*To have arrows (increment/decrement) visible for amount of porduct changing*/
 }
 
 @media (min-width: 769px) {
@@ -377,7 +378,11 @@ main {
 
 @media (min-width: 769px) {
   .productCard .textInfo {
-    background: orchid;
+    /*background: $beige;*/
+    padding: 0px 0px 0px 10px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -389,6 +394,8 @@ main {
 @media (min-width: 769px) {
   .productCard .productImg {
     height: 350px;
+    background: #E8DBCE;
+    padding: 20px;
   }
 }
 
@@ -408,6 +415,7 @@ main {
 .productCard .price {
   font-size: 18px;
   text-align: center;
+  font-weight: bold;
 }
 
 .productCard .productDescriptionText {
@@ -428,6 +436,13 @@ main {
   color: #F9F5F2;
   padding: 8px 100px;
   font-size: 18px;
+  -webkit-box-shadow: 0px 8px 5px #424D55;
+          box-shadow: 0px 8px 5px #424D55;
+}
+
+.productCard input[type=number]::-webkit-inner-spin-button,
+.productCard input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
 }
 
 /*End of product site styling*/
