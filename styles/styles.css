@@ -308,9 +308,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-family: Roboto, "sans-serif";
   color: #424D55;
   font-weight: 400;
@@ -329,8 +329,21 @@ main {
   }
 }
 
+.product-info {
+  margin-left: 10px;
+}
+
+.product-info h3 {
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 16px;
+}
+
 .product-image {
-  height: 130px;
+  background: gray;
+  height: 180px;
+  width: 100%;
 }
 
 @media (min-width: 769px) {
@@ -341,6 +354,10 @@ main {
 
 .articleIcon {
   height: 20px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 /*Product site styling*/
