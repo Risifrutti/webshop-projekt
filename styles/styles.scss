@@ -66,10 +66,7 @@ body {
     }
 
     a {
-        font-size: 20px;
-        font-family: Roboto, "sans-serif";
-        font-weight: 400;
-        color: $darkblue;
+        @include roboto-text(20px);
     }
 }
 
@@ -303,13 +300,11 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 40px;
 
     .shoppingCartH2 { /*H2 högst upp*/
-        font-family: Roboto, "sans-serif";
-        font-size: 22px;
-        font-weight: 400;
+        @include roboto-text(22px);
         text-decoration: underline;
-        color: $darkblue;
         margin: 20px 0px 20px 0px; 
     }
 }
@@ -319,25 +314,28 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
+    padding: 10px;
+    padding-bottom: 40px;
 
-    .productsHeadingInCart { /*h3:an i beiga rutan högst upp*/
-        font-family: Roboto, "sans-serif";
-        color: $darkblue;
-        font-weight: 400;
+    .cartProductHeading { /*h3:an i beiga rutan högst upp*/
+        @include roboto-text(20px);
         margin: 15px 0px 0px 0px;
     }
 
     hr { /*De horisentella linjerna*/
-        width: 80%;
-        border: solid 0.1px $darkblue;
+        width: 90%;
+        border-top: 1px solid $darkblue;
+        border-bottom: none;
     }
 }
 
-.productImgAndProdNameCart { /*Wrappar runt bilden och produktnamn*/
+.cartTheProduct { /*Sektionen från ena linjen till nedersta linjen*/
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 30px 5px 30px 5px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     .wrapperForProductImgCart { /*Det vita runt bilden*/
         display: flex;
@@ -346,38 +344,82 @@ main {
         align-items: center;
         background-color: $white;
         height: 110px;
-        width: 110px;
-    }
+        width: 95px;
+        margin: 10px 0px 0px 15px;
 
-    .productImageInCart { /*Produktbilden*/
-        width: auto;
-        height: 70px;
+        .productImageInCart { /*Produktbilden*/
+            width: auto;
+            height: 70px;
+        }
     }
 
     .cartProductNameHeading { /*Produktnamn*/
-        font-family: Roboto, "sans-serif";
-        font-weight: 400;
-        color: $darkblue;
-        font-size: 15px;
+        @include roboto-text(15px);
         overflow-wrap: break-word;
         max-width: 100px;
+        margin-top: 10px;
+        padding-right: 20px;
     }
-}
 
-.inputQuantityAndDeleteButtonWrapper {
+    .inputQuantityAndDeleteButtonWrapper { /*Wrappar input antal och delete ikon*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px;
+        
+        .inputQuantityInCart { /*Input antal produkter*/
+            width: 60px;
+            height: 20px;
+            background-color: $white;
+            border: none;
+            margin-right: 12px;
+            @include roboto-text(12px);
+        }
+            
+        .deleteProdIconInCart { /*Delete knapp (krysset)*/
+            width: auto;
+            height: 20px;
+        }
+    }
 
-    .inputQuantityInCart { /*Input antal produkter*/
-        width: 15%;
-        background-color: $white;
-        border: none;
-        color: $darkblue;
-        font-family: Roboto, "sans-serif";
+
+    .priceHeadingInCart { /*Pris*/
+        @include roboto-text(15px);
+        margin: 0px;
+        padding-right: 20px;
     }
     
-    .deleteProdIconInCart { /*Delete knapp (krysset)*/
-        width: auto;
-        height: 17px;
+
+}
+
+.cartTotalPriceSection { /*Wrapper runt total och product price*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    padding-bottom: 30px;
+
+    p { /*Total och product price*/
+        @include roboto-text(15px);
+        width: 50%;
     }
+
+    :nth-child(2) {
+        text-align: end
+    }
+
+}
+
+.cartCheckoutButton {
+    width: 170px;
+    height: 30px;
+    background-color: $green;
+    border: none;
+    font-family: Viga, "sans-serif";
+    color: $white;
+    font-size: 15px;
+    box-shadow: 1px 1px 4px $darkblue;
 }
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/////////////////
