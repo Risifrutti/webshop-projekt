@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Color theme for webshop */
 /* Roboto regular */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
@@ -259,6 +260,79 @@ main {
   margin: 15px;
 }
 
+.product-list-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-list-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 769px) {
+  .product-list-wrapper {
+    max-width: 1000px;
+    margin: 20px;
+  }
+}
+
+@media (min-wdith: 1025px) {
+  .product-list-wrapper {
+    max-width: 1200px;
+  }
+}
+
+.product-article {
+  height: 250px;
+  width: 170px;
+  background: #E8DBCE;
+  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 769px) {
+  .product-article {
+    height: 380px;
+    width: 240px;
+  }
+}
+
+.product-image {
+  height: 130px;
+}
+
+@media (min-width: 769px) {
+  .product-image {
+    height: 240px;
+  }
+}
+
+.articleIcon {
+  height: 20px;
+}
+
 /*Product site styling*/
 .productCard {
   background: #CFA48D;
@@ -357,4 +431,124 @@ main {
 }
 
 /*End of product site styling*/
+/*Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
+.cartAndPayContent {
+  /*Hela sidan förutom header & footer*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cartAndPayContent .shoppingCartH2 {
+  /*H2 högst upp*/
+  font-family: Roboto, "sans-serif";
+  font-size: 22px;
+  font-weight: 400;
+  text-decoration: underline;
+  color: #424D55;
+  margin: 20px 0px 20px 0px;
+}
+
+.cartContent {
+  /*Den beiga boxen*/
+  background-color: #E8DBCE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cartContent .productsHeadingInCart {
+  /*h3:an i beiga rutan högst upp*/
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  margin: 15px 0px 0px 0px;
+}
+
+.cartContent hr {
+  /*De horisentella linjerna*/
+  width: 80%;
+  border: solid 0.1px #424D55;
+}
+
+.productImgAndProdNameCart {
+  /*Wrappar runt bilden och produktnamn*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 30px 5px 30px 5px;
+}
+
+.productImgAndProdNameCart .wrapperForProductImgCart {
+  /*Det vita runt bilden*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F9F5F2;
+  height: 110px;
+  width: 110px;
+}
+
+.productImgAndProdNameCart .productImageInCart {
+  /*Produktbilden*/
+  width: auto;
+  height: 70px;
+}
+
+.productImgAndProdNameCart .cartProductNameHeading {
+  /*Produktnamn*/
+  font-family: Roboto, "sans-serif";
+  font-weight: 400;
+  color: #424D55;
+  font-size: 15px;
+  overflow-wrap: break-word;
+  max-width: 100px;
+}
+
+.inputQuantityAndDeleteButtonWrapper .inputQuantityInCart {
+  /*Input antal produkter*/
+  width: 15%;
+  background-color: #F9F5F2;
+  border: none;
+  color: #424D55;
+  font-family: Roboto, "sans-serif";
+}
+
+.inputQuantityAndDeleteButtonWrapper .deleteProdIconInCart {
+  /*Delete knapp (krysset)*/
+  width: auto;
+  height: 17px;
+}
+
+/*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
 /*# sourceMappingURL=styles.css.map */
