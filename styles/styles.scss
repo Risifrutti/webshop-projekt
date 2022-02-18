@@ -594,7 +594,7 @@ input[type="search"]::placeholder {
 
 
     .priceHeadingInCart { /*Pris*/
-        @include roboto-text(15px);
+        @include roboto-text-light(15px);
         margin: 0px;
         align-self: center;
 
