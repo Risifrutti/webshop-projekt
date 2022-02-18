@@ -13,7 +13,7 @@
 }
 
 @mixin for-large-screen {
-  @media (min-wdith:1025px){
+  @media (min-width:1025px){
     @content;
   }
 }
