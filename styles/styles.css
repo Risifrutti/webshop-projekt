@@ -262,6 +262,10 @@ main {
   margin: 15px;
 }
 
+.searchForm {
+  background: red;
+}
+
 .product-list-main {
   display: -webkit-box;
   display: -ms-flexbox;
