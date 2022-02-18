@@ -1,16 +1,19 @@
 {
     "categories": [
         {
+            "categoryName": "All"
+        },
+        {
             "categoryName": "Books",
-            "categoryDescription": ""
+            "categoryDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus."
         },
         {
             "categoryName": "Cassettes",
-            "categoryDescription": ""
+            "categoryDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus."
         },
         {
             "categoryName": "VHS",
-            "categoryDescription": ""
+            "categoryDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus."
         }
     ]
 }
