@@ -363,14 +363,14 @@ main {
     padding-top: 40px;
     padding-bottom: 40px;
 
-    .shoppingCartH2 { /*H2 högst upp*/
+    .cartAndPayMainHeading { /*H2 högst upp*/
         @include roboto-text(22px);
         text-decoration: underline;
         margin: 20px 0px 20px 0px; 
     }
 }
 
-.cartContent { /*Den beiga boxen*/
+.cartAndPayContentBox { /*Den beiga boxen*/
     background-color: $beige;
     display: flex;
     flex-direction: column;
@@ -378,6 +378,7 @@ main {
     width: 80%;
     padding: 10px;
     padding-bottom: 40px;
+    margin-bottom: 40px;
 
     @include for-small-screen {
         width: 60%;
@@ -422,8 +423,9 @@ main {
 
     }
 
-.cartAndPayHeading { /*Alla h3:or*/
-    @include roboto-text(20px);
+    .cartAndPayHeading { /*Alla h3:or*/
+        @include roboto-text(20px);
+    }
 }
 
 .cartAndPayLine { /*De horisentella linjerna*/
@@ -432,11 +434,12 @@ main {
     border-bottom: none;
 
     @include for-small-screen {
-        width: 99%;
-    hr { /*De horisentella linjerna*/
-        width: 90%;
-        border-top: 1px solid $darkblue;
-        border-bottom: none;
+        width: 99%;  
+        hr { /*De horisentella linjerna*/
+            width: 90%;
+            border-top: 1px solid $darkblue;
+            border-bottom: none;
+        }
     }
 }
 
@@ -539,7 +542,7 @@ main {
 
 }
 
-.cartCheckoutButton {
+.checkoutAndPayButton {
     width: 170px;
     height: 30px;
     background-color: $green;
