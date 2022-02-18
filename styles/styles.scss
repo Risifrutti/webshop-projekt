@@ -182,11 +182,10 @@ main {
 }
 
 input[type="search"] {
-    border: none;
     background: transparent;
-    color: inherit;
-    border: 1px solid transparent;
+    padding: 20px;
     border-radius: 5px;
+    padding-top: 0;
   }
 
 input[type="search"]::placeholder {
@@ -207,6 +206,7 @@ input[type="search"]::placeholder {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    padding-left: 20px;
     @include roboto-text(20px);
 }
 

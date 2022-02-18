@@ -277,11 +277,10 @@ main {
 }
 
 input[type="search"] {
-  border: none;
   background: transparent;
-  color: inherit;
-  border: 1px solid transparent;
+  padding: 20px;
   border-radius: 5px;
+  padding-top: 0;
 }
 
 input[type="search"]::-webkit-input-placeholder {
@@ -339,6 +338,7 @@ input[type="search"]::placeholder {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding-left: 20px;
   font-family: Roboto, "sans-serif";
   color: #424D55;
   font-weight: 400;
