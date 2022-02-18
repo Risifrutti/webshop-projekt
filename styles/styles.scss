@@ -370,6 +370,8 @@ main {
 
     @include for-small-screen {
         width: 60%;
+        padding: 0px;
+        padding-bottom: 40px;
     }
 
     .cartHeadings {/*Wrappar alla h3:or*/
@@ -544,6 +546,7 @@ input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] { 
     margin: 15px;
     border: none;
     border-radius: 5px;
+    background: $white;
     @include roboto-text(15px);
 
 }

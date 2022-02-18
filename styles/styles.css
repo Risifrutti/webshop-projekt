@@ -555,6 +555,8 @@ main {
 @media (min-width: 769px) {
   .cartAndPayContentBox {
     width: 60%;
+    padding: 0px;
+    padding-bottom: 40px;
   }
 }
 
@@ -828,6 +830,7 @@ input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] {
   margin: 15px;
   border: none;
   border-radius: 5px;
+  background: #F9F5F2;
   font-family: Roboto, "sans-serif";
   color: #424D55;
   font-weight: 400;
