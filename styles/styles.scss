@@ -223,6 +223,44 @@ main {
     margin: 15px;
 }
 
+//----------------Categories & search input styling--------------------
+
+.searchForm {
+    background: white;
+    padding: 2px;
+    border: 1px solid currentColor;
+    border-radius: 5px;
+    margin: 0 0 20px;
+    /*
+    display: flex;
+    flex-direction: row;
+    */
+}
+
+input[type="search"] {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 7px 8px;
+    font-size: 14px;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+  }
+
+input[type="search"]::placeholder {
+  @include roboto-text(14px);
+}
+
+.searchBtn {
+    background: red;
+}
+
+
+  
+
+//----------------End of categories &search input----------------------
+
 // --------------------Product list-------------------------
 
 
@@ -319,7 +357,7 @@ main {
 
 //--------------End of pruductlist---------------------
 
-/*Product site styling*/////////////////////////////////
+//-------------------Product site styling---------------//
 .productCard {
     background: $beige;
     display: flex;
@@ -340,6 +378,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-family: Viga;
         @include for-small-screen {
             /*background: $beige;*/
             padding: 0px 0px 0px 10px;
@@ -359,6 +398,7 @@ main {
     .productName {
         font-size: 20px;
         text-align: center;
+        font-family: Viga, "sans-serif";
         @include for-small-screen {
             font-size: 28px;
             align-content: flex-start;
@@ -371,8 +411,8 @@ main {
     }
 
     .productDescriptionText {
-        font-size: 16px;
         text-align: center;
+        @include roboto-text(16px);
         @include for-small-screen {
             text-align: left;
         }
@@ -391,6 +431,7 @@ main {
         padding: 8px 100px;
         font-size: 18px;
         box-shadow: 0px 8px 5px $darkblue;
+        font-family: Viga, "sans-serif";
     }
     /*To have arrows (increment/decrement) visible for amount of porduct changing*/
     input[type=number]::-webkit-inner-spin-button, 
@@ -399,7 +440,7 @@ main {
     }
 
 }
-/*End of product site styling*/////////////////////////
+//-------------End of product site styling------------//
 
 /*Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
 
@@ -410,14 +451,14 @@ main {
     padding-top: 40px;
     padding-bottom: 40px;
 
-    .shoppingCartH2 { /*H2 högst upp*/
+    .cartAndPayMainHeading { /*H2 högst upp*/
         @include roboto-text(22px);
         text-decoration: underline;
         margin: 20px 0px 20px 0px; 
     }
 }
 
-.cartContent { /*Den beiga boxen*/
+.cartAndPayContentBox { /*Den beiga boxen*/
     background-color: $beige;
     display: flex;
     flex-direction: column;
@@ -425,6 +466,7 @@ main {
     width: 80%;
     padding: 10px;
     padding-bottom: 40px;
+    margin-bottom: 40px;
 
     @include for-small-screen {
         width: 60%;
@@ -469,10 +511,23 @@ main {
 
     }
 
-    hr { /*De horisentella linjerna*/
-        width: 90%;
-        border-top: 1px solid $darkblue;
-        border-bottom: none;
+    .cartAndPayHeading { /*Alla h3:or*/
+        @include roboto-text(20px);
+    }
+}
+
+.cartAndPayLine { /*De horisentella linjerna*/
+    width: 90%;
+    border-top: 1px solid $darkblue;
+    border-bottom: none;
+
+    @include for-small-screen {
+        width: 99%;  
+        hr { /*De horisentella linjerna*/
+            width: 90%;
+            border-top: 1px solid $darkblue;
+            border-bottom: none;
+        }
     }
 }
 
@@ -575,7 +630,7 @@ main {
 
 }
 
-.cartCheckoutButton {
+.checkoutAndPayButton {
     width: 170px;
     height: 30px;
     background-color: $green;
@@ -584,30 +639,112 @@ main {
     color: $white;
     font-size: 15px;
     box-shadow: 1px 1px 4px $darkblue;
+    cursor: pointer;
 }
+
+//Billing and Shipping
+
+.billingAndShippingBox { /*Hela billing&Shipping boxen*/
+    display: none;
+}
+
+.billingAndShippingForm { /*Formuläret*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include for-small-screen {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .requiredInfoBillingAndShippingForm { /*Section med alla inputfält*/
+        display: flex;
+        flex-direction: column;
+        min-width: 150px;
+
+        @include for-small-screen {
+            width: 30%;
+        }
+    }
+
+    .textAreaAndButtonInForm { /*Section med textarea och button*/
+        display: flex;
+        flex-direction: column;
+
+        .checkoutAndPayButton { /*Knappen i formuläret*/
+            align-self: center;
+            margin-top: 20px;
+
+            @include for-small-screen {
+                width: 240px;
+            }
+        }
+    }
+}
+
+input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] { /*Alla input och textarea*/
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background: $white;
+    @include roboto-text(15px);
+}
+
+textarea[name="billingAndShippingInfo"] { /*Textarea*/
+
+    @include for-small-screen {
+        height: 245px;
+        width: 230px;
+    }
+}
+
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/////////////////
 
-/*Sign in & registration/become a member popup form*///////////////////////////////////
+//---------------Sign in popup form----------------------//
+
+
 .popupForm {
-    background: $beige;
+    background: $beige; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    font-family: Viga, "sans-serif";
+    
+    
+    @include for-small-screen{
+        width: 350px;
+        padding-top: 20px;
+        position: relative;
+        margin: 0 auto;
+        
+    }
 
     .closeIcon {
         width: auto;
-        height: 20px;
+        height: 18px;
+        /*
         float: right;
         padding: 8px;
+        */
         margin-bottom: 30px;
+        padding: 8px;
+        position: absolute;
+        right: 20px;
     }
 
     .centerText {
         text-align: center;
+        color: $darkblue;
     }
     .litleText {
-        font-size: 14px;
+        font-size: 12px;
+        color: $darkblue;
     }
 
     .inputSignin {
@@ -615,7 +752,7 @@ main {
         border-radius: 2px;
         padding: 4px;
     }
-    #formBtn {
+    .formBtn {
         height: auto;
         width: 170px;
         border: 1px solid black;
@@ -624,17 +761,17 @@ main {
     }
     .signInBtn {
         background: $darkblue;
-        color: $beige;
+        color: white;
     }
     .becomeMemberBtn {
         background: $brown;
-        color: $darkblue;
+        color: rgb(37, 37, 37);
     }
 }
 
 
 
-/*End of Sign in & registration/become a member popup form*///////////////////////////
+/*End of Sign in popup form///////////////////////////
 
 /* Main content in the home page */
 #welcomeText {

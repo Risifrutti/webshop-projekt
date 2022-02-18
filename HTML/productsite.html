@@ -31,7 +31,7 @@
             <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle hideHeaderElements">Sign
                 in</a>
 
-            <a href="/webshop-projekt/HTML/basket.html">
+            <a href="/webshop-projekt/HTML/shoppingcart.html">
                 <img src="/webshop-projekt/pictures/Icons/shoppingCart-icon.png" alt="shopping cart"
                     class="headerIcons headerCart">
             </a>
@@ -39,7 +39,20 @@
 
         </div>
     </header>
-    <h2>Here comes categories + search field</h2>
+    <div class="categorieField">
+        <nav class="categories">
+            <form class="searchForm">
+                <input type="search" placeholder="Search">
+                <button type="submit" class="searchBtn"><img src="/webshop-projekt/Pictures/Icons/search-icon.png" alt="search icon"></button>
+              </form>
+            <ul class="categoriesList">
+                <li>All</li>
+                <li>Books</li>
+                <li>VHS</li>
+                <li>Casettes</li>
+            </ul>
+        </nav>
+    </div>
     <main class="mainContent">
         <div class="productCard">
             <div class="textInfo">
@@ -48,10 +61,8 @@
             <section class="textInfo">
                 <h2 class="productName">Product Name</h2>
                 <p class="price">$19.99</p>
-                <p class="productDescriptionText">Here comes som text about products... Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit. Harum quae maiores soluta impedit quos.Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit. Harum quae maiores soluta impedit quos.</p>
-                <p><input type="number" id="quantity" class="quantity" min="1"></p>
+                <p class="productDescriptionText">Here comes som text about products... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae maiores soluta impedit quos.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae maiores soluta impedit quos.</p>
+                <p><input type="number" id="quantity" class="quantity" min="1" placeholder="1"></p>
                 <p><button class="addToCartButton">Add to cart</button></p>
             </section>
         </div>

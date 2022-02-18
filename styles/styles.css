@@ -337,6 +337,61 @@ main {
   margin: 15px;
 }
 
+.searchForm {
+  background: white;
+  padding: 2px;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+  margin: 0 0 20px;
+  /*
+    display: flex;
+    flex-direction: row;
+    */
+}
+
+input[type="search"] {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid transparent;
+  border-radius: inherit;
+}
+
+input[type="search"]::-webkit-input-placeholder {
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+input[type="search"]:-ms-input-placeholder {
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+input[type="search"]::-ms-input-placeholder {
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+input[type="search"]::placeholder {
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.searchBtn {
+  background: red;
+}
+
 .product-list-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -459,7 +514,6 @@ main {
   }
 }
 
-/*Product site styling*/
 .productCard {
   background: #E8DBCE;
   display: -webkit-box;
@@ -502,6 +556,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: Viga;
 }
 
 @media (min-width: 769px) {
@@ -530,6 +585,7 @@ main {
 .productCard .productName {
   font-size: 20px;
   text-align: center;
+  font-family: Viga, "sans-serif";
 }
 
 @media (min-width: 769px) {
@@ -547,8 +603,11 @@ main {
 }
 
 .productCard .productDescriptionText {
-  font-size: 16px;
   text-align: center;
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 @media (min-width: 769px) {
@@ -572,6 +631,7 @@ main {
   font-size: 18px;
   -webkit-box-shadow: 0px 8px 5px #424D55;
           box-shadow: 0px 8px 5px #424D55;
+  font-family: Viga, "sans-serif";
 }
 
 .productCard input[type=number]::-webkit-inner-spin-button,
@@ -579,7 +639,6 @@ main {
   opacity: 1;
 }
 
-/*End of product site styling*/
 /*Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
 .cartAndPayContent {
   /*Hela sidan förutom header & footer*/
@@ -597,7 +656,7 @@ main {
   padding-bottom: 40px;
 }
 
-.cartAndPayContent .shoppingCartH2 {
+.cartAndPayContent .cartAndPayMainHeading {
   /*H2 högst upp*/
   font-family: Roboto, "sans-serif";
   color: #424D55;
@@ -607,7 +666,7 @@ main {
   margin: 20px 0px 20px 0px;
 }
 
-.cartContent {
+.cartAndPayContentBox {
   /*Den beiga boxen*/
   background-color: #E8DBCE;
   display: -webkit-box;
@@ -623,20 +682,21 @@ main {
   width: 80%;
   padding: 10px;
   padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 @media (min-width: 769px) {
-  .cartContent {
+  .cartAndPayContentBox {
     width: 60%;
   }
 }
 
-.cartContent .cartHeadings {
+.cartAndPayContentBox .cartHeadings {
   /*Wrappar alla h3:or*/
 }
 
 @media (min-width: 769px) {
-  .cartContent .cartHeadings {
+  .cartAndPayContentBox .cartHeadings {
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -651,7 +711,7 @@ main {
   }
 }
 
-.cartContent .cartHeadings .cartProductHeading {
+.cartAndPayContentBox .cartHeadings .cartProductHeading {
   /*Alla h3:or*/
   font-family: Roboto, "sans-serif";
   color: #424D55;
@@ -660,39 +720,59 @@ main {
 }
 
 @media (min-width: 769px) {
-  .cartContent .cartHeadings :first-child {
+  .cartAndPayContentBox .cartHeadings :first-child {
     width: 40%;
   }
 }
 
-.cartContent .cartHeadings .cartQuantityHeading {
+.cartAndPayContentBox .cartHeadings .cartQuantityHeading {
   /*Quantity h3:a*/
   display: none;
 }
 
 @media (min-width: 769px) {
-  .cartContent .cartHeadings .cartQuantityHeading {
+  .cartAndPayContentBox .cartHeadings .cartQuantityHeading {
     display: block;
   }
 }
 
-.cartContent .cartHeadings .cartPriceHeading {
+.cartAndPayContentBox .cartHeadings .cartPriceHeading {
   /*Price h3:a*/
   display: none;
 }
 
 @media (min-width: 769px) {
-  .cartContent .cartHeadings .cartPriceHeading {
+  .cartAndPayContentBox .cartHeadings .cartPriceHeading {
     display: block;
     justify-self: flex-end;
   }
 }
 
-.cartContent hr {
+.cartAndPayContentBox .cartAndPayHeading {
+  /*Alla h3:or*/
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.cartAndPayLine {
   /*De horisentella linjerna*/
   width: 90%;
   border-top: 1px solid #424D55;
   border-bottom: none;
+}
+
+@media (min-width: 769px) {
+  .cartAndPayLine {
+    width: 99%;
+  }
+  .cartAndPayLine hr {
+    /*De horisentella linjerna*/
+    width: 90%;
+    border-top: 1px solid #424D55;
+    border-bottom: none;
+  }
 }
 
 .cartTheProduct {
@@ -861,7 +941,7 @@ main {
   }
 }
 
-.cartCheckoutButton {
+.checkoutAndPayButton {
   width: 170px;
   height: 30px;
   background-color: #08B519;
@@ -871,10 +951,106 @@ main {
   font-size: 15px;
   -webkit-box-shadow: 1px 1px 4px #424D55;
           box-shadow: 1px 1px 4px #424D55;
+  cursor: pointer;
+}
+
+.billingAndShippingBox {
+  /*Hela billing&Shipping boxen*/
+  display: none;
+}
+
+.billingAndShippingForm {
+  /*Formuläret*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .billingAndShippingForm {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+.billingAndShippingForm .requiredInfoBillingAndShippingForm {
+  /*Section med alla inputfält*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 150px;
+}
+
+@media (min-width: 769px) {
+  .billingAndShippingForm .requiredInfoBillingAndShippingForm {
+    width: 30%;
+  }
+}
+
+.billingAndShippingForm .textAreaAndButtonInForm {
+  /*Section med textarea och button*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.billingAndShippingForm .textAreaAndButtonInForm .checkoutAndPayButton {
+  /*Knappen i formuläret*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 20px;
+}
+
+@media (min-width: 769px) {
+  .billingAndShippingForm .textAreaAndButtonInForm .checkoutAndPayButton {
+    width: 240px;
+  }
+}
+
+input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] {
+  /*Alla input och textarea*/
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #F9F5F2;
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+textarea[name="billingAndShippingInfo"] {
+  /*Textarea*/
+}
+
+@media (min-width: 769px) {
+  textarea[name="billingAndShippingInfo"] {
+    height: 245px;
+    width: 230px;
+  }
 }
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
-/*Sign in & registration/become a member popup form*/
 .popupForm {
   background: #E8DBCE;
   display: -webkit-box;
@@ -887,22 +1063,43 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  font-family: Viga, "sans-serif";
+}
+
+@media (min-width: 769px) {
+  .popupForm {
+    width: 350px;
+    padding-top: 20px;
+    position: relative;
+    margin: 0 auto;
+  }
 }
 
 .popupForm .closeIcon {
   width: auto;
-  height: 20px;
-  float: right;
-  padding: 8px;
+  height: 18px;
+  /*
+        float: right;
+        padding: 8px;
+        */
   margin-bottom: 30px;
+  padding: 8px;
+  position: absolute;
+  right: 20px;
 }
 
 .popupForm .centerText {
   text-align: center;
+  color: #424D55;
 }
 
 .popupForm .litleText {
-  font-size: 14px;
+  font-size: 12px;
+  color: #424D55;
 }
 
 .popupForm .inputSignin {
@@ -911,7 +1108,7 @@ main {
   padding: 4px;
 }
 
-.popupForm #formBtn {
+.popupForm .formBtn {
   height: auto;
   width: 170px;
   border: 1px solid black;
@@ -921,15 +1118,16 @@ main {
 
 .popupForm .signInBtn {
   background: #424D55;
-  color: #E8DBCE;
+  color: white;
 }
 
 .popupForm .becomeMemberBtn {
   background: #CFA48D;
-  color: #424D55;
+  color: #252525;
 }
 
-/*End of Sign in & registration/become a member popup form*/
+/*End of Sign in popup form///////////////////////////
+
 /* Main content in the home page */
 #welcomeText {
   font-family: rock salt;
