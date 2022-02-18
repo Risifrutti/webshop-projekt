@@ -93,6 +93,37 @@ main {
     margin: 0px;
 }
 
+
+//------------Hamburger Menu style ---------
+
+#ham-nav {
+    display:flex;
+    flex-direction: column;
+    background: $white;
+    min-height: 100%;
+    width: 75%;
+    position: absolute;
+    align-self: flex-start;
+
+        @include for-small-screen {
+            display: none;
+        }
+}
+
+#ham-top {
+    width: 100%;
+    height: 80px;
+    background-color: $darkblue;
+}
+
+#menu-items {
+    display:flex;
+    flex-direction: column;
+    @include roboto-text(20px);
+}
+
+//--------End of style hamburger menu--------
+
 /* Styling for footer */
 .footer {
     display: flex;
