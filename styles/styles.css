@@ -526,7 +526,7 @@ main {
   padding-bottom: 40px;
 }
 
-.cartAndPayContent .shoppingCartH2 {
+.cartAndPayContent .cartAndPayMainHeading {
   /*H2 högst upp*/
   font-family: Roboto, "sans-serif";
   color: #424D55;
@@ -536,7 +536,7 @@ main {
   margin: 20px 0px 20px 0px;
 }
 
-.cartContent {
+.cartAndPayContentBox {
   /*Den beiga boxen*/
   background-color: #E8DBCE;
   display: -webkit-box;
@@ -555,17 +555,17 @@ main {
 }
 
 @media (min-width: 769px) {
-  .cartContent {
+  .cartAndPayContentBox {
     width: 60%;
   }
 }
 
-.cartContent .cartHeadings {
+.cartAndPayContentBox .cartHeadings {
   /*Wrappar alla h3:or*/
 }
 
 @media (min-width: 769px) {
-  .cartContent .cartHeadings {
+  .cartAndPayContentBox .cartHeadings {
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -580,7 +580,7 @@ main {
   }
 }
 
-.cartContent .cartHeadings .cartProductHeading {
+.cartAndPayContentBox .cartHeadings .cartProductHeading {
   /*Alla h3:or*/
   font-family: Roboto, "sans-serif";
   color: #424D55;
@@ -589,35 +589,43 @@ main {
 }
 
 @media (min-width: 769px) {
-  .cartContent .cartHeadings :first-child {
+  .cartAndPayContentBox .cartHeadings :first-child {
     width: 40%;
   }
 }
 
-.cartContent .cartHeadings .cartQuantityHeading {
+.cartAndPayContentBox .cartHeadings .cartQuantityHeading {
   /*Quantity h3:a*/
   display: none;
 }
 
 @media (min-width: 769px) {
-  .cartContent .cartHeadings .cartQuantityHeading {
+  .cartAndPayContentBox .cartHeadings .cartQuantityHeading {
     display: block;
   }
 }
 
-.cartContent .cartHeadings .cartPriceHeading {
+.cartAndPayContentBox .cartHeadings .cartPriceHeading {
   /*Price h3:a*/
   display: none;
 }
 
 @media (min-width: 769px) {
-  .cartContent .cartHeadings .cartPriceHeading {
+  .cartAndPayContentBox .cartHeadings .cartPriceHeading {
     display: block;
     justify-self: flex-end;
   }
 }
 
-.cartContent hr {
+.cartAndPayContentBox .cartAndPayHeading {
+  /*Alla h3:or*/
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.cartAndPayLine {
   /*De horisentella linjerna*/
   width: 90%;
   border-top: 1px solid #424D55;
@@ -627,6 +635,12 @@ main {
 @media (min-width: 769px) {
   .cartAndPayLine {
     width: 99%;
+  }
+  .cartAndPayLine hr {
+    /*De horisentella linjerna*/
+    width: 90%;
+    border-top: 1px solid #424D55;
+    border-bottom: none;
   }
 }
 
@@ -796,7 +810,7 @@ main {
   }
 }
 
-.cartCheckoutButton {
+.checkoutAndPayButton {
   width: 170px;
   height: 30px;
   background-color: #08B519;

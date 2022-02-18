@@ -8,9 +8,5 @@ proceedToCheckoutButton.addEventListener("click", () => {
     billingAndShippingBox.style.display = "flex";
     proceedToCheckoutButton.style.display = "none";
 
-    inputQuantityAndDelete.forEach(element => {
-        element.style.display = "none";
-    })
-
 })
 
