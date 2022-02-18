@@ -282,7 +282,7 @@ input[type="search"] {
   font-size: 14px;
   color: inherit;
   border: 1px solid transparent;
-  border-radius: inherit;
+  border-radius: 5px;
 }
 
 input[type="search"]::-webkit-input-placeholder {
@@ -314,7 +314,9 @@ input[type="search"]::placeholder {
 }
 
 .searchBtn {
-  background: red;
+  background: none;
+  border-radius: 5px;
+  border-color: white;
 }
 
 .product-list-main {
