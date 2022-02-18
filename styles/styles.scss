@@ -96,7 +96,7 @@ main {
 
 //------------Hamburger Menu style ---------
 
-#ham-nav {
+.ham-nav {
     display:flex;
     flex-direction: column;
     background: $white;
@@ -108,6 +108,13 @@ main {
         @include for-small-screen {
             display: none;
         }
+}
+#show-ham{
+    display:block;
+}
+
+.hide-ham{
+    display:none;
 }
 
 #ham-top {

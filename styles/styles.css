@@ -140,7 +140,7 @@ main {
   margin: 0px;
 }
 
-#ham-nav {
+.ham-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,9 +157,17 @@ main {
 }
 
 @media (min-width: 769px) {
-  #ham-nav {
+  .ham-nav {
     display: none;
   }
+}
+
+#show-ham {
+  display: block;
+}
+
+.hide-ham {
+  display: none;
 }
 
 #ham-top {
