@@ -261,7 +261,7 @@ main {
 
 //--------------End of pruductlist---------------------
 
-/*Product site styling*/////////////////////////////////
+//-------------------Product site styling---------------//
 .productCard {
     background: $beige;
     display: flex;
@@ -282,6 +282,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-family: Viga;
         @include for-small-screen {
             /*background: $beige;*/
             padding: 0px 0px 0px 10px;
@@ -301,6 +302,7 @@ main {
     .productName {
         font-size: 20px;
         text-align: center;
+        font-family: Viga, "sans-serif";
         @include for-small-screen {
             font-size: 28px;
             align-content: flex-start;
@@ -313,8 +315,8 @@ main {
     }
 
     .productDescriptionText {
-        font-size: 16px;
         text-align: center;
+        @include roboto-text(16px);
         @include for-small-screen {
             text-align: left;
         }
@@ -333,6 +335,7 @@ main {
         padding: 8px 100px;
         font-size: 18px;
         box-shadow: 0px 8px 5px $darkblue;
+        font-family: Viga, "sans-serif";
     }
     /*To have arrows (increment/decrement) visible for amount of porduct changing*/
     input[type=number]::-webkit-inner-spin-button, 
@@ -341,7 +344,7 @@ main {
     }
 
 }
-/*End of product site styling*/////////////////////////
+//-------------End of product site styling------------//
 
 /*Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
 
