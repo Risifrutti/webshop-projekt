@@ -39,12 +39,43 @@
 
         </div>
     </header>
+
+    <!----------- Hamburger menu --------------->
+
+    <nav id="hamburger-nav" class="hide-ham ham-nav">
+        <div id="ham-top">
+            <img id="ham-close" src="/webshop-projekt/pictures/Icons/krysset.png" alt="close hamburger menu "
+                class="headerIcons">
+        </div>
+        <div id="menu-items">
+            <a href="/webshop-projekt/HTML/homepage.html" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Home</h4>
+                </div>
+            </a>
+            <a href="/webshop-projekt/HTML/productlist.html" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Shop</h4>
+                </div>
+            </a>
+            <a href="#" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Sign in</h4>
+                </div>
+            </a>
+            </a>
+        </div>
+    </nav>
+
+    <!-- End of Hamburger Menu -->
+
     <div class="categorieField">
         <nav class="categories">
             <form class="searchForm">
                 <input type="search" placeholder="Search">
-                <button type="submit" class="searchBtn"><img src="/webshop-projekt/Pictures/Icons/search-icon.png" alt="search icon"></button>
-              </form>
+                <button type="submit" class="searchBtn"><img src="/webshop-projekt/Pictures/Icons/search-icon.png"
+                        alt="search icon"></button>
+            </form>
             <ul class="categoriesList">
                 <li>All</li>
                 <li>Books</li>
@@ -61,7 +92,9 @@
             <section class="textInfo">
                 <h2 class="productName">Product Name</h2>
                 <p class="price">$19.99</p>
-                <p class="productDescriptionText">Here comes som text about products... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae maiores soluta impedit quos.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae maiores soluta impedit quos.</p>
+                <p class="productDescriptionText">Here comes som text about products... Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Harum quae maiores soluta impedit quos.Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Harum quae maiores soluta impedit quos.</p>
                 <p><input type="number" id="quantity" class="quantity" min="1" placeholder="1"></p>
                 <p><button class="addToCartButton">Add to cart</button></p>
             </section>
@@ -89,6 +122,7 @@
     </footer>
 
     <script src=""></script>
+    <script src="/webshop-projekt/Javascript/views/hamburger.js"></script>
 </body>
 
 </html>
