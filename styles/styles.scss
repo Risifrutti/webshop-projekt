@@ -575,8 +575,11 @@ input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] { 
 }
 
 textarea[name="billingAndShippingInfo"] { /*Textarea*/
-    height: 230px;
-    width: 230px;
+
+    @include for-small-screen {
+        height: 245px;
+        width: 230px;
+    }
 }
 
 
