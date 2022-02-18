@@ -624,7 +624,7 @@ main {
 
 @media (min-width: 769px) {
   .cartAndPayLine {
-    width: 100%;
+    width: 99%;
   }
 }
 
