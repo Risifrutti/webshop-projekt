@@ -533,26 +533,44 @@ main {
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/////////////////
 
-/*Sign in & registration/become a member popup form*///////////////////////////////////
+//---------------Sign in & registration/become a member popup form----------------------//
+
 .popupForm {
     background: $beige;
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    font-family: Viga, "sans-serif";
+    
+    @include for-small-screen{
+        width: 350px;
+        padding-top: 20px;
+        position: relative;
+        margin: 0 auto;
+        
+    }
 
     .closeIcon {
         width: auto;
-        height: 20px;
+        height: 18px;
         float: right;
         padding: 8px;
         margin-bottom: 30px;
+        @include for-small-screenc{
+            padding-right: -40px;
+        }
     }
 
     .centerText {
         text-align: center;
+        color: $darkblue;
     }
     .litleText {
-        font-size: 14px;
+        font-size: 12px;
+        color: $darkblue;
     }
 
     .inputSignin {
@@ -569,11 +587,11 @@ main {
     }
     .signInBtn {
         background: $darkblue;
-        color: $beige;
+        color: white;
     }
     .becomeMemberBtn {
         background: $brown;
-        color: $darkblue;
+        color: rgb(37, 37, 37);
     }
 }
 

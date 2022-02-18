@@ -805,7 +805,6 @@ main {
 }
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
-/*Sign in & registration/become a member popup form*/
 .popupForm {
   background: #E8DBCE;
   display: -webkit-box;
@@ -818,11 +817,25 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  font-family: Viga, "sans-serif";
+}
+
+@media (min-width: 769px) {
+  .popupForm {
+    width: 350px;
+    padding-top: 20px;
+    position: relative;
+    margin: 0 auto;
+  }
 }
 
 .popupForm .closeIcon {
   width: auto;
-  height: 20px;
+  height: 18px;
   float: right;
   padding: 8px;
   margin-bottom: 30px;
@@ -830,10 +843,12 @@ main {
 
 .popupForm .centerText {
   text-align: center;
+  color: #424D55;
 }
 
 .popupForm .litleText {
-  font-size: 14px;
+  font-size: 12px;
+  color: #424D55;
 }
 
 .popupForm .inputSignin {
@@ -852,12 +867,12 @@ main {
 
 .popupForm .signInBtn {
   background: #424D55;
-  color: #E8DBCE;
+  color: white;
 }
 
 .popupForm .becomeMemberBtn {
   background: #CFA48D;
-  color: #424D55;
+  color: #252525;
 }
 
 /*End of Sign in & registration/become a member popup form*/
