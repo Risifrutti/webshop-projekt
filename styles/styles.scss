@@ -526,9 +526,14 @@ main {
     color: $white;
     font-size: 15px;
     box-shadow: 1px 1px 4px $darkblue;
+    cursor: pointer;
 }
 
 //Billing and Shipping
+
+.billingAndShippingBox { /*Hela billing&Shipping boxen*/
+    display: none;
+}
 
 .billingAndShippingForm { /*Formuläret*/
     display: flex;

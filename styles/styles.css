@@ -799,6 +799,12 @@ main {
   font-size: 15px;
   -webkit-box-shadow: 1px 1px 4px #424D55;
           box-shadow: 1px 1px 4px #424D55;
+  cursor: pointer;
+}
+
+.billingAndShippingBox {
+  /*Hela billing&Shipping boxen*/
+  display: none;
 }
 
 .billingAndShippingForm {
