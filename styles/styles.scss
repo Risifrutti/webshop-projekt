@@ -344,22 +344,21 @@ main {
 /*End of product site styling*/////////////////////////
 
 /*Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
-
+//Shopping Cart 
 .cartAndPayContent { /*Hela sidan förutom header & footer*/ 
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 40px;
-    padding-bottom: 40px;
 
-    .shoppingCartH2 { /*H2 högst upp*/
+    .cartAndPayMainHeading{ /*H2 högst upp*/
         @include roboto-text(22px);
         text-decoration: underline;
         margin: 20px 0px 20px 0px; 
     }
 }
 
-.cartContent { /*Den beiga boxen*/
+.cartAndPayContentBox { /*Den beiga boxen*/
     background-color: $beige;
     display: flex;
     flex-direction: column;
@@ -367,6 +366,7 @@ main {
     width: 80%;
     padding: 10px;
     padding-bottom: 40px;
+    margin-bottom: 40px;
 
     @include for-small-screen {
         width: 60%;
@@ -379,10 +379,6 @@ main {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-        }
-
-        .cartProductHeading { /*Alla h3:or*/
-            @include roboto-text(20px);
         }
 
         :first-child {
@@ -410,15 +406,19 @@ main {
         }
 
     }
+}
 
-    hr { /*De horisentella linjerna*/
-        width: 90%;
-        border-top: 1px solid $darkblue;
-        border-bottom: none;
+.cartAndPayHeading { /*Alla h3:or*/
+    @include roboto-text(20px);
+}
 
-        @include for-small-screen {
-            width: 100%;
-        }
+.cartAndPayLine { /*De horisentella linjerna*/
+    width: 90%;
+    border-top: 1px solid $darkblue;
+    border-bottom: none;
+
+    @include for-small-screen {
+        width: 100%;
     }
 }
 
@@ -505,7 +505,7 @@ main {
     width: 90%;
     margin-bottom: 30px;
 
-    @include for-small-screen {
+    @include for-small-screen { 
         justify-content: flex-end;
     }
 
@@ -513,15 +513,9 @@ main {
         @include roboto-text(15px);
     }
 
-    :nth-child(2) {
-        @include for-small-screen {
-            padding-left: 20px;
-        }
-    }
-
 }
 
-.cartCheckoutButton {
+.checkoutAndPayButton { /*Checkout knapp*/
     width: 170px;
     height: 30px;
     background-color: $green;
@@ -531,6 +525,29 @@ main {
     font-size: 15px;
     box-shadow: 1px 1px 4px $darkblue;
 }
+
+//Billing and Shipping
+
+.billingAndShippingForm { /*Formuläret*/
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+
+    .checkoutAndPayButton { /*Knappen i formuläret*/
+        align-self: center;
+    }
+}
+
+input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] { /*Alla input och textarea*/
+    padding: 10px;
+    margin: 15px;
+    border: none;
+    border-radius: 5px;
+    @include roboto-text(15px);
+
+}
+
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/////////////////
 
