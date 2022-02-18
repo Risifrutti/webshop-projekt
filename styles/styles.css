@@ -628,6 +628,12 @@ main {
   border-bottom: none;
 }
 
+@media (min-width: 769px) {
+  .cartAndPayLine {
+    width: 99%;
+  }
+}
+
 .cartTheProduct {
   /*Sektionen från ena linjen till nedersta linjen*/
   width: 90%;
@@ -804,6 +810,103 @@ main {
   font-size: 15px;
   -webkit-box-shadow: 1px 1px 4px #424D55;
           box-shadow: 1px 1px 4px #424D55;
+  cursor: pointer;
+}
+
+.billingAndShippingBox {
+  /*Hela billing&Shipping boxen*/
+  display: none;
+}
+
+.billingAndShippingForm {
+  /*Formuläret*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .billingAndShippingForm {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+.billingAndShippingForm .requiredInfoBillingAndShippingForm {
+  /*Section med alla inputfält*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 150px;
+}
+
+@media (min-width: 769px) {
+  .billingAndShippingForm .requiredInfoBillingAndShippingForm {
+    width: 30%;
+  }
+}
+
+.billingAndShippingForm .textAreaAndButtonInForm {
+  /*Section med textarea och button*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.billingAndShippingForm .textAreaAndButtonInForm .checkoutAndPayButton {
+  /*Knappen i formuläret*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 20px;
+}
+
+@media (min-width: 769px) {
+  .billingAndShippingForm .textAreaAndButtonInForm .checkoutAndPayButton {
+    width: 240px;
+  }
+}
+
+input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] {
+  /*Alla input och textarea*/
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #F9F5F2;
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+textarea[name="billingAndShippingInfo"] {
+  /*Textarea*/
+}
+
+@media (min-width: 769px) {
+  textarea[name="billingAndShippingInfo"] {
+    height: 245px;
+    width: 230px;
+  }
 }
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/

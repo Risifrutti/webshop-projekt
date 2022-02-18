@@ -422,6 +422,17 @@ main {
 
     }
 
+.cartAndPayHeading { /*Alla h3:or*/
+    @include roboto-text(20px);
+}
+
+.cartAndPayLine { /*De horisentella linjerna*/
+    width: 90%;
+    border-top: 1px solid $darkblue;
+    border-bottom: none;
+
+    @include for-small-screen {
+        width: 99%;
     hr { /*De horisentella linjerna*/
         width: 90%;
         border-top: 1px solid $darkblue;
@@ -537,7 +548,67 @@ main {
     color: $white;
     font-size: 15px;
     box-shadow: 1px 1px 4px $darkblue;
+    cursor: pointer;
 }
+
+//Billing and Shipping
+
+.billingAndShippingBox { /*Hela billing&Shipping boxen*/
+    display: none;
+}
+
+.billingAndShippingForm { /*Formuläret*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include for-small-screen {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .requiredInfoBillingAndShippingForm { /*Section med alla inputfält*/
+        display: flex;
+        flex-direction: column;
+        min-width: 150px;
+
+        @include for-small-screen {
+            width: 30%;
+        }
+    }
+
+    .textAreaAndButtonInForm { /*Section med textarea och button*/
+        display: flex;
+        flex-direction: column;
+
+        .checkoutAndPayButton { /*Knappen i formuläret*/
+            align-self: center;
+            margin-top: 20px;
+
+            @include for-small-screen {
+                width: 240px;
+            }
+        }
+    }
+}
+
+input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] { /*Alla input och textarea*/
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background: $white;
+    @include roboto-text(15px);
+}
+
+textarea[name="billingAndShippingInfo"] { /*Textarea*/
+
+    @include for-small-screen {
+        height: 245px;
+        width: 230px;
+    }
+}
+
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/////////////////
 
