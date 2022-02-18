@@ -277,8 +277,6 @@ main {
 input[type="search"] {
   border: none;
   background: transparent;
-  margin: 0;
-  padding: 7px 8px;
   font-size: 14px;
   color: inherit;
   border: 1px solid transparent;
@@ -289,34 +287,39 @@ input[type="search"]::-webkit-input-placeholder {
   font-family: Roboto, "sans-serif";
   color: #424D55;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 input[type="search"]:-ms-input-placeholder {
   font-family: Roboto, "sans-serif";
   color: #424D55;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 input[type="search"]::-ms-input-placeholder {
   font-family: Roboto, "sans-serif";
   color: #424D55;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 input[type="search"]::placeholder {
   font-family: Roboto, "sans-serif";
   color: #424D55;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .searchBtn {
   background: none;
   border-radius: 5px;
   border-color: white;
+}
+
+.categoriesList {
+  list-style-type: none;
+  background: red;
 }
 
 .product-list-main {

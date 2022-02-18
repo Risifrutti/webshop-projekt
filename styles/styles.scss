@@ -182,8 +182,6 @@ main {
 input[type="search"] {
     border: none;
     background: transparent;
-    margin: 0;
-    padding: 7px 8px;
     font-size: 14px;
     color: inherit;
     border: 1px solid transparent;
@@ -191,13 +189,17 @@ input[type="search"] {
   }
 
 input[type="search"]::placeholder {
-  @include roboto-text(14px);
+  @include roboto-text(16px);
 }
 
 .searchBtn {
     background: none;
     border-radius: 5px;
     border-color: white;
+}
+.categoriesList {
+    list-style-type: none;
+    background: red;
 }
 
 
