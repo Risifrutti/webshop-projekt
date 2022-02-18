@@ -533,22 +533,50 @@ main {
 .billingAndShippingForm { /*Formuläret*/
     display: flex;
     flex-direction: column;
-    align-content: center;
     width: 100%;
 
-    .checkoutAndPayButton { /*Knappen i formuläret*/
-        align-self: center;
+    @include for-small-screen {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .requiredInfoBillingAndShippingForm { /*Section med alla inputfält*/
+        display: flex;
+        flex-direction: column;
+        min-width: 150px;
+
+        @include for-small-screen {
+            width: 30%;
+        }
+    }
+
+    .textAreaAndButtonInForm { /*Section med textarea och button*/
+        display: flex;
+        flex-direction: column;
+
+        .checkoutAndPayButton { /*Knappen i formuläret*/
+            align-self: center;
+            margin-top: 20px;
+
+            @include for-small-screen {
+                width: 240px;
+            }
+        }
     }
 }
 
 input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] { /*Alla input och textarea*/
     padding: 10px;
-    margin: 15px;
+    margin: 10px;
     border: none;
     border-radius: 5px;
     background: $white;
     @include roboto-text(15px);
+}
 
+textarea[name="billingAndShippingInfo"] { /*Textarea*/
+    height: 230px;
+    width: 230px;
 }
 
 

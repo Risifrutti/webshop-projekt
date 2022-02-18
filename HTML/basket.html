@@ -127,22 +127,31 @@
             <hr class="cartAndPayLine">
 
             <form action="" class="billingAndShippingForm">
+
+                <section class="requiredInfoBillingAndShippingForm">
+
+                    <input type="text" name="billingAndShippingInfo" placeholder="Name *" required>
+
+                    <input type="text" name="billingAndShippingInfo" placeholder="Street address *">
+    
+                    <input type="text" name="billingAndShippingInfo" placeholder="Postcode / ZIP *">
+    
+                    <input type="text" name="billingAndShippingInfo" placeholder="Town / City *">
+    
+                    <input type="email" name="billingAndShippingInfo" placeholder="Email address *">
+    
+                    <input type="tel" name="billingAndShippingInfo" placeholder="Phone *">
+
+                </section>
                 
-                <input type="text" name="billingAndShippingInfo" placeholder="Name *" required>
+                <section class="textAreaAndButtonInForm">
 
-                <input type="text" name="billingAndShippingInfo" placeholder="Street address *">
+                    <textarea name="billingAndShippingInfo" cols="25" rows="7" placeholder="Order Notes..."></textarea>
 
-                <input type="text" name="billingAndShippingInfo" placeholder="Postcode / ZIP *">
+                    <button type="submit" class="checkoutAndPayButton">Confirm payment</button>
 
-                <input type="text" name="billingAndShippingInfo" placeholder="Town / City *">
+                </section>
 
-                <input type="email" name="billingAndShippingInfo" placeholder="Email address *">
-
-                <input type="tel" name="billingAndShippingInfo" placeholder="Phone *">
-
-                <textarea name="billingAndShippingInfo" cols="25" rows="7" placeholder="Order Notes..."></textarea>
-
-                <button type="submit" class="checkoutAndPayButton">Confirm payment</button>
             </form>
 
         </article>
