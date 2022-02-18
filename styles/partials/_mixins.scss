@@ -13,23 +13,17 @@
 }
 
 @mixin for-large-screen {
-  @media (min-wdith:1025px){
+  @media (min-width:1025px){
     @content;
   }
 }
 
-<<<<<<< HEAD
-=======
 /*Mixins for text*/
 
->>>>>>> a0fd6d7027a7ff48db28310fabb3fc80c8f9eb83
 @mixin roboto-text($size) {
   font-family: Roboto, "sans-serif";
   color: $darkblue;
   font-weight: 400;
   font-size: $size;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> a0fd6d7027a7ff48db28310fabb3fc80c8f9eb83

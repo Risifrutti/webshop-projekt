@@ -277,23 +277,21 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 360px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
 @media (min-width: 769px) {
   .product-list-wrapper {
-    max-width: 1000px;
+    width: 750px;
     margin: 20px;
   }
 }
 
-@media (min-wdith: 1025px) {
+@media (min-width: 1025px) {
   .product-list-wrapper {
-    max-width: 1200px;
+    width: 1010px;
   }
 }
 
