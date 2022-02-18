@@ -262,6 +262,61 @@ main {
   margin: 15px;
 }
 
+.searchForm {
+  background: white;
+  padding: 2px;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+  margin: 0 0 20px;
+  /*
+    display: flex;
+    flex-direction: row;
+    */
+}
+
+input[type="search"] {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid transparent;
+  border-radius: inherit;
+}
+
+input[type="search"]::-webkit-input-placeholder {
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+input[type="search"]:-ms-input-placeholder {
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+input[type="search"]::-ms-input-placeholder {
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+input[type="search"]::placeholder {
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.searchBtn {
+  background: red;
+}
+
 .product-list-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -978,7 +1033,7 @@ textarea[name="billingAndShippingInfo"] {
   padding: 4px;
 }
 
-.popupForm #formBtn {
+.popupForm .formBtn {
   height: auto;
   width: 170px;
   border: 1px solid black;
