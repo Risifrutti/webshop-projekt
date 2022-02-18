@@ -44,19 +44,19 @@
     
     <main class="cartAndPayContent">
 
-        <h2 class="shoppingCartH2">Shopping Cart</h2>
+        <h2 class="cartAndPayMainHeading">Shopping Cart</h2>
 
-        <article class="cartContent">
+        <article class="cartAndPayContentBox">
 
             <div class="cartHeadings">
 
-                <h3 class="cartProductHeading">Products</h3>
-                <h3 class="cartProductHeading cartQuantityHeading">Quantity</h3>
-                <h3 class="cartProductHeading cartPriceHeading">Price</h3>
+                <h3 class="cartAndPayHeading">Products</h3>
+                <h3 class="cartAndPayHeading cartQuantityHeading">Quantity</h3>
+                <h3 class="cartAndPayHeading cartPriceHeading">Price</h3>
 
             </div>
 
-            <hr>
+            <hr class="cartAndPayLine">
 
             <article class="cartTheProduct">
 
@@ -102,7 +102,7 @@
 
         </article>
             
-            <hr>
+            <hr class="cartAndPayLine">
             
             <section class="cartTotalPriceSection">
                 
@@ -114,12 +114,48 @@
             
             <section class="cartSectionWPayBtn">
 
-                <button class="cartCheckoutButton">Proceed to checkout</button>
+                <button class="checkoutAndPayButton">Proceed to checkout</button>
 
             </section>
         
         </article>
     
+        <article class="cartAndPayContentBox">
+
+            <h3 class="cartAndPayHeading">Billing & Shipping</h3>
+            
+            <hr class="cartAndPayLine">
+
+            <form action="" class="billingAndShippingForm">
+
+                <section class="requiredInfoBillingAndShippingForm">
+
+                    <input type="text" name="billingAndShippingInfo" placeholder="Name *" required>
+
+                    <input type="text" name="billingAndShippingInfo" placeholder="Street address *">
+    
+                    <input type="text" name="billingAndShippingInfo" placeholder="Postcode / ZIP *">
+    
+                    <input type="text" name="billingAndShippingInfo" placeholder="Town / City *">
+    
+                    <input type="email" name="billingAndShippingInfo" placeholder="Email address *">
+    
+                    <input type="tel" name="billingAndShippingInfo" placeholder="Phone *">
+
+                </section>
+                
+                <section class="textAreaAndButtonInForm">
+
+                    <textarea name="billingAndShippingInfo" cols="25" rows="7" placeholder="Order Notes..."></textarea>
+
+                    <button type="submit" class="checkoutAndPayButton">Confirm payment</button>
+
+                </section>
+
+            </form>
+
+        </article>
+
     </main>
 
     <footer class="footer">
