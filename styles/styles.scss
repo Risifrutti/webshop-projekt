@@ -261,7 +261,7 @@ main {
 
 //--------------End of pruductlist---------------------
 
-/*Product site styling*/////////////////////////////////
+//-------------------Product site styling---------------//
 .productCard {
     background: $beige;
     display: flex;
@@ -282,6 +282,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-family: Viga;
         @include for-small-screen {
             /*background: $beige;*/
             padding: 0px 0px 0px 10px;
@@ -301,6 +302,7 @@ main {
     .productName {
         font-size: 20px;
         text-align: center;
+        font-family: Viga, "sans-serif";
         @include for-small-screen {
             font-size: 28px;
             align-content: flex-start;
@@ -313,8 +315,8 @@ main {
     }
 
     .productDescriptionText {
-        font-size: 16px;
         text-align: center;
+        @include roboto-text(16px);
         @include for-small-screen {
             text-align: left;
         }
@@ -333,6 +335,7 @@ main {
         padding: 8px 100px;
         font-size: 18px;
         box-shadow: 0px 8px 5px $darkblue;
+        font-family: Viga, "sans-serif";
     }
     /*To have arrows (increment/decrement) visible for amount of porduct changing*/
     input[type=number]::-webkit-inner-spin-button, 
@@ -341,24 +344,25 @@ main {
     }
 
 }
-/*End of product site styling*/////////////////////////
+//-------------End of product site styling------------//
 
 /*Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
-//Shopping Cart 
+
 .cartAndPayContent { /*Hela sidan förutom header & footer*/ 
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 40px;
+    padding-bottom: 40px;
 
-    .cartAndPayMainHeading{ /*H2 högst upp*/
+    .shoppingCartH2 { /*H2 högst upp*/
         @include roboto-text(22px);
         text-decoration: underline;
         margin: 20px 0px 20px 0px; 
     }
 }
 
-.cartAndPayContentBox { /*Den beiga boxen*/
+.cartContent { /*Den beiga boxen*/
     background-color: $beige;
     display: flex;
     flex-direction: column;
@@ -366,12 +370,9 @@ main {
     width: 80%;
     padding: 10px;
     padding-bottom: 40px;
-    margin-bottom: 40px;
 
     @include for-small-screen {
         width: 60%;
-        padding: 0px;
-        padding-bottom: 40px;
     }
 
     .cartHeadings {/*Wrappar alla h3:or*/
@@ -381,6 +382,10 @@ main {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+        }
+
+        .cartProductHeading { /*Alla h3:or*/
+            @include roboto-text(20px);
         }
 
         :first-child {
@@ -408,7 +413,6 @@ main {
         }
 
     }
-}
 
 .cartAndPayHeading { /*Alla h3:or*/
     @include roboto-text(20px);
@@ -421,6 +425,10 @@ main {
 
     @include for-small-screen {
         width: 99%;
+    hr { /*De horisentella linjerna*/
+        width: 90%;
+        border-top: 1px solid $darkblue;
+        border-bottom: none;
     }
 }
 
@@ -472,11 +480,11 @@ main {
         
         .inputQuantityInCart { /*Input antal produkter*/
             width: 60px;
-            height: 25px;
+            height: 20px;
             background-color: $white;
             border: none;
             margin-right: 12px;
-            @include roboto-text(15px);
+            @include roboto-text(12px);
         }
             
         .deleteProdIconInCart { /*Delete knapp (krysset)*/
@@ -507,7 +515,7 @@ main {
     width: 90%;
     margin-bottom: 30px;
 
-    @include for-small-screen { 
+    @include for-small-screen {
         justify-content: flex-end;
     }
 
@@ -515,9 +523,15 @@ main {
         @include roboto-text(15px);
     }
 
+    :nth-child(2) {
+        @include for-small-screen {
+            padding-left: 20px;
+        }
+    }
+
 }
 
-.checkoutAndPayButton { /*Checkout knapp*/
+.cartCheckoutButton {
     width: 170px;
     height: 30px;
     background-color: $green;
@@ -590,26 +604,48 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/////////////////
 
-/*Sign in & registration/become a member popup form*///////////////////////////////////
+//---------------Sign in popup form----------------------//
+
+
 .popupForm {
-    background: $beige;
+    background: $beige; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    font-family: Viga, "sans-serif";
+    
+    
+    @include for-small-screen{
+        width: 350px;
+        padding-top: 20px;
+        position: relative;
+        margin: 0 auto;
+        
+    }
 
     .closeIcon {
         width: auto;
-        height: 20px;
+        height: 18px;
+        /*
         float: right;
         padding: 8px;
+        */
         margin-bottom: 30px;
+        padding: 8px;
+        position: absolute;
+        right: 20px;
     }
 
     .centerText {
         text-align: center;
+        color: $darkblue;
     }
     .litleText {
-        font-size: 14px;
+        font-size: 12px;
+        color: $darkblue;
     }
 
     .inputSignin {
@@ -626,17 +662,17 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     }
     .signInBtn {
         background: $darkblue;
-        color: $beige;
+        color: white;
     }
     .becomeMemberBtn {
         background: $brown;
-        color: $darkblue;
+        color: rgb(37, 37, 37);
     }
 }
 
 
 
-/*End of Sign in & registration/become a member popup form*///////////////////////////
+/*End of Sign in popup form///////////////////////////
 
 /* Main content in the home page */
 #welcomeText {
