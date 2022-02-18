@@ -472,11 +472,11 @@ main {
         
         .inputQuantityInCart { /*Input antal produkter*/
             width: 60px;
-            height: 20px;
+            height: 25px;
             background-color: $white;
             border: none;
             margin-right: 12px;
-            @include roboto-text(12px);
+            @include roboto-text(15px);
         }
             
         .deleteProdIconInCart { /*Delete knapp (krysset)*/

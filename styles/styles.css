@@ -721,14 +721,14 @@ main {
 .cartTheProduct .inputQuantityAndDeleteButtonWrapper .inputQuantityInCart {
   /*Input antal produkter*/
   width: 60px;
-  height: 20px;
+  height: 25px;
   background-color: #F9F5F2;
   border: none;
   margin-right: 12px;
   font-family: Roboto, "sans-serif";
   color: #424D55;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .cartTheProduct .inputQuantityAndDeleteButtonWrapper .deleteProdIconInCart {
