@@ -1,0 +1,58 @@
+{
+    "products": [
+        {
+            "category": "Books",
+            "name": "",
+            "prodDescription": "",
+            "price": ""
+        },
+        {
+            "category": "Books",
+            "name": "",
+            "prodDescription": "",
+            "price": ""
+        },
+        {
+            "category": "Books",
+            "name": "",
+            "prodDescription": "",
+            "price": ""
+        },
+        {
+            "category": "Cassettes",
+            "name": "",
+            "prodDescription": "",
+            "price": ""
+        },
+        {
+            "category": "Cassettes",
+            "name": "",
+            "prodDescription": "",
+            "price": ""
+        },
+        {
+            "category": "Cassettes",
+            "name": "",
+            "prodDescription": "",
+            "price": ""
+        },
+        {
+            "category": "VHS",
+            "name": "",
+            "prodDescription": "",
+            "price": ""
+        },
+        {
+            "category": "VHS",
+            "name": "",
+            "prodDescription": "",
+            "price": ""
+        },
+        {
+            "category": "VHS",
+            "name": "",
+            "prodDescription": "",
+            "price": ""
+        }
+    ]
+}
