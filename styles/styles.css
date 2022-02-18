@@ -622,6 +622,12 @@ main {
   border-bottom: none;
 }
 
+@media (min-width: 769px) {
+  .cartContent hr {
+    width: 100%;
+  }
+}
+
 .cartTheProduct {
   /*Sektionen från ena linjen till nedersta linjen*/
   width: 90%;

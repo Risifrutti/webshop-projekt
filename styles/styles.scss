@@ -415,6 +415,10 @@ main {
         width: 90%;
         border-top: 1px solid $darkblue;
         border-bottom: none;
+
+        @include for-small-screen {
+            width: 100%;
+        }
     }
 }
 
