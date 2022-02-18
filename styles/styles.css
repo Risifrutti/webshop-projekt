@@ -523,9 +523,10 @@ main {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-.cartAndPayContent .cartAndPayMainHeading {
+.cartAndPayContent .shoppingCartH2 {
   /*H2 högst upp*/
   font-family: Roboto, "sans-serif";
   color: #424D55;
@@ -535,7 +536,7 @@ main {
   margin: 20px 0px 20px 0px;
 }
 
-.cartAndPayContentBox {
+.cartContent {
   /*Den beiga boxen*/
   background-color: #E8DBCE;
   display: -webkit-box;
@@ -551,23 +552,20 @@ main {
   width: 80%;
   padding: 10px;
   padding-bottom: 40px;
-  margin-bottom: 40px;
 }
 
 @media (min-width: 769px) {
-  .cartAndPayContentBox {
+  .cartContent {
     width: 60%;
-    padding: 0px;
-    padding-bottom: 40px;
   }
 }
 
-.cartAndPayContentBox .cartHeadings {
+.cartContent .cartHeadings {
   /*Wrappar alla h3:or*/
 }
 
 @media (min-width: 769px) {
-  .cartAndPayContentBox .cartHeadings {
+  .cartContent .cartHeadings {
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -582,36 +580,7 @@ main {
   }
 }
 
-@media (min-width: 769px) {
-  .cartAndPayContentBox .cartHeadings :first-child {
-    width: 40%;
-  }
-}
-
-.cartAndPayContentBox .cartHeadings .cartQuantityHeading {
-  /*Quantity h3:a*/
-  display: none;
-}
-
-@media (min-width: 769px) {
-  .cartAndPayContentBox .cartHeadings .cartQuantityHeading {
-    display: block;
-  }
-}
-
-.cartAndPayContentBox .cartHeadings .cartPriceHeading {
-  /*Price h3:a*/
-  display: none;
-}
-
-@media (min-width: 769px) {
-  .cartAndPayContentBox .cartHeadings .cartPriceHeading {
-    display: block;
-    justify-self: flex-end;
-  }
-}
-
-.cartAndPayHeading {
+.cartContent .cartHeadings .cartProductHeading {
   /*Alla h3:or*/
   font-family: Roboto, "sans-serif";
   color: #424D55;
@@ -619,17 +588,40 @@ main {
   font-size: 20px;
 }
 
-.cartAndPayLine {
+@media (min-width: 769px) {
+  .cartContent .cartHeadings :first-child {
+    width: 40%;
+  }
+}
+
+.cartContent .cartHeadings .cartQuantityHeading {
+  /*Quantity h3:a*/
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .cartContent .cartHeadings .cartQuantityHeading {
+    display: block;
+  }
+}
+
+.cartContent .cartHeadings .cartPriceHeading {
+  /*Price h3:a*/
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .cartContent .cartHeadings .cartPriceHeading {
+    display: block;
+    justify-self: flex-end;
+  }
+}
+
+.cartContent hr {
   /*De horisentella linjerna*/
   width: 90%;
   border-top: 1px solid #424D55;
   border-bottom: none;
-}
-
-@media (min-width: 769px) {
-  .cartAndPayLine {
-    width: 100%;
-  }
 }
 
 .cartTheProduct {
@@ -723,14 +715,14 @@ main {
 .cartTheProduct .inputQuantityAndDeleteButtonWrapper .inputQuantityInCart {
   /*Input antal produkter*/
   width: 60px;
-  height: 25px;
+  height: 20px;
   background-color: #F9F5F2;
   border: none;
   margin-right: 12px;
   font-family: Roboto, "sans-serif";
   color: #424D55;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .cartTheProduct .inputQuantityAndDeleteButtonWrapper .deleteProdIconInCart {
@@ -792,8 +784,13 @@ main {
   font-size: 15px;
 }
 
-.checkoutAndPayButton {
-  /*Checkout knapp*/
+@media (min-width: 769px) {
+  .cartTotalPriceSection :nth-child(2) {
+    padding-left: 20px;
+  }
+}
+
+.cartCheckoutButton {
   width: 170px;
   height: 30px;
   background-color: #08B519;
@@ -805,97 +802,7 @@ main {
           box-shadow: 1px 1px 4px #424D55;
 }
 
-.billingAndShippingForm {
-  /*Formuläret*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-}
-
-@media (min-width: 769px) {
-  .billingAndShippingForm {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-}
-
-.billingAndShippingForm .requiredInfoBillingAndShippingForm {
-  /*Section med alla inputfält*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-width: 150px;
-}
-
-@media (min-width: 769px) {
-  .billingAndShippingForm .requiredInfoBillingAndShippingForm {
-    width: 30%;
-  }
-}
-
-.billingAndShippingForm .textAreaAndButtonInForm {
-  /*Section med textarea och button*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.billingAndShippingForm .textAreaAndButtonInForm .checkoutAndPayButton {
-  /*Knappen i formuläret*/
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin-top: 20px;
-}
-
-@media (min-width: 769px) {
-  .billingAndShippingForm .textAreaAndButtonInForm .checkoutAndPayButton {
-    width: 240px;
-  }
-}
-
-input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] {
-  /*Alla input och textarea*/
-  padding: 10px;
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
-  background: #F9F5F2;
-  font-family: Roboto, "sans-serif";
-  color: #424D55;
-  font-weight: 400;
-  font-size: 15px;
-}
-
-textarea[name="billingAndShippingInfo"] {
-  /*Textarea*/
-  height: 230px;
-  width: 230px;
-}
-
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
-.displayMain {
-  display: block;
-}
-
 .popupForm {
   background: #E8DBCE;
   display: -webkit-box;
