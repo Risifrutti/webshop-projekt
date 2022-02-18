@@ -23,7 +23,13 @@
 @mixin roboto-text($size) {
   font-family: Roboto, "sans-serif";
   color: $darkblue;
+  font-size: $size;
+}
+
+@mixin roboto-text-light($size) {
+  font-family: Roboto, "sans-serif";
   font-weight: 400;
+  color: $darkblue;
   font-size: $size;
 }
 

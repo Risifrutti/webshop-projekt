@@ -1,13 +1,20 @@
 @charset "UTF-8";
 /* Color theme for webshop */
-/* Roboto regular */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-/* Bold Roboto */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap%27");
-/* Viga */
-@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
-/* Rock Salt */
-@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+/*Roboto regular 400, roboto light and viga*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Rock+Salt&family=Viga&display=swap");
+/* Roboto regular 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/* Bold Roboto 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap%27');
+
+/* Viga 
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+/* Rock Salt 
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+*/
 /*Mixins for media queries*/
 /*Mixins for text*/
 /*Styling for body*/
@@ -110,7 +117,6 @@ body {
 .headerElements a {
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 20px;
 }
 
@@ -288,28 +294,24 @@ input[type="search"] {
 input[type="search"]::-webkit-input-placeholder {
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 14px;
 }
 
 input[type="search"]:-ms-input-placeholder {
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 14px;
 }
 
 input[type="search"]::-ms-input-placeholder {
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 14px;
 }
 
 input[type="search"]::placeholder {
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 14px;
 }
 
@@ -368,7 +370,6 @@ input[type="search"]::placeholder {
           align-items: flex-start;
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 12px;
 }
 
@@ -379,7 +380,6 @@ input[type="search"]::placeholder {
     margin-bottom: 30px;
     font-family: Roboto, "sans-serif";
     color: #424D55;
-    font-weight: 400;
     font-size: 14px;
   }
 }
@@ -397,7 +397,6 @@ input[type="search"]::placeholder {
 .product-info h3 {
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 13px;
   margin: 0;
   margin-top: 5px;
@@ -407,7 +406,6 @@ input[type="search"]::placeholder {
   .product-info h3 {
     font-family: Roboto, "sans-serif";
     color: #424D55;
-    font-weight: 400;
     font-size: 16px;
   }
 }
@@ -531,7 +529,6 @@ input[type="search"]::placeholder {
   text-align: center;
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 16px;
 }
 
@@ -585,7 +582,6 @@ input[type="search"]::placeholder {
   /*H2 högst upp*/
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 22px;
   text-decoration: underline;
   margin: 20px 0px 20px 0px;
@@ -640,7 +636,6 @@ input[type="search"]::placeholder {
   /*Alla h3:or*/
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 20px;
 }
 
@@ -677,7 +672,6 @@ input[type="search"]::placeholder {
   /*Alla h3:or*/
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 20px;
 }
 
@@ -757,7 +751,6 @@ input[type="search"]::placeholder {
   /*Produktnamn*/
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 15px;
   overflow-wrap: break-word;
   max-width: 100px;
@@ -797,7 +790,6 @@ input[type="search"]::placeholder {
   margin-right: 12px;
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 12px;
 }
 
@@ -810,8 +802,8 @@ input[type="search"]::placeholder {
 .cartTheProduct .priceHeadingInCart {
   /*Pris*/
   font-family: Roboto, "sans-serif";
-  color: #424D55;
   font-weight: 400;
+  color: #424D55;
   font-size: 15px;
   margin: 0px;
   -ms-flex-item-align: center;
@@ -856,7 +848,6 @@ input[type="search"]::placeholder {
   /*Total och product price*/
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 15px;
 }
 
@@ -960,7 +951,6 @@ input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] {
   background: #F9F5F2;
   font-family: Roboto, "sans-serif";
   color: #424D55;
-  font-weight: 400;
   font-size: 15px;
 }
 
