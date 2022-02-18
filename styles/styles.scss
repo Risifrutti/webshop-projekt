@@ -533,8 +533,11 @@ main {
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/////////////////
 
-//---------------Sign in & registration/become a member popup form----------------------//
+//---------------Sign in popup form----------------------//
 
+.displayMain {
+    display: block;
+}
 .popupForm {
     background: $beige;
     display: flex;
@@ -544,6 +547,7 @@ main {
     padding-top: 10px;
     padding-bottom: 40px;
     font-family: Viga, "sans-serif";
+    
     
     @include for-small-screen{
         width: 350px;
@@ -556,12 +560,14 @@ main {
     .closeIcon {
         width: auto;
         height: 18px;
+        /*
         float: right;
         padding: 8px;
+        */
         margin-bottom: 30px;
-        @include for-small-screenc{
-            padding-right: -40px;
-        }
+        padding: 8px;
+        position: absolute;
+        right: 20px;
     }
 
     .centerText {
@@ -597,7 +603,7 @@ main {
 
 
 
-/*End of Sign in & registration/become a member popup form*///////////////////////////
+/*End of Sign in popup form///////////////////////////
 
 /* Main content in the home page */
 #welcomeText {

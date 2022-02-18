@@ -803,6 +803,10 @@ main {
 }
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
+.displayMain {
+  display: block;
+}
+
 .popupForm {
   background: #E8DBCE;
   display: -webkit-box;
@@ -834,9 +838,14 @@ main {
 .popupForm .closeIcon {
   width: auto;
   height: 18px;
-  float: right;
-  padding: 8px;
+  /*
+        float: right;
+        padding: 8px;
+        */
   margin-bottom: 30px;
+  padding: 8px;
+  position: absolute;
+  right: 20px;
 }
 
 .popupForm .centerText {
@@ -873,7 +882,8 @@ main {
   color: #252525;
 }
 
-/*End of Sign in & registration/become a member popup form*/
+/*End of Sign in popup form///////////////////////////
+
 /* Main content in the home page */
 #welcomeText {
   font-family: rock salt;
