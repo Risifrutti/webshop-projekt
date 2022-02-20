@@ -1,13 +1,20 @@
 @charset "UTF-8";
 /* Color theme for webshop */
-/* Roboto regular */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-/* Bold Roboto */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap%27");
-/* Viga */
-@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
-/* Rock Salt */
-@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+/*Roboto regular 400, roboto light and viga*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Rock+Salt&family=Viga&display=swap");
+/* Roboto regular 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/* Bold Roboto 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap%27');
+
+/* Viga 
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+/* Rock Salt 
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+*/
 /*Mixins for media queries*/
 /*Mixins for text*/
 /*Styling for body*/
@@ -109,8 +116,8 @@ body {
 
 .headerElements a {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 20px;
 }
 
@@ -138,6 +145,81 @@ body {
 /**/
 main {
   margin: 0px;
+}
+
+.ham-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #F9F5F2;
+  min-height: calc(100% - 390px);
+  width: 75%;
+  position: absolute;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-shadow: 0px 5px 10px 0px #00000081;
+          box-shadow: 0px 5px 10px 0px #00000081;
+}
+
+@media (min-width: 481px) {
+  .ham-nav {
+    width: 65%;
+  }
+}
+
+@media (min-width: 769px) {
+  .ham-nav {
+    display: none;
+  }
+}
+
+.hide-ham {
+  display: none;
+}
+
+#ham-top {
+  width: 100%;
+  height: 127px;
+  background-color: #424D55;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#ham-top img {
+  margin: 40px;
+  margin-top: 50px;
+  height: 25px;
+}
+
+#menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#menu-items .menu-item {
+  border-bottom: 2px solid #424D55;
+  text-align: center;
+}
+
+#menu-items .menu-item h4 {
+  margin: 25px;
+  font-family: Roboto, "sans-serif";
+  color: #424D55;
+  font-weight: 400;
+  font-size: 24px;
 }
 
 /* Styling for footer */
@@ -285,34 +367,54 @@ input[type="search"] {
 
 input[type="search"]::-webkit-input-placeholder {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
+<<<<<<< HEAD
   font-weight: 400;
   font-size: 18px;
   padding-left: 5px;
+=======
+  font-size: 14px;
+>>>>>>> 5a0ac0662f308a9c8f6a3a55cf9c7e50f993d81c
 }
 
 input[type="search"]:-ms-input-placeholder {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
+<<<<<<< HEAD
   font-weight: 400;
   font-size: 18px;
   padding-left: 5px;
+=======
+  font-size: 14px;
+>>>>>>> 5a0ac0662f308a9c8f6a3a55cf9c7e50f993d81c
 }
 
 input[type="search"]::-ms-input-placeholder {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
+<<<<<<< HEAD
   font-weight: 400;
   font-size: 18px;
   padding-left: 5px;
+=======
+  font-size: 14px;
+>>>>>>> 5a0ac0662f308a9c8f6a3a55cf9c7e50f993d81c
 }
 
 input[type="search"]::placeholder {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
+<<<<<<< HEAD
   font-weight: 400;
   font-size: 18px;
   padding-left: 5px;
+=======
+  font-size: 14px;
+>>>>>>> 5a0ac0662f308a9c8f6a3a55cf9c7e50f993d81c
 }
 
 .searchBtn {
@@ -395,8 +497,8 @@ input[type="search"]::placeholder {
       -ms-flex-align: start;
           align-items: flex-start;
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 12px;
 }
 
@@ -406,8 +508,8 @@ input[type="search"]::placeholder {
     width: 240px;
     margin-bottom: 30px;
     font-family: Roboto, "sans-serif";
+    font-weight: bold;
     color: #424D55;
-    font-weight: 400;
     font-size: 14px;
   }
 }
@@ -424,8 +526,8 @@ input[type="search"]::placeholder {
 
 .product-info h3 {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 13px;
   margin: 0;
   margin-top: 5px;
@@ -434,8 +536,8 @@ input[type="search"]::placeholder {
 @media (min-width: 769px) {
   .product-info h3 {
     font-family: Roboto, "sans-serif";
+    font-weight: bold;
     color: #424D55;
-    font-weight: 400;
     font-size: 16px;
   }
 }
@@ -558,8 +660,8 @@ input[type="search"]::placeholder {
 .productCard .productDescriptionText {
   text-align: center;
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 16px;
 }
 
@@ -612,8 +714,8 @@ input[type="search"]::placeholder {
 .cartAndPayContent .cartAndPayMainHeading {
   /*H2 högst upp*/
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 22px;
   text-decoration: underline;
   margin: 20px 0px 20px 0px;
@@ -667,8 +769,8 @@ input[type="search"]::placeholder {
 .cartAndPayContentBox .cartHeadings .cartProductHeading {
   /*Alla h3:or*/
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 20px;
 }
 
@@ -704,8 +806,8 @@ input[type="search"]::placeholder {
 .cartAndPayContentBox .cartAndPayHeading {
   /*Alla h3:or*/
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 20px;
 }
 
@@ -784,8 +886,8 @@ input[type="search"]::placeholder {
 .cartTheProduct .cartProductNameHeading {
   /*Produktnamn*/
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 15px;
   overflow-wrap: break-word;
   max-width: 100px;
@@ -824,8 +926,8 @@ input[type="search"]::placeholder {
   border: none;
   margin-right: 12px;
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 12px;
 }
 
@@ -838,8 +940,8 @@ input[type="search"]::placeholder {
 .cartTheProduct .priceHeadingInCart {
   /*Pris*/
   font-family: Roboto, "sans-serif";
-  color: #424D55;
   font-weight: 400;
+  color: #424D55;
   font-size: 15px;
   margin: 0px;
   -ms-flex-item-align: center;
@@ -883,8 +985,8 @@ input[type="search"]::placeholder {
 .cartTotalPriceSection p {
   /*Total och product price*/
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 15px;
 }
 
@@ -987,8 +1089,8 @@ input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] {
   border-radius: 5px;
   background: #F9F5F2;
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 15px;
 }
 

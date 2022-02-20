@@ -1,0 +1,58 @@
+{
+    "products": [
+        {
+            "category": "Books",
+            "name": "Pride and Prejudice",
+            "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
+            "price": "9.99$"
+        },
+        {
+            "category": "Books",
+            "name": "Lorem Ipsum",
+            "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
+            "price": "9.99$"
+        },
+        {
+            "category": "Books",
+            "name": "Lorem Ipsum",
+            "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
+            "price": "9.99$"
+        },
+        {
+            "category": "Cassettes",
+            "name": "Chess",
+            "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
+            "price": "4.99$"
+        },
+        {
+            "category": "Cassettes",
+            "name": "Carola",
+            "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
+            "price": "4.99$"
+        },
+        {
+            "category": "Cassettes",
+            "name": "Mr Music",
+            "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
+            "price": "4.99$"
+        },
+        {
+            "category": "VHS",
+            "name": "Star Wars",
+            "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
+            "price": "6.99$"
+        },
+        {
+            "category": "VHS",
+            "name": "Back to the Future",
+            "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
+            "price": "6.99$"
+        },
+        {
+            "category": "VHS",
+            "name": "Lion King",
+            "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
+            "price": "6.99$"
+        }
+    ]
+}
