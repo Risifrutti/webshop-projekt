@@ -525,9 +525,14 @@ main {
 #welcomeText {
     font-family: rock salt;
     font-size: 18px;
-    border: 2px outset;
     text-align: center;
-    padding: 30px;
+    padding: 35px;
+
+    @include for-small-screen {
+        font-size: 32px;
+        padding: 55px;
+        color: #424D55;
+    }
 }
 
 #categoryBooks {
@@ -550,18 +555,43 @@ main {
     text-align: center;
     color: black;
     font-family: viga;
+
+    #imageVHS {
+        height: 105px;
+        width: 100vw;
+
+        @include for-small-screen {
+            width: 100vw;
+            height: 40vh;
+        }
+    }
 }
 
 .categoryText {
     position: absolute;
     top: 35%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 33px;
+    transform: translate(-50%, -60%);
+    font-size: 25px;
+    border: 3px inset whitesmoke;
+    padding: 10px;
+
+    @include for-small-screen {
+        top: 42%;
+        border: 3px outset whitesmoke;
+        padding: 15px;
+        color: #22272b;
+        font-size: 35px;
+    }
 }
 
 .homepageImages {
     max-width: 100%;
     max-height: 100%;
     opacity: 65%;
+
+    @include for-small-screen {
+        width: 100vw;
+        height: 40vh;
+    }
 }
