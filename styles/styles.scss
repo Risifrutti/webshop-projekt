@@ -335,6 +335,7 @@ input[type="search"]::placeholder {
         margin-bottom: 30px;
         @include roboto-text(14px);
     }
+
 }
 
 //Where the productname and price are
@@ -352,15 +353,24 @@ input[type="search"]::placeholder {
 
         @include for-small-screen{
             @include roboto-text(16px);
+        
         }
+    }
+    p {
+        margin-bottom:0 ;
     }
 }
 
-//Placeholder for the product image
 .product-image {
-    border: 1px solid $darkblue;
-    height: 180px;
-    width:100%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+
+}
+
+.product-image img {
+    height: 150px;
+    margin: 10px;
 
     @include for-small-screen {
         height: 240px;
@@ -370,13 +380,13 @@ input[type="search"]::placeholder {
 //The put in cart icon
 .articleIcon {
     height: 20px;
-    margin-right:5px;
-    margin-bottom:5px;
+    margin:5px;
     align-self: flex-end;
 
     @include for-small-screen {
         height: 30px;
         margin: 10px;
+        margin-top: 5px;
 
     }
 }
@@ -969,7 +979,11 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
 	&:hover {
 		background-color: white;
 		color: $darkblue;
+<<<<<<< HEAD
 		border: 2px solid $blue;
+=======
+		border: 2px solid $darkblue;
+>>>>>>> a485f5cd16d60319dcae872e991d3ca2dee9fccd
 	}
 }
 
