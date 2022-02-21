@@ -34,12 +34,41 @@
 
             <a href="/webshop-projekt/HTML/shoppingcart.html">
                 <img src="/webshop-projekt/pictures/Icons/shoppingCart-icon.png" alt="shopping cart"
-                class="headerIcons headerCart">
+                    class="headerIcons headerCart">
             </a>
 
 
         </div>
     </header>
+
+    <!----------- Hamburger menu --------------->
+
+    <nav id="hamburger-nav" class="hide-ham ham-nav">
+        <div id="ham-top">
+            <img id="ham-close" src="/webshop-projekt/pictures/Icons/krysset.png" alt="close hamburger menu "
+                class="headerIcons">
+        </div>
+        <div id="menu-items">
+            <a href="/webshop-projekt/HTML/homepage.html" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Home</h4>
+                </div>
+            </a>
+            <a href="/webshop-projekt/HTML/productlist.html" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Shop</h4>
+                </div>
+            </a>
+            <a href="#" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Sign in</h4>
+                </div>
+            </a>
+            </a>
+        </div>
+    </nav>
+
+    <!-- End of Hamburger Menu -->
 
     <main>
         <div id="welcomeText">
@@ -48,19 +77,19 @@
         </div>
 
         <div class="homepageCateogry" id="categoryBooks">
-            <img class="homepageImages" src="/webshop-projekt/Pictures/Images/Frontpage pics/books_in_a_row.jpg" alt="books in a row">
+            <img class="homepageImages" src="/webshop-projekt/Pictures/Images/Frontpage pics/books_fixed.jpg" alt="books in a row">
             <p class="categoryText">Books</p>
 
         </div>
 
         <div class="homepageCateogry" id="categoryCassettes">
-            <img class="homepageImages" src="/webshop-projekt/Pictures/Images/Frontpage pics/cassettes.jpg" alt="cassettes">
+            <img class="homepageImages" src="/webshop-projekt/Pictures/Images/Frontpage pics/cassettes_fixed_FORREAL.jpg" alt="cassettes">
             <p class="categoryText">Cassettes</p>
 
         </div>
 
         <div class="homepageCateogry" id="categoryVHS">
-            <img class="homepageImages" src="/webshop-projekt/Pictures/Images/Frontpage pics/VHS_tapes.jpg" alt="VHS tapes">
+            <img class="homepageImages" id="imageVHS" src="/webshop-projekt/Pictures/Images/Frontpage pics/VHS_fixed.jpg" alt="VHS tapes">
             <p class="categoryText">VHS</p>
 
         </div>
@@ -86,6 +115,7 @@
     </footer>
 
     <script src=""></script>
+    <script src="/webshop-projekt/Javascript/views/hamburger.js"></script>
 </body>
 
 </html>

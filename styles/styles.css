@@ -1,13 +1,20 @@
 @charset "UTF-8";
 /* Color theme for webshop */
-/* Roboto regular */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-/* Bold Roboto */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap%27");
-/* Viga */
-@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
-/* Rock Salt */
-@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+/*Roboto regular 400, roboto light and viga*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Rock+Salt&family=Viga&display=swap");
+/* Roboto regular 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/* Bold Roboto 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap%27');
+
+/* Viga 
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+/* Rock Salt 
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+*/
 /*Mixins for media queries*/
 /*Mixins for text*/
 /*Styling for body*/
@@ -109,8 +116,8 @@ body {
 
 .headerElements a {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 20px;
 }
 
@@ -138,6 +145,82 @@ body {
 /**/
 main {
   margin: 0px;
+}
+
+.ham-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #F9F5F2;
+  min-height: calc(100% - 390px);
+  width: 75%;
+  position: absolute;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-shadow: 0px 5px 10px 0px #00000081;
+          box-shadow: 0px 5px 10px 0px #00000081;
+  z-index: 99999;
+}
+
+@media (min-width: 481px) {
+  .ham-nav {
+    width: 65%;
+  }
+}
+
+@media (min-width: 769px) {
+  .ham-nav {
+    display: none;
+  }
+}
+
+.hide-ham {
+  display: none;
+}
+
+#ham-top {
+  width: 100%;
+  height: 127px;
+  background-color: #424D55;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#ham-top img {
+  margin: 40px;
+  margin-top: 50px;
+  height: 25px;
+}
+
+#menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#menu-items .menu-item {
+  border-bottom: 2px solid #424D55;
+  text-align: center;
+}
+
+#menu-items .menu-item h4 {
+  margin: 25px;
+  font-family: Roboto, "sans-serif";
+  font-weight: bold;
+  color: #424D55;
+  font-size: 24px;
 }
 
 /* Styling for footer */
@@ -264,57 +347,104 @@ main {
 
 .searchForm {
   background: white;
-  padding: 2px;
   border: 1px solid currentColor;
   border-radius: 5px;
-  margin: 0 0 20px;
-  /*
-    display: flex;
-    flex-direction: row;
-    */
+  position: absolute;
+  float: right;
+  right: 20px;
+  height: 35px;
+}
+
+@media (min-width: 1025px) {
+  .searchForm {
+    margin-top: 50px;
+    margin-right: 30px;
+  }
+}
+
+.columnSearch {
+  padding-top: 20px;
 }
 
 input[type="search"] {
-  border: none;
   background: transparent;
-  margin: 0;
-  padding: 7px 8px;
-  font-size: 14px;
-  color: inherit;
-  border: 1px solid transparent;
-  border-radius: inherit;
+  border-radius: 5px;
+  border: none;
+  height: 35px;
+  padding-top: 5px;
 }
 
 input[type="search"]::-webkit-input-placeholder {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
+  padding-left: 8px;
 }
 
 input[type="search"]:-ms-input-placeholder {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
+  padding-left: 8px;
 }
 
 input[type="search"]::-ms-input-placeholder {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
+  padding-left: 8px;
 }
 
 input[type="search"]::placeholder {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
+  padding-left: 8px;
 }
 
 .searchBtn {
-  background: red;
+  background: none;
+  border-radius: 5px;
+  border-color: white;
+  width: auto;
+  height: 35px;
+}
+
+.categoriesList {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-left: 20px;
+  font-family: Roboto, "sans-serif";
+  font-weight: bold;
+  color: #424D55;
+  font-size: 20px;
+}
+
+@media (min-width: 769px) {
+  .categoriesList {
+    /*
+        position: relative;
+        float: left;
+        left: 150px;
+        */
+    margin-right: 200px;
+  }
 }
 
 .product-list-main {
@@ -367,8 +497,8 @@ input[type="search"]::placeholder {
       -ms-flex-align: start;
           align-items: flex-start;
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 12px;
 }
 
@@ -378,8 +508,8 @@ input[type="search"]::placeholder {
     width: 240px;
     margin-bottom: 30px;
     font-family: Roboto, "sans-serif";
+    font-weight: bold;
     color: #424D55;
-    font-weight: 400;
     font-size: 14px;
   }
 }
@@ -396,8 +526,8 @@ input[type="search"]::placeholder {
 
 .product-info h3 {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 13px;
   margin: 0;
   margin-top: 5px;
@@ -406,8 +536,8 @@ input[type="search"]::placeholder {
 @media (min-width: 769px) {
   .product-info h3 {
     font-family: Roboto, "sans-serif";
+    font-weight: bold;
     color: #424D55;
-    font-weight: 400;
     font-size: 16px;
   }
 }
@@ -508,7 +638,6 @@ input[type="search"]::placeholder {
 }
 
 .productCard .productName {
-  font-size: 20px;
   text-align: center;
   font-family: Viga, "sans-serif";
 }
@@ -530,8 +659,8 @@ input[type="search"]::placeholder {
 .productCard .productDescriptionText {
   text-align: center;
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 16px;
 }
 
@@ -584,8 +713,8 @@ input[type="search"]::placeholder {
 .cartAndPayContent .cartAndPayMainHeading {
   /*H2 högst upp*/
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 22px;
   text-decoration: underline;
   margin: 20px 0px 20px 0px;
@@ -639,8 +768,8 @@ input[type="search"]::placeholder {
 .cartAndPayContentBox .cartHeadings .cartProductHeading {
   /*Alla h3:or*/
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 20px;
 }
 
@@ -676,8 +805,8 @@ input[type="search"]::placeholder {
 .cartAndPayContentBox .cartAndPayHeading {
   /*Alla h3:or*/
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 20px;
 }
 
@@ -756,8 +885,8 @@ input[type="search"]::placeholder {
 .cartTheProduct .cartProductNameHeading {
   /*Produktnamn*/
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 15px;
   overflow-wrap: break-word;
   max-width: 100px;
@@ -796,8 +925,8 @@ input[type="search"]::placeholder {
   border: none;
   margin-right: 12px;
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 12px;
 }
 
@@ -810,8 +939,8 @@ input[type="search"]::placeholder {
 .cartTheProduct .priceHeadingInCart {
   /*Pris*/
   font-family: Roboto, "sans-serif";
-  color: #424D55;
   font-weight: 400;
+  color: #424D55;
   font-size: 15px;
   margin: 0px;
   -ms-flex-item-align: center;
@@ -855,8 +984,8 @@ input[type="search"]::placeholder {
 .cartTotalPriceSection p {
   /*Total och product price*/
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 15px;
 }
 
@@ -959,8 +1088,8 @@ input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] {
   border-radius: 5px;
   background: #F9F5F2;
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 15px;
 }
 
@@ -1057,9 +1186,16 @@ textarea[name="billingAndShippingInfo"] {
 #welcomeText {
   font-family: rock salt;
   font-size: 18px;
-  border: 2px outset;
   text-align: center;
-  padding: 30px;
+  padding: 35px;
+}
+
+@media (min-width: 769px) {
+  #welcomeText {
+    font-size: 32px;
+    padding: 55px;
+    color: #424D55;
+  }
 }
 
 #categoryBooks {
@@ -1067,7 +1203,6 @@ textarea[name="billingAndShippingInfo"] {
   text-align: center;
   color: black;
   font-family: viga;
-  font-size: 20px;
 }
 
 #categoryCassettes {
@@ -1075,7 +1210,6 @@ textarea[name="billingAndShippingInfo"] {
   text-align: center;
   color: black;
   font-family: viga;
-  font-size: 20px;
 }
 
 #categoryVHS {
@@ -1083,22 +1217,52 @@ textarea[name="billingAndShippingInfo"] {
   text-align: center;
   color: black;
   font-family: viga;
-  font-size: 20px;
+}
+
+#categoryVHS #imageVHS {
+  height: 105px;
+  width: 100vw;
+}
+
+@media (min-width: 769px) {
+  #categoryVHS #imageVHS {
+    width: 100vw;
+    height: 40vh;
+  }
 }
 
 .categoryText {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 30px;
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  font-size: 25px;
+  border: 3px inset whitesmoke;
+  padding: 10px;
+}
+
+@media (min-width: 769px) {
+  .categoryText {
+    top: 42%;
+    border: 3px outset whitesmoke;
+    padding: 15px;
+    color: #22272b;
+    font-size: 35px;
+  }
 }
 
 .homepageImages {
-  width: 100%;
-  height: 100%;
-  opacity: 75%;
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 65%;
+}
+
+@media (min-width: 769px) {
+  .homepageImages {
+    width: 100vw;
+    height: 40vh;
+  }
 }
 
 /* BECOME A MEMBER - Victoria */

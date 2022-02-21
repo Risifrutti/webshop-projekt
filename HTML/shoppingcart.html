@@ -34,13 +34,62 @@
 
             <a href="/webshop-projekt/HTML/shoppingcart.html">
                 <img src="/webshop-projekt/pictures/Icons/shoppingCart-icon.png" alt="shopping cart"
-                class="headerIcons headerCart">
+                    class="headerIcons headerCart">
             </a>
 
 
         </div>
 
     </header>
+
+    <!----------- Hamburger menu --------------->
+
+    <nav id="hamburger-nav" class="hide-ham ham-nav">
+        <div id="ham-top">
+            <img id="ham-close" src="/webshop-projekt/pictures/Icons/krysset.png" alt="close hamburger menu "
+                class="headerIcons">
+        </div>
+        <div id="menu-items">
+            <a href="/webshop-projekt/HTML/homepage.html" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Home</h4>
+                </div>
+            </a>
+            <a href="/webshop-projekt/HTML/productlist.html" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Shop</h4>
+                </div>
+            </a>
+            <a href="#" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Sign in</h4>
+                </div>
+            </a>
+            </a>
+        </div>
+    </nav>
+
+    <!-- End of Hamburger Menu -->
+
+    <!-- Categories & search field -->
+    <div class="categorieField">
+        <nav class="categories columnSearch">
+            <form class="searchForm">
+                <input type="search" placeholder="Search...">
+                <button type="submit" class="searchBtn"><img src="/webshop-projekt/Pictures/Icons/search-icon.png" alt="search icon"></button>
+              </form><br>
+            <ul class="categoriesList columnSearch">
+                <li>All</li>
+                <li>|</li>
+                <li>Books</li>
+                <li>|</li>
+                <li>VHS</li>
+                <li>|</li>
+                <li>Casettes</li>
+            </ul>
+        </nav>
+    </div>
+    <!-- End of Categories & search field -->
     
     <main class="cartAndPayContent">
 
@@ -60,23 +109,25 @@
 
             <article class="cartTheProduct">
 
-                    <div class="wrapperForProductImgCart">
-    
-                        <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="The product image" class="productImageInCart">
-                        
-                    </div>
-                    
-                    <h4 class="cartProductNameHeading">Product name</h4>
+                <div class="wrapperForProductImgCart">
 
-                    <div class="inputQuantityAndDeleteButtonWrapper">
-                            
-                        <input type="number" class="inputQuantityInCart" id="inputQuantity">
-                            
-                        <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="Delete product icon" class="deleteProdIconInCart">
-                        
-                    </div>
-    
-                    <h4 class="priceHeadingInCart">$Price</h4>
+                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="The product image"
+                        class="productImageInCart">
+
+                </div>
+
+                <h4 class="cartProductNameHeading">Product name</h4>
+
+                <div class="inputQuantityAndDeleteButtonWrapper">
+
+                    <input type="number" class="inputQuantityInCart" id="inputQuantity">
+
+                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="Delete product icon"
+                        class="deleteProdIconInCart">
+
+                </div>
+
+                <h4 class="priceHeadingInCart">$Price</h4>
 
             </article>
 
@@ -84,46 +135,48 @@
 
                 <div class="wrapperForProductImgCart">
 
-                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="The product image" class="productImageInCart">
-                    
+                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="The product image"
+                        class="productImageInCart">
+
                 </div>
-                
+
                 <h4 class="cartProductNameHeading">Product name</h4>
 
                 <div class="inputQuantityAndDeleteButtonWrapper">
-                        
+
                     <input type="number" class="inputQuantityInCart" id="inputQuantity">
-                        
-                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="Delete product icon" class="deleteProdIconInCart">
-                    
+
+                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="Delete product icon"
+                        class="deleteProdIconInCart">
+
                 </div>
 
                 <h4 class="priceHeadingInCart">$Price</h4>
 
-        </article>
-            
+            </article>
+
             <hr class="cartAndPayLine">
-            
+
             <section class="cartTotalPriceSection">
-                
+
                 <p>Total:</p>
-                
+
                 <p>$Total price</p>
-            
+
             </section>
-            
+
             <section class="cartSectionWPayBtn">
 
                 <button class="checkoutAndPayButton proceedToCheckoutButton">Proceed to checkout</button>
 
             </section>
-        
+
         </article>
-    
+
         <article class="cartAndPayContentBox billingAndShippingBox">
 
             <h3 class="cartAndPayHeading">Billing & Shipping</h3>
-            
+
             <hr class="cartAndPayLine">
 
             <form action="" class="billingAndShippingForm">
@@ -133,17 +186,17 @@
                     <input type="text" name="billingAndShippingInfo" placeholder="Name *" required>
 
                     <input type="text" name="billingAndShippingInfo" placeholder="Street address *">
-    
+
                     <input type="text" name="billingAndShippingInfo" placeholder="Postcode / ZIP *">
-    
+
                     <input type="text" name="billingAndShippingInfo" placeholder="Town / City *">
-    
+
                     <input type="email" name="billingAndShippingInfo" placeholder="Email address *">
-    
+
                     <input type="tel" name="billingAndShippingInfo" placeholder="Phone *">
 
                 </section>
-                
+
                 <section class="textAreaAndButtonInForm">
 
                     <textarea name="billingAndShippingInfo" cols="25" rows="7" placeholder="Order Notes..."></textarea>
@@ -178,4 +231,5 @@
     </footer>
 
     <script src="/webshop-projekt/Javascript/views/shoppingcart.js"></script>
+    <script src="/webshop-projekt/Javascript/views/hamburger.js"></script>
 </body>

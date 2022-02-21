@@ -93,6 +93,65 @@ main {
     margin: 0px;
 }
 
+
+//------------Hamburger Menu style ---------
+
+.ham-nav {
+    display:flex;
+    flex-direction: column;
+    background: $white;
+    min-height: calc(100% - 390px);
+    width: 75%;
+    position: absolute;
+    align-self: flex-start;
+    box-shadow: 0px 5px 10px 0px #00000081;
+    z-index: 99999;
+
+    @include for-tablet {
+        width: 65%;
+    }
+
+        @include for-small-screen {
+            display: none;
+        }
+}
+
+.hide-ham{
+    display:none;
+}
+
+#ham-top {
+    width: 100%;
+    height: 127px;
+    background-color: $darkblue;
+    display:flex;
+    align-items: center;
+
+
+    img {
+        margin:40px;
+        margin-top:50px;
+        height:25px;
+    }
+}
+
+#menu-items {
+    display:flex;
+    flex-direction: column;
+    
+    .menu-item {
+        border-bottom: 2px solid $darkblue;
+        text-align: center;
+
+        h4{
+            margin: 25px;
+            @include roboto-text(24px);
+        }
+    }
+}
+
+//----------End of style hamburger menu--------
+
 /* Styling for footer */
 .footer {
     display: flex;
@@ -169,37 +228,62 @@ main {
 
 .searchForm {
     background: white;
-    padding: 2px;
     border: 1px solid currentColor;
     border-radius: 5px;
-    margin: 0 0 20px;
-    /*
-    display: flex;
-    flex-direction: row;
-    */
+    position: absolute;
+    float: right;
+    right: 20px;
+    height: 35px;
+    @include for-large-screen {
+        margin-top: 50px;
+        margin-right: 30px;
+    }
+}
+.columnSearch {
+    padding-top: 20px; 
 }
 
 input[type="search"] {
-    border: none;
     background: transparent;
-    margin: 0;
-    padding: 7px 8px;
-    font-size: 14px;
-    color: inherit;
-    border: 1px solid transparent;
-    border-radius: inherit;
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    padding-top: 5px;
   }
 
 input[type="search"]::placeholder {
-  @include roboto-text(14px);
+  @include roboto-text(18px);
+  padding-left: 8px;
 }
+
 
 .searchBtn {
-    background: red;
+    background: none;
+    border-radius: 5px;
+    border-color: white;
+    width: auto;
+    height: 35px;
 }
+.categoriesList {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    @include roboto-text(20px);
+    
+    @include for-small-screen {
+        /*
+        position: relative;
+        float: left;
+        left: 150px;
+        */
+        margin-right: 200px;
+        
+    }
 
-
-  
+} 
 
 //----------------End of categories &search input----------------------
 
@@ -338,7 +422,7 @@ input[type="search"]::placeholder {
         }
     }
     .productName {
-        font-size: 20px;
+
         text-align: center;
         font-family: Viga, "sans-serif";
         @include for-small-screen {
@@ -536,7 +620,7 @@ input[type="search"]::placeholder {
 
 
     .priceHeadingInCart { /*Pris*/
-        @include roboto-text(15px);
+        @include roboto-text-light(15px);
         margin: 0px;
         align-self: center;
 
@@ -719,9 +803,14 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
 #welcomeText {
     font-family: rock salt;
     font-size: 18px;
-    border: 2px outset;
     text-align: center;
-    padding: 30px;
+    padding: 35px;
+
+    @include for-small-screen {
+        font-size: 32px;
+        padding: 55px;
+        color: #424D55;
+    }
 }
 
 #categoryBooks {
@@ -729,7 +818,6 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     text-align: center;
     color: black;
     font-family: viga;
-    font-size: 20px;
 }
 
 #categoryCassettes {
@@ -737,7 +825,6 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     text-align: center;
     color: black;
     font-family: viga;
-    font-size: 20px;
     
 }
 
@@ -746,23 +833,49 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     text-align: center;
     color: black;
     font-family: viga;
-    font-size: 20px;
+
+    #imageVHS {
+        height: 105px;
+        width: 100vw;
+
+        @include for-small-screen {
+            width: 100vw;
+            height: 40vh;
+        }
+    }
 }
 
 .categoryText {
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
+    transform: translate(-50%, -60%);
+    font-size: 25px;
+    border: 3px inset whitesmoke;
+    padding: 10px;
+
+    @include for-small-screen {
+        top: 42%;
+        border: 3px outset whitesmoke;
+        padding: 15px;
+        color: #22272b;
+        font-size: 35px;
+    }
 }
 
 .homepageImages {
-    width: 100%;
-    height: 100%;
-    opacity: 75%;
-}
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 65%;
 
+
+
+
+    @include for-small-screen {
+        width: 100vw;
+        height: 40vh;
+    }
+}
 
 
 
@@ -837,3 +950,4 @@ margin: 7px auto;
    }
 
 /* Victoria */
+    
