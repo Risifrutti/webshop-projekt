@@ -9,21 +9,25 @@ async function showProducts() {
     data.products.forEach(element => {
 
         const product =
-            `<a href="/webshop-projekt/HTML/productsite.html" class="noLinkStyle">
-            <article class="product-article">
+            `<article class="product-article">
                 <section class="product-image">
+                <a href="/webshop-projekt/HTML/productsite.html" class="noLinkStyle">
                 <img id="productimage" src=${element.prodImageURL}
-                alt="Product image">
+                alt="Product image"> 
+                </a>
                 </section>
-                <section class="product-info">
+                <section class="product-info"> 
+                <a href="/webshop-projekt/HTML/productsite.html" class="noLinkStyle">
                     <h3 class="product-name">${element.name}</h3>
                     <p class="product-price">${element.price}</p>
+                    </a>
                 </section>
+                
 
                 <img id="addToCartIcon" src="/webshop-projekt/pictures/Icons/addtocarticon2.png" alt="add to cart"
                     class="articleIcon">
             </article>
-        </a>`
+        `
 
         productContainer.innerHTML += product;
 
