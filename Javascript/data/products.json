@@ -24,21 +24,21 @@
         {
             "category": "Cassettes",
             "name": "Chess",
-            "prodImageURL": "/webshop-projekt/Pictures/Images/Kasett1",
+            "prodImageURL": "/webshop-projekt/Pictures/Images/Kasett1.png",
             "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
             "price": "4.99$"
         },
         {
             "category": "Cassettes",
             "name": "Carola",
-            "prodImageURL": "/webshop-projekt/Pictures/Images/Kasett2",
+            "prodImageURL": "/webshop-projekt/Pictures/Images/Kasett2.png",
             "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
             "price": "4.99$"
         },
         {
             "category": "Cassettes",
             "name": "Mr Music",
-            "prodImageURL": "/webshop-projekt/Pictures/Images/Kasett3",
+            "prodImageURL": "/webshop-projekt/Pictures/Images/Kasett3.png",
             "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
             "price": "4.99$"
         },

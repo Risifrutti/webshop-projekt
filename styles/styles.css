@@ -542,22 +542,34 @@ input[type="search"]::placeholder {
   }
 }
 
+.product-info p {
+  margin-bottom: 0;
+}
+
 .product-image {
-  border: 1px solid #424D55;
-  height: 180px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-image img {
+  height: 150px;
+  margin: 10px;
 }
 
 @media (min-width: 769px) {
-  .product-image {
+  .product-image img {
     height: 240px;
   }
 }
 
 .articleIcon {
   height: 20px;
-  margin-right: 5px;
-  margin-bottom: 5px;
+  margin: 5px;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
@@ -566,6 +578,7 @@ input[type="search"]::placeholder {
   .articleIcon {
     height: 30px;
     margin: 10px;
+    margin-top: 5px;
   }
 }
 
@@ -1266,22 +1279,36 @@ textarea[name="billingAndShippingInfo"] {
 }
 
 /* BECOME A MEMBER - Victoria */
+.button {
+  background-color: #424D55;
+  border: 2px solid white;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 10px 28px;
+  color: white;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: white;
+  color: #424D55;
+  border: 2px solid #424D55;
+}
+
 .bg-modal {
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /*display: none;*/
 }
 
 .modal-contents {
@@ -1305,7 +1332,11 @@ h3 {
 }
 
 input {
-  margin: 7px auto;
+  margin: 15px auto;
+  display: block;
+  width: 50%;
+  padding: 8px;
+  border: 1px solid gray;
 }
 
 .close {
@@ -1317,6 +1348,10 @@ input {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   cursor: pointer;
+}
+
+.close:hover {
+  color: #666;
 }
 
 /* Victoria */
