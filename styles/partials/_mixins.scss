@@ -13,7 +13,7 @@
 }
 
 @mixin for-large-screen {
-  @media (min-wdith:1025px){
+  @media (min-width:1025px){
     @content;
   }
 }
@@ -22,7 +22,14 @@
 
 @mixin roboto-text($size) {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: $darkblue;
+  font-size: $size;
+}
+
+@mixin roboto-text-light($size) {
+  font-family: Roboto, "sans-serif";
   font-weight: 400;
+  color: $darkblue;
   font-size: $size;
 }

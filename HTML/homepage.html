@@ -32,16 +32,45 @@
             <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle hideHeaderElements">Sign
                 in</a>
 
-            <a href="/webshop-projekt/HTML/basket.html">
+            <a href="/webshop-projekt/HTML/shoppingcart.html">
                 <img src="/webshop-projekt/pictures/Icons/shoppingCart-icon.png" alt="shopping cart"
-                class="headerIcons headerCart">
+                    class="headerIcons headerCart">
             </a>
 
 
         </div>
     </header>
 
-    <main class="mainBody">
+    <!----------- Hamburger menu --------------->
+
+    <nav id="hamburger-nav" class="hide-ham ham-nav">
+        <div id="ham-top">
+            <img id="ham-close" src="/webshop-projekt/pictures/Icons/krysset.png" alt="close hamburger menu "
+                class="headerIcons">
+        </div>
+        <div id="menu-items">
+            <a href="/webshop-projekt/HTML/homepage.html" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Home</h4>
+                </div>
+            </a>
+            <a href="/webshop-projekt/HTML/productlist.html" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Shop</h4>
+                </div>
+            </a>
+            <a href="#" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Sign in</h4>
+                </div>
+            </a>
+            </a>
+        </div>
+    </nav>
+
+    <!-- End of Hamburger Menu -->
+
+    <main>
         <div id="welcomeText">
             <p>Welcome To Our Retro Media Shop!</p>
 
@@ -86,6 +115,7 @@
     </footer>
 
     <script src=""></script>
+    <script src="/webshop-projekt/Javascript/views/hamburger.js"></script>
 </body>
 
 </html>

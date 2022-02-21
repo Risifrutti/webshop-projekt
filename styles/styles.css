@@ -1,13 +1,20 @@
 @charset "UTF-8";
 /* Color theme for webshop */
-/* Roboto regular */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-/* Bold Roboto */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap%27");
-/* Viga */
-@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
-/* Rock Salt */
-@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+/*Roboto regular 400, roboto light and viga*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Rock+Salt&family=Viga&display=swap");
+/* Roboto regular 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/* Bold Roboto 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap%27');
+
+/* Viga 
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+/* Rock Salt 
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+*/
 /*Mixins for media queries*/
 /*Mixins for text*/
 /*Styling for body*/
@@ -109,8 +116,8 @@ body {
 
 .headerElements a {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 20px;
 }
 
@@ -138,6 +145,81 @@ body {
 /**/
 main {
   margin: 0px;
+}
+
+.ham-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #F9F5F2;
+  min-height: calc(100% - 390px);
+  width: 75%;
+  position: absolute;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-shadow: 0px 5px 10px 0px #00000081;
+          box-shadow: 0px 5px 10px 0px #00000081;
+}
+
+@media (min-width: 481px) {
+  .ham-nav {
+    width: 65%;
+  }
+}
+
+@media (min-width: 769px) {
+  .ham-nav {
+    display: none;
+  }
+}
+
+.hide-ham {
+  display: none;
+}
+
+#ham-top {
+  width: 100%;
+  height: 127px;
+  background-color: #424D55;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#ham-top img {
+  margin: 40px;
+  margin-top: 50px;
+  height: 25px;
+}
+
+#menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#menu-items .menu-item {
+  border-bottom: 2px solid #424D55;
+  text-align: center;
+}
+
+#menu-items .menu-item h4 {
+  margin: 25px;
+  font-family: Roboto, "sans-serif";
+  font-weight: bold;
+  color: #424D55;
+  font-size: 24px;
 }
 
 /* Styling for footer */
@@ -262,6 +344,108 @@ main {
   margin: 15px;
 }
 
+.searchForm {
+  background: white;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+  position: absolute;
+  float: right;
+  right: 20px;
+  height: 35px;
+}
+
+@media (min-width: 1025px) {
+  .searchForm {
+    margin-top: 50px;
+    margin-right: 30px;
+  }
+}
+
+.columnSearch {
+  padding-top: 20px;
+}
+
+input[type="search"] {
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  height: 35px;
+  padding-top: 5px;
+}
+
+input[type="search"]::-webkit-input-placeholder {
+  font-family: Roboto, "sans-serif";
+  font-weight: bold;
+  color: #424D55;
+  font-size: 18px;
+  padding-left: 8px;
+}
+
+input[type="search"]:-ms-input-placeholder {
+  font-family: Roboto, "sans-serif";
+  font-weight: bold;
+  color: #424D55;
+  font-size: 18px;
+  padding-left: 8px;
+}
+
+input[type="search"]::-ms-input-placeholder {
+  font-family: Roboto, "sans-serif";
+  font-weight: bold;
+  color: #424D55;
+  font-size: 18px;
+  padding-left: 8px;
+}
+
+input[type="search"]::placeholder {
+  font-family: Roboto, "sans-serif";
+  font-weight: bold;
+  color: #424D55;
+  font-size: 18px;
+  padding-left: 8px;
+}
+
+.searchBtn {
+  background: none;
+  border-radius: 5px;
+  border-color: white;
+  width: auto;
+  height: 35px;
+}
+
+.categoriesList {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-left: 20px;
+  font-family: Roboto, "sans-serif";
+  font-weight: bold;
+  color: #424D55;
+  font-size: 20px;
+}
+
+@media (min-width: 769px) {
+  .categoriesList {
+    /*
+        position: relative;
+        float: left;
+        left: 150px;
+        */
+    margin-right: 200px;
+  }
+}
+
 .product-list-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,23 +461,21 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 360px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
 @media (min-width: 769px) {
   .product-list-wrapper {
-    max-width: 1000px;
+    width: 750px;
     margin: 20px;
   }
 }
 
-@media (min-wdith: 1025px) {
+@media (min-width: 1025px) {
   .product-list-wrapper {
-    max-width: 1200px;
+    width: 1010px;
   }
 }
 
@@ -314,8 +496,8 @@ main {
       -ms-flex-align: start;
           align-items: flex-start;
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 12px;
 }
 
@@ -325,8 +507,8 @@ main {
     width: 240px;
     margin-bottom: 30px;
     font-family: Roboto, "sans-serif";
+    font-weight: bold;
     color: #424D55;
-    font-weight: 400;
     font-size: 14px;
   }
 }
@@ -343,8 +525,8 @@ main {
 
 .product-info h3 {
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 13px;
   margin: 0;
   margin-top: 5px;
@@ -353,8 +535,8 @@ main {
 @media (min-width: 769px) {
   .product-info h3 {
     font-family: Roboto, "sans-serif";
+    font-weight: bold;
     color: #424D55;
-    font-weight: 400;
     font-size: 16px;
   }
 }
@@ -386,7 +568,6 @@ main {
   }
 }
 
-/*Product site styling*/
 .productCard {
   background: #E8DBCE;
   display: -webkit-box;
@@ -429,6 +610,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: Viga;
 }
 
 @media (min-width: 769px) {
@@ -456,6 +638,7 @@ main {
 
 .productCard .productName {
   text-align: center;
+  font-family: Viga, "sans-serif";
 }
 
 @media (min-width: 769px) {
@@ -473,8 +656,11 @@ main {
 }
 
 .productCard .productDescriptionText {
-  font-size: 16px;
   text-align: center;
+  font-family: Roboto, "sans-serif";
+  font-weight: bold;
+  color: #424D55;
+  font-size: 16px;
 }
 
 @media (min-width: 769px) {
@@ -498,6 +684,7 @@ main {
   font-size: 18px;
   -webkit-box-shadow: 0px 8px 5px #424D55;
           box-shadow: 0px 8px 5px #424D55;
+  font-family: Viga, "sans-serif";
 }
 
 .productCard input[type=number]::-webkit-inner-spin-button,
@@ -505,7 +692,6 @@ main {
   opacity: 1;
 }
 
-/*End of product site styling*/
 /*Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
 .cartAndPayContent {
   /*Hela sidan förutom header & footer*/
@@ -519,20 +705,21 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 40px;
   padding-bottom: 40px;
 }
 
-.cartAndPayContent .shoppingCartH2 {
+.cartAndPayContent .cartAndPayMainHeading {
   /*H2 högst upp*/
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 22px;
   text-decoration: underline;
   margin: 20px 0px 20px 0px;
 }
 
-.cartContent {
+.cartAndPayContentBox {
   /*Den beiga boxen*/
   background-color: #E8DBCE;
   display: -webkit-box;
@@ -548,27 +735,102 @@ main {
   width: 80%;
   padding: 10px;
   padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 
-.cartContent .cartProductHeading {
-  /*h3:an i beiga rutan högst upp*/
+@media (min-width: 769px) {
+  .cartAndPayContentBox {
+    width: 60%;
+  }
+}
+
+.cartAndPayContentBox .cartHeadings {
+  /*Wrappar alla h3:or*/
+}
+
+@media (min-width: 769px) {
+  .cartAndPayContentBox .cartHeadings {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.cartAndPayContentBox .cartHeadings .cartProductHeading {
+  /*Alla h3:or*/
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 20px;
-  margin: 15px 0px 0px 0px;
 }
 
-.cartContent hr {
+@media (min-width: 769px) {
+  .cartAndPayContentBox .cartHeadings :first-child {
+    width: 40%;
+  }
+}
+
+.cartAndPayContentBox .cartHeadings .cartQuantityHeading {
+  /*Quantity h3:a*/
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .cartAndPayContentBox .cartHeadings .cartQuantityHeading {
+    display: block;
+  }
+}
+
+.cartAndPayContentBox .cartHeadings .cartPriceHeading {
+  /*Price h3:a*/
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .cartAndPayContentBox .cartHeadings .cartPriceHeading {
+    display: block;
+    justify-self: flex-end;
+  }
+}
+
+.cartAndPayContentBox .cartAndPayHeading {
+  /*Alla h3:or*/
+  font-family: Roboto, "sans-serif";
+  font-weight: bold;
+  color: #424D55;
+  font-size: 20px;
+}
+
+.cartAndPayLine {
   /*De horisentella linjerna*/
   width: 90%;
   border-top: 1px solid #424D55;
   border-bottom: none;
 }
 
+@media (min-width: 769px) {
+  .cartAndPayLine {
+    width: 99%;
+  }
+  .cartAndPayLine hr {
+    /*De horisentella linjerna*/
+    width: 90%;
+    border-top: 1px solid #424D55;
+    border-bottom: none;
+  }
+}
+
 .cartTheProduct {
   /*Sektionen från ena linjen till nedersta linjen*/
-  width: 100%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -581,6 +843,16 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 15px 0px 15px 0px;
+}
+
+@media (min-width: 769px) {
+  .cartTheProduct {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 20px;
+  }
 }
 
 .cartTheProduct .wrapperForProductImgCart {
@@ -601,7 +873,6 @@ main {
   background-color: #F9F5F2;
   height: 110px;
   width: 95px;
-  margin: 10px 0px 0px 15px;
 }
 
 .cartTheProduct .wrapperForProductImgCart .productImageInCart {
@@ -613,13 +884,12 @@ main {
 .cartTheProduct .cartProductNameHeading {
   /*Produktnamn*/
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 15px;
   overflow-wrap: break-word;
   max-width: 100px;
-  margin-top: 10px;
-  padding-right: 20px;
+  margin-top: 0px;
 }
 
 .cartTheProduct .inputQuantityAndDeleteButtonWrapper {
@@ -637,7 +907,13 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 15px;
+  margin: 15px 0px;
+}
+
+@media (min-width: 769px) {
+  .cartTheProduct .inputQuantityAndDeleteButtonWrapper {
+    margin-top: 0px;
+  }
 }
 
 .cartTheProduct .inputQuantityAndDeleteButtonWrapper .inputQuantityInCart {
@@ -648,8 +924,8 @@ main {
   border: none;
   margin-right: 12px;
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 12px;
 }
 
@@ -662,11 +938,20 @@ main {
 .cartTheProduct .priceHeadingInCart {
   /*Pris*/
   font-family: Roboto, "sans-serif";
-  color: #424D55;
   font-weight: 400;
+  color: #424D55;
   font-size: 15px;
   margin: 0px;
-  padding-right: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (min-width: 769px) {
+  .cartTheProduct .priceHeadingInCart {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
 }
 
 .cartTotalPriceSection {
@@ -680,24 +965,36 @@ main {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 90%;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 769px) {
+  .cartTotalPriceSection {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 .cartTotalPriceSection p {
   /*Total och product price*/
   font-family: Roboto, "sans-serif";
+  font-weight: bold;
   color: #424D55;
-  font-weight: 400;
   font-size: 15px;
-  width: 50%;
 }
 
-.cartTotalPriceSection :nth-child(2) {
-  text-align: end;
+@media (min-width: 769px) {
+  .cartTotalPriceSection :nth-child(2) {
+    padding-left: 20px;
+  }
 }
 
-.cartCheckoutButton {
+.checkoutAndPayButton {
   width: 170px;
   height: 30px;
   background-color: #08B519;
@@ -707,10 +1004,106 @@ main {
   font-size: 15px;
   -webkit-box-shadow: 1px 1px 4px #424D55;
           box-shadow: 1px 1px 4px #424D55;
+  cursor: pointer;
+}
+
+.billingAndShippingBox {
+  /*Hela billing&Shipping boxen*/
+  display: none;
+}
+
+.billingAndShippingForm {
+  /*Formuläret*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .billingAndShippingForm {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+.billingAndShippingForm .requiredInfoBillingAndShippingForm {
+  /*Section med alla inputfält*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 150px;
+}
+
+@media (min-width: 769px) {
+  .billingAndShippingForm .requiredInfoBillingAndShippingForm {
+    width: 30%;
+  }
+}
+
+.billingAndShippingForm .textAreaAndButtonInForm {
+  /*Section med textarea och button*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.billingAndShippingForm .textAreaAndButtonInForm .checkoutAndPayButton {
+  /*Knappen i formuläret*/
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 20px;
+}
+
+@media (min-width: 769px) {
+  .billingAndShippingForm .textAreaAndButtonInForm .checkoutAndPayButton {
+    width: 240px;
+  }
+}
+
+input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] {
+  /*Alla input och textarea*/
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #F9F5F2;
+  font-family: Roboto, "sans-serif";
+  font-weight: bold;
+  color: #424D55;
+  font-size: 15px;
+}
+
+textarea[name="billingAndShippingInfo"] {
+  /*Textarea*/
+}
+
+@media (min-width: 769px) {
+  textarea[name="billingAndShippingInfo"] {
+    height: 245px;
+    width: 230px;
+  }
 }
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
-/*Sign in & registration/become a member popup form*/
 .popupForm {
   background: #E8DBCE;
   display: -webkit-box;
@@ -723,22 +1116,43 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  font-family: Viga, "sans-serif";
+}
+
+@media (min-width: 769px) {
+  .popupForm {
+    width: 350px;
+    padding-top: 20px;
+    position: relative;
+    margin: 0 auto;
+  }
 }
 
 .popupForm .closeIcon {
   width: auto;
-  height: 20px;
-  float: right;
-  padding: 8px;
+  height: 18px;
+  /*
+        float: right;
+        padding: 8px;
+        */
   margin-bottom: 30px;
+  padding: 8px;
+  position: absolute;
+  right: 20px;
 }
 
 .popupForm .centerText {
   text-align: center;
+  color: #424D55;
 }
 
 .popupForm .litleText {
-  font-size: 14px;
+  font-size: 12px;
+  color: #424D55;
 }
 
 .popupForm .inputSignin {
@@ -747,7 +1161,7 @@ main {
   padding: 4px;
 }
 
-.popupForm #formBtn {
+.popupForm .formBtn {
   height: auto;
   width: 170px;
   border: 1px solid black;
@@ -757,15 +1171,16 @@ main {
 
 .popupForm .signInBtn {
   background: #424D55;
-  color: #E8DBCE;
+  color: white;
 }
 
 .popupForm .becomeMemberBtn {
   background: #CFA48D;
-  color: #424D55;
+  color: #252525;
 }
 
-/*End of Sign in & registration/become a member popup form*/
+/*End of Sign in popup form///////////////////////////
+
 /* Main content in the home page */
 #welcomeText {
   font-family: rock salt;

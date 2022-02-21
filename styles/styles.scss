@@ -93,6 +93,64 @@ main {
     margin: 0px;
 }
 
+
+//------------Hamburger Menu style ---------
+
+.ham-nav {
+    display:flex;
+    flex-direction: column;
+    background: $white;
+    min-height: calc(100% - 390px);
+    width: 75%;
+    position: absolute;
+    align-self: flex-start;
+    box-shadow: 0px 5px 10px 0px #00000081;
+
+    @include for-tablet {
+        width: 65%;
+    }
+
+        @include for-small-screen {
+            display: none;
+        }
+}
+
+.hide-ham{
+    display:none;
+}
+
+#ham-top {
+    width: 100%;
+    height: 127px;
+    background-color: $darkblue;
+    display:flex;
+    align-items: center;
+
+
+    img {
+        margin:40px;
+        margin-top:50px;
+        height:25px;
+    }
+}
+
+#menu-items {
+    display:flex;
+    flex-direction: column;
+    
+    .menu-item {
+        border-bottom: 2px solid $darkblue;
+        text-align: center;
+
+        h4{
+            margin: 25px;
+            @include roboto-text(24px);
+        }
+    }
+}
+
+//----------End of style hamburger menu--------
+
 /* Styling for footer */
 .footer {
     display: flex;
@@ -165,6 +223,69 @@ main {
     margin: 15px;
 }
 
+//----------------Categories & search input styling--------------------
+
+.searchForm {
+    background: white;
+    border: 1px solid currentColor;
+    border-radius: 5px;
+    position: absolute;
+    float: right;
+    right: 20px;
+    height: 35px;
+    @include for-large-screen {
+        margin-top: 50px;
+        margin-right: 30px;
+    }
+}
+.columnSearch {
+    padding-top: 20px; 
+}
+
+input[type="search"] {
+    background: transparent;
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    padding-top: 5px;
+  }
+
+input[type="search"]::placeholder {
+  @include roboto-text(18px);
+  padding-left: 8px;
+}
+
+
+.searchBtn {
+    background: none;
+    border-radius: 5px;
+    border-color: white;
+    width: auto;
+    height: 35px;
+}
+.categoriesList {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    @include roboto-text(20px);
+    
+    @include for-small-screen {
+        /*
+        position: relative;
+        float: left;
+        left: 150px;
+        */
+        margin-right: 200px;
+        
+    }
+
+} 
+
+//----------------End of categories &search input----------------------
+
 // --------------------Product list-------------------------
 
 
@@ -178,20 +299,20 @@ main {
 //Wraps all the articles
 .product-list-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap:wrap;
+    width: 360px;
     margin-top: 50px;
     margin-bottom:50px;
 
     
 
     @include for-small-screen{
-    max-width: 1000px;
+    width: 750px;
     margin: 20px;
     }
 
     @include for-large-screen{
-        max-width:1200px;
+        width:1010px;
     }
 }
 
@@ -261,7 +382,7 @@ main {
 
 //--------------End of pruductlist---------------------
 
-/*Product site styling*/////////////////////////////////
+//-------------------Product site styling---------------//
 .productCard {
     background: $beige;
     display: flex;
@@ -282,6 +403,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-family: Viga;
         @include for-small-screen {
             /*background: $beige;*/
             padding: 0px 0px 0px 10px;
@@ -301,6 +423,7 @@ main {
     .productName {
 
         text-align: center;
+        font-family: Viga, "sans-serif";
         @include for-small-screen {
             font-size: 28px;
             align-content: flex-start;
@@ -313,8 +436,8 @@ main {
     }
 
     .productDescriptionText {
-        font-size: 16px;
         text-align: center;
+        @include roboto-text(16px);
         @include for-small-screen {
             text-align: left;
         }
@@ -333,6 +456,7 @@ main {
         padding: 8px 100px;
         font-size: 18px;
         box-shadow: 0px 8px 5px $darkblue;
+        font-family: Viga, "sans-serif";
     }
     /*To have arrows (increment/decrement) visible for amount of porduct changing*/
     input[type=number]::-webkit-inner-spin-button, 
@@ -341,7 +465,7 @@ main {
     }
 
 }
-/*End of product site styling*/////////////////////////
+//-------------End of product site styling------------//
 
 /*Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
 
@@ -349,16 +473,17 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 40px;
     padding-bottom: 40px;
 
-    .shoppingCartH2 { /*H2 högst upp*/
+    .cartAndPayMainHeading { /*H2 högst upp*/
         @include roboto-text(22px);
         text-decoration: underline;
         margin: 20px 0px 20px 0px; 
     }
 }
 
-.cartContent { /*Den beiga boxen*/
+.cartAndPayContentBox { /*Den beiga boxen*/
     background-color: $beige;
     display: flex;
     flex-direction: column;
@@ -366,25 +491,83 @@ main {
     width: 80%;
     padding: 10px;
     padding-bottom: 40px;
+    margin-bottom: 40px;
 
-    .cartProductHeading { /*h3:an i beiga rutan högst upp*/
-        @include roboto-text(20px);
-        margin: 15px 0px 0px 0px;
+    @include for-small-screen {
+        width: 60%;
     }
 
-    hr { /*De horisentella linjerna*/
-        width: 90%;
-        border-top: 1px solid $darkblue;
-        border-bottom: none;
+    .cartHeadings {/*Wrappar alla h3:or*/
+
+        @include for-small-screen{
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .cartProductHeading { /*Alla h3:or*/
+            @include roboto-text(20px);
+        }
+
+        :first-child {
+
+            @include for-small-screen {
+                width: 40%;
+            }
+        }
+    
+        .cartQuantityHeading { /*Quantity h3:a*/
+            display: none;
+    
+            @include for-small-screen {
+                display:block;
+            }
+        }
+    
+        .cartPriceHeading { /*Price h3:a*/
+            display: none;
+    
+            @include for-small-screen {
+                display: block;
+                justify-self: flex-end;
+            }
+        }
+
+    }
+
+    .cartAndPayHeading { /*Alla h3:or*/
+        @include roboto-text(20px);
+    }
+}
+
+.cartAndPayLine { /*De horisentella linjerna*/
+    width: 90%;
+    border-top: 1px solid $darkblue;
+    border-bottom: none;
+
+    @include for-small-screen {
+        width: 99%;  
+        hr { /*De horisentella linjerna*/
+            width: 90%;
+            border-top: 1px solid $darkblue;
+            border-bottom: none;
+        }
     }
 }
 
 .cartTheProduct { /*Sektionen från ena linjen till nedersta linjen*/
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 15px 0px 15px 0px;
+
+    @include for-small-screen {
+        align-items: flex-start;
+        margin-top: 20px;
+    }
 
     .wrapperForProductImgCart { /*Det vita runt bilden*/
         display: flex;
@@ -394,7 +577,6 @@ main {
         background-color: $white;
         height: 110px;
         width: 95px;
-        margin: 10px 0px 0px 15px;
 
         .productImageInCart { /*Produktbilden*/
             width: auto;
@@ -406,8 +588,7 @@ main {
         @include roboto-text(15px);
         overflow-wrap: break-word;
         max-width: 100px;
-        margin-top: 10px;
-        padding-right: 20px;
+        margin-top: 0px;
     }
 
     .inputQuantityAndDeleteButtonWrapper { /*Wrappar input antal och delete ikon*/
@@ -415,7 +596,11 @@ main {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin: 15px;
+        margin: 15px 0px;
+
+        @include for-small-screen{
+            margin-top: 0px;
+        }
         
         .inputQuantityInCart { /*Input antal produkter*/
             width: 60px;
@@ -434,9 +619,13 @@ main {
 
 
     .priceHeadingInCart { /*Pris*/
-        @include roboto-text(15px);
+        @include roboto-text-light(15px);
         margin: 0px;
-        padding-right: 20px;
+        align-self: center;
+
+        @include for-small-screen {
+            align-self: flex-start;
+        }
     }
     
 
@@ -446,21 +635,27 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 90%;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    @include for-small-screen {
+        justify-content: flex-end;
+    }
 
     p { /*Total och product price*/
         @include roboto-text(15px);
-        width: 50%;
     }
 
     :nth-child(2) {
-        text-align: end
+        @include for-small-screen {
+            padding-left: 20px;
+        }
     }
 
 }
 
-.cartCheckoutButton {
+.checkoutAndPayButton {
     width: 170px;
     height: 30px;
     background-color: $green;
@@ -469,30 +664,112 @@ main {
     color: $white;
     font-size: 15px;
     box-shadow: 1px 1px 4px $darkblue;
+    cursor: pointer;
 }
+
+//Billing and Shipping
+
+.billingAndShippingBox { /*Hela billing&Shipping boxen*/
+    display: none;
+}
+
+.billingAndShippingForm { /*Formuläret*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include for-small-screen {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .requiredInfoBillingAndShippingForm { /*Section med alla inputfält*/
+        display: flex;
+        flex-direction: column;
+        min-width: 150px;
+
+        @include for-small-screen {
+            width: 30%;
+        }
+    }
+
+    .textAreaAndButtonInForm { /*Section med textarea och button*/
+        display: flex;
+        flex-direction: column;
+
+        .checkoutAndPayButton { /*Knappen i formuläret*/
+            align-self: center;
+            margin-top: 20px;
+
+            @include for-small-screen {
+                width: 240px;
+            }
+        }
+    }
+}
+
+input[name="billingAndShippingInfo"], textarea[name="billingAndShippingInfo"] { /*Alla input och textarea*/
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background: $white;
+    @include roboto-text(15px);
+}
+
+textarea[name="billingAndShippingInfo"] { /*Textarea*/
+
+    @include for-small-screen {
+        height: 245px;
+        width: 230px;
+    }
+}
+
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/////////////////
 
-/*Sign in & registration/become a member popup form*///////////////////////////////////
+//---------------Sign in popup form----------------------//
+
+
 .popupForm {
-    background: $beige;
+    background: $beige; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    font-family: Viga, "sans-serif";
+    
+    
+    @include for-small-screen{
+        width: 350px;
+        padding-top: 20px;
+        position: relative;
+        margin: 0 auto;
+        
+    }
 
     .closeIcon {
         width: auto;
-        height: 20px;
+        height: 18px;
+        /*
         float: right;
         padding: 8px;
+        */
         margin-bottom: 30px;
+        padding: 8px;
+        position: absolute;
+        right: 20px;
     }
 
     .centerText {
         text-align: center;
+        color: $darkblue;
     }
     .litleText {
-        font-size: 14px;
+        font-size: 12px;
+        color: $darkblue;
     }
 
     .inputSignin {
@@ -500,7 +777,7 @@ main {
         border-radius: 2px;
         padding: 4px;
     }
-    #formBtn {
+    .formBtn {
         height: auto;
         width: 170px;
         border: 1px solid black;
@@ -509,17 +786,17 @@ main {
     }
     .signInBtn {
         background: $darkblue;
-        color: $beige;
+        color: white;
     }
     .becomeMemberBtn {
         background: $brown;
-        color: $darkblue;
+        color: rgb(37, 37, 37);
     }
 }
 
 
 
-/*End of Sign in & registration/become a member popup form*///////////////////////////
+/*End of Sign in popup form///////////////////////////
 
 /* Main content in the home page */
 #welcomeText {
