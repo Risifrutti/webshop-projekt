@@ -28,7 +28,7 @@
         </a>
 
         <div class="headerElements">
-            <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle hideHeaderElements">Sign
+            <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle hideHeaderElements signInHeader">Sign
                 in</a>
 
             <a href="/webshop-projekt/HTML/shoppingcart.html">
@@ -40,60 +40,23 @@
         </div>
     </header>
     <main>
-        
-        <div class="popupForm">
-            <form id="loginForm">
-                <img src="/webshop-projekt/Pictures/Icons/krysset-svart.png" alt="close popup" class="closeIcon"><br>
-                <h2 class="centerText">Sign in</h2>
-                <label for="email" class="email litleText">E-mail *</label><br>
-                <input type="text" id="email" class="inputSignin" placeholder="Email address"><br>
-                <label for="password" class="password litleText">Password *</label><br>
-                <input type="password" id="password" class="inputSignin" placeholder="Password"><br>
-                <p class="litleText centerText">Forgot password?</p>
-                <p><button class="signInBtn formBtn">Sign in</button></p>
-                <p><button class="becomeMemberBtn formBtn">Become a member</button></p>
-            </form> 
-        </div>
 
-<!-- BECOME A MEMBER - Victoria -->
-        <!-- 
-        <div class="bg-modal">
-            <div class="modal-contents">
-
-                <div class="close">+</div>
-                <h2>Become a member</h2>
-                <h3>Become a member — don’t miss out on deals, offers, discounts and bonus vouchers.</h3>
-                <hr>
-
+        <div class="background-modal">
+            <div class="signIn-content">
                 <form action="">
-                    <input type="text" placeholder="Name *">
-                    <input type="text" placeholder="E-Mail *">
-                    <input type="text" placeholder="Street Address *">
-                    <input type="text" placeholder="Create Password *">
-                    <input type="text" placeholder="Postcode / ZIP *">
-                    <input type="text" placeholder="Birthday dd/mm/yyyy">
-                    <input type="text" placeholder="Town / City *">
-                    <input type="text" placeholder="Phone Number">
-
-                    <p><button class="signInBtn formBtn">Become a member</button></p>
-                    <p><button class="becomeMemberBtn formBtn">Back to sign in</button></p>
-
-                    <!--<a href="#" class="button">Become a Member</a>
-                    <br>
-                   <a href="#" class="button">Back to sign in</a> -->
-                 <!-- 
+                    <div id="popupClose" class="closePopup">+</div>
+                    <h2 class="sigInText">Sig in</h2>
+                    <label class="smallText textLeft" for="email">Email *</label><br>
+                    <input type="email" placeholder="Email address" class="inputSignIn"><br>
+                    <label class="smallTex textLeft" for="password">Password *</label><br>
+                    <input type="password" placeholder="Password" class="inputSignIn"><br>
+                    <p class="smallText">Forgot password?</p><br>
+                    <button class="signInButton popupBtn">Sign in</button><br>
+                    <button class="becomeMemberButton popupBtn">Become a member</button>
                 </form>
-
             </div>
+
         </div>
-        -->
-
-<!-- Victoria -->
-
-
-
-
-
 
 
     </main>

@@ -731,7 +731,8 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
 
 //---------------Sign in popup form----------------------//
 
-
+// kommenterar bort
+/*
 .popupForm {
     background: $beige; 
     display: flex;
@@ -754,10 +755,6 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     .closeIcon {
         width: auto;
         height: 18px;
-        /*
-        float: right;
-        padding: 8px;
-        */
         margin-bottom: 30px;
         padding: 8px;
         position: absolute;
@@ -795,7 +792,86 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     }
 }
 
+//slut av kommentera bort
+*/
+////////////////////////////////////////////////////////////////////////////////////
+/*------Ny popup----*/
+/*Den svarta transparent background in popupforms*/
+.background-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/*Popupfönstret*/
+.signIn-content {
+    width: 500px;
+    height: 400px;
+    background-color: $beige;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    font-family: Viga, "sans-serif";
+    color: $darkblue;
+}
 
+/*close popup styling*/
+.closePopup {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+
+    color: $darkblue;
+    transform: rotate(45deg);
+    cursor: pointer; /*handen visas på close "X" knappen*/
+}
+.inputSignIn {
+    width: 50%;
+    display: block; /*för att ingen annat element ska ta plats i rad*/
+    margin: 0px auto;
+    padding: 5px;
+    border: 1px solid $darkblue;
+    border-radius: 5px;
+}
+.smallText {
+    font-size: 12px;
+}
+.textLeft {
+    font-size: 12px;
+    position: relative;
+    float:left;
+    margin-left: 25%;
+}
+
+.popupBtn {
+    border-radius: 5px;
+    width: 50%;
+    display: block;
+    margin: 0px auto;
+    padding: 5px;
+    border: 1px solid black;
+   
+}
+
+.signInButton {
+    background-color: $darkblue;
+    color: white;
+    cursor: pointer;
+}
+.becomeMemberButton {
+    background-color: $brown;
+    color: black;
+    cursor: pointer;
+}
+////////////////////////////////////////////////////////////////////////////////////
 
 /*End of Sign in popup form///////////////////////////
 
@@ -880,9 +956,9 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
 
 
 /* BECOME A MEMBER - Victoria */
-
+/*
 .button {
-	background-color: $blue;
+	background-color: $darkblue;
 	border: 2px solid white;
 	border-radius: 30px;
 	text-decoration: none;
@@ -892,7 +968,7 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
 	display: inline-block;
 	&:hover {
 		background-color: white;
-		color: $blue;
+		color: $darkblue;
 		border: 2px solid $blue;
 	}
 }
@@ -953,6 +1029,6 @@ input {
 	}
 
    }
-
+*/
 /* Victoria */
     

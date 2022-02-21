@@ -1105,79 +1105,154 @@ textarea[name="billingAndShippingInfo"] {
 }
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
+/*
 .popupForm {
-  background: #E8DBCE;
+    background: $beige; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    font-family: Viga, "sans-serif";
+    
+    
+    @include for-small-screen{
+        width: 350px;
+        padding-top: 20px;
+        position: relative;
+        margin: 0 auto;
+        
+    }
+
+    .closeIcon {
+        width: auto;
+        height: 18px;
+        margin-bottom: 30px;
+        padding: 8px;
+        position: absolute;
+        right: 20px;
+    }
+
+    .centerText {
+        text-align: center;
+        color: $darkblue;
+    }
+    .litleText {
+        font-size: 12px;
+        color: $darkblue;
+    }
+
+    .inputSignin {
+        border: 1px solid $darkblue;
+        border-radius: 2px;
+        padding: 4px;
+    }
+    .formBtn {
+        height: auto;
+        width: 170px;
+        border: 1px solid black;
+        border-radius: 2px;
+        padding: 4px;
+    }
+    .signInBtn {
+        background: $darkblue;
+        color: white;
+    }
+    .becomeMemberBtn {
+        background: $brown;
+        color: rgb(37, 37, 37);
+    }
+}
+
+//slut av kommentera bort
+*/
+/*------Ny popup----*/
+/*Den svarta transparent background in popupforms*/
+.background-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding-top: 10px;
-  padding-bottom: 40px;
-  font-family: Viga, "sans-serif";
 }
 
-@media (min-width: 769px) {
-  .popupForm {
-    width: 350px;
-    padding-top: 20px;
-    position: relative;
-    margin: 0 auto;
-  }
-}
-
-.popupForm .closeIcon {
-  width: auto;
-  height: 18px;
-  /*
-        float: right;
-        padding: 8px;
-        */
-  margin-bottom: 30px;
-  padding: 8px;
-  position: absolute;
-  right: 20px;
-}
-
-.popupForm .centerText {
+/*Popupfönstret*/
+.signIn-content {
+  width: 500px;
+  height: 400px;
+  background-color: #E8DBCE;
+  border-radius: 4px;
   text-align: center;
+  padding-top: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  font-family: Viga, "sans-serif";
   color: #424D55;
 }
 
-.popupForm .litleText {
-  font-size: 12px;
+/*close popup styling*/
+.closePopup {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
   color: #424D55;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  cursor: pointer;
+  /*handen visas på close "X" knappen*/
 }
 
-.popupForm .inputSignin {
+.inputSignIn {
+  width: 50%;
+  display: block;
+  /*för att ingen annat element ska ta plats i rad*/
+  margin: 0px auto;
+  padding: 5px;
   border: 1px solid #424D55;
-  border-radius: 2px;
-  padding: 4px;
+  border-radius: 5px;
 }
 
-.popupForm .formBtn {
-  height: auto;
-  width: 170px;
+.smallText {
+  font-size: 12px;
+}
+
+.textLeft {
+  font-size: 12px;
+  position: relative;
+  float: left;
+  margin-left: 25%;
+}
+
+.popupBtn {
+  border-radius: 5px;
+  width: 50%;
+  display: block;
+  margin: 0px auto;
+  padding: 5px;
   border: 1px solid black;
-  border-radius: 2px;
-  padding: 4px;
 }
 
-.popupForm .signInBtn {
-  background: #424D55;
+.signInButton {
+  background-color: #424D55;
   color: white;
+  cursor: pointer;
 }
 
-.popupForm .becomeMemberBtn {
-  background: #CFA48D;
-  color: #252525;
+.becomeMemberButton {
+  background-color: #CFA48D;
+  color: black;
+  cursor: pointer;
 }
 
 /*End of Sign in popup form///////////////////////////
@@ -1266,58 +1341,79 @@ textarea[name="billingAndShippingInfo"] {
 }
 
 /* BECOME A MEMBER - Victoria */
+/*
+.button {
+	background-color: $darkblue;
+	border: 2px solid white;
+	border-radius: 30px;
+	text-decoration: none;
+	padding: 10px 28px;
+	color: white;
+	margin-top: 10px;
+	display: inline-block;
+	&:hover {
+		background-color: white;
+		color: $darkblue;
+		border: 2px solid $blue;
+	}
+}
+
+
+
+
 .bg-modal {
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /*display: none;*/
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
 }
 
 .modal-contents {
-  height: 500px;
-  width: 400px;
-  background-color: #E8DBCE;
-  text-align: center;
-  border-radius: 4px;
-  padding: 20px;
-  position: relative;
+	height: 500px;
+	width: 400px;
+	background-color: #E8DBCE;
+	text-align: center;
+    border-radius: 4px;
+	padding: 20px;
+	position: relative;
+	
 }
 
 h2 {
-  font-family: Viga, sans-serif;
-  color: #424D55;
+	font-family: Viga, sans-serif; 
+    color: #424D55;
 }
 
 h3 {
-  font-family: roboto-text, sans-serif;
-  color: #424D55;
+    font-family: roboto-text, sans-serif;
+    color: #424D55
 }
 
 input {
-  margin: 7px auto;
+	margin: 15px auto;
+	display: block;
+	width: 50%;
+	padding: 8px;
+	border: 1px solid gray;
 }
 
 .close {
-  position: absolute;
-  top: 0;
-  right: 14px;
-  font-size: 42px;
-  color: #424D55;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  cursor: pointer;
-}
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    color: #424D55;
+    transform: rotate(45deg);
+    cursor: pointer;
+    &:hover {
+		color: #666;
+	}
 
+   }
+*/
 /* Victoria */
 /*# sourceMappingURL=styles.css.map */
