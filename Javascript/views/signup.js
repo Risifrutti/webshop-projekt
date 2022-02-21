@@ -31,3 +31,4 @@ closeBecomeMember.addEventListener("click", () => {
 	console.log("clicked");
 	becomeMemberPopup.style.display = "none"; //Döljer member popup
 });
+
