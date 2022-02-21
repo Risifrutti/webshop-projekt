@@ -163,6 +163,7 @@ main {
       align-self: flex-start;
   -webkit-box-shadow: 0px 5px 10px 0px #00000081;
           box-shadow: 0px 5px 10px 0px #00000081;
+  z-index: 99999;
 }
 
 @media (min-width: 481px) {

@@ -105,6 +105,7 @@ main {
     position: absolute;
     align-self: flex-start;
     box-shadow: 0px 5px 10px 0px #00000081;
+    z-index: 99999;
 
     @include for-tablet {
         width: 65%;
