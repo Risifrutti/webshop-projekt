@@ -421,7 +421,7 @@ input[type="search"]::placeholder {
         }
     }
     .productName {
-        font-size: 20px;
+
         text-align: center;
         font-family: Viga, "sans-serif";
         @include for-small-screen {
@@ -802,9 +802,14 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
 #welcomeText {
     font-family: rock salt;
     font-size: 18px;
-    border: 2px outset;
     text-align: center;
-    padding: 30px;
+    padding: 35px;
+
+    @include for-small-screen {
+        font-size: 32px;
+        padding: 55px;
+        color: #424D55;
+    }
 }
 
 #categoryBooks {
@@ -812,7 +817,6 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     text-align: center;
     color: black;
     font-family: viga;
-    font-size: 20px;
 }
 
 #categoryCassettes {
@@ -820,7 +824,6 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     text-align: center;
     color: black;
     font-family: viga;
-    font-size: 20px;
     
 }
 
@@ -829,19 +832,43 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     text-align: center;
     color: black;
     font-family: viga;
-    font-size: 20px;
+
+    #imageVHS {
+        height: 105px;
+        width: 100vw;
+
+        @include for-small-screen {
+            width: 100vw;
+            height: 40vh;
+        }
+    }
 }
 
 .categoryText {
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
+    transform: translate(-50%, -60%);
+    font-size: 25px;
+    border: 3px inset whitesmoke;
+    padding: 10px;
+
+    @include for-small-screen {
+        top: 42%;
+        border: 3px outset whitesmoke;
+        padding: 15px;
+        color: #22272b;
+        font-size: 35px;
+    }
 }
 
 .homepageImages {
-    width: 100%;
-    height: 100%;
-    opacity: 75%;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 65%;
+
+    @include for-small-screen {
+        width: 100vw;
+        height: 40vh;
+    }
 }
