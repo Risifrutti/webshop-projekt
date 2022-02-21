@@ -906,11 +906,9 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
 	height: 100%;
 	position: absolute;
 	top: 0;
-    display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
-    /*display: none;*/
-
 }
 
 .modal-contents {
@@ -935,7 +933,11 @@ h3 {
 }
 
 input {
-margin: 7px auto;
+	margin: 15px auto;
+	display: block;
+	width: 50%;
+	padding: 8px;
+	border: 1px solid gray;
 }
 
 .close {
@@ -946,6 +948,9 @@ margin: 7px auto;
     color: #424D55;
     transform: rotate(45deg);
     cursor: pointer;
+    &:hover {
+		color: #666;
+	}
 
    }
 
