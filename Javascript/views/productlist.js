@@ -54,6 +54,14 @@ async function saveToCartFromProdList() {
     addProdToCartIcons.forEach(icon => {
         icon.addEventListener("click", (e) => {
 
+<<<<<<< HEAD
+            i = e.target.id;
+            let prodstring = "";
+
+            if (data.products[i]) {
+
+                prodString = + JSON.stringify(data.products[i]);
+=======
             //Sparar ned varukorgens id som vi klickat på
             cartID = e.target.id;
             
@@ -62,6 +70,7 @@ async function saveToCartFromProdList() {
 
                 //Pushar in objektet från produktlistan till den nya tomma arrayen
                 arrayWProducts.push(JSON.stringify(data.products[cartID]));
+>>>>>>> d74cb849faddf57f8cf4a053663aee7d2489cbfa
 
                 //Sparar arrayen i localstorage under nyckeln "product" 
                localStorage.setItem(`product`, arrayWProducts);
@@ -70,5 +79,45 @@ async function saveToCartFromProdList() {
     })
 }
 
+<<<<<<< HEAD
+showProducts().then(saveToCartFromProdList());
+
+
+//--Sökfunktionen--
+const searchButton = document.getElementById("searchbutton");
+
+searchButton.addEventListener("click", async function (e) {
+    e.preventDefault();
+
+    const searchField = document.getElementById("searchfield");
+    const searchInput = searchField.value.toUpperCase();
+    const productList = document.querySelectorAll(".product-article");
+
+    const data = await fetchFile("/webshop-projekt/Javascript/data/products.json");
+
+    //Tar bort hideproduct-klassen från föregående sökningar
+    productList.forEach(element => {
+        if (element.classList.contains("hideProduct")) {
+            element.classList.remove("hideProduct");
+        }
+    });
+
+    //Jämför det användaren sökt på med produktens namn och beskrivning 
+    //och lägger till klassen "hideProduct" på de produkter som inte matchar.
+    data.products.forEach(element => {
+        if (!element.name.toUpperCase().includes(searchInput) && !element.prodDescription.toUpperCase().includes(searchInput)) {
+            productList.forEach(product => {
+                const productName = product.childNodes[3].childNodes[1].childNodes[1];
+                if (element.name.toUpperCase().includes(productName.innerText.toUpperCase())) {
+                    product.classList.add("hideProduct");
+                    console.log(product);
+                }
+            });
+        }
+    });
+});
+
+=======
 //Kör showProducts funktion först och när den är klar kör vi saceToCartFromProdList funktionen
 showProducts().then(saveToCartFromProdList()); 
+>>>>>>> d74cb849faddf57f8cf4a053663aee7d2489cbfa

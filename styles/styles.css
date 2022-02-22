@@ -583,6 +583,10 @@ input[type="search"]::placeholder {
   }
 }
 
+.hideProduct {
+  display: none;
+}
+
 .productCard {
   background: #E8DBCE;
   display: -webkit-box;
