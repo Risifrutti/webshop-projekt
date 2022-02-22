@@ -816,6 +816,7 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     background-color: $darkblue;
     color: white;
     cursor: pointer;
+    margin-top: 20px;
 }
 .becomeMemberButton {
     background-color: $brown;
@@ -867,6 +868,7 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5px;
 }
 
 /*End of become a member popup---------------------*/
