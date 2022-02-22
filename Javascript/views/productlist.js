@@ -16,7 +16,7 @@ async function showProducts() {
                 </a>
                 </section>
                 <section class="product-info"> 
-                <a href="/webshop-projekt/HTML/productsite.html" class="noLinkStyle">
+                <a href="/webshop-projekt/HTML/productsite.html?category=${element.category}&name=${element.name}" class="noLinkStyle">
                     <h3 class="product-name">${element.name}</h3>
                     <p class="product-price">${element.price}</p>
                     </a>
