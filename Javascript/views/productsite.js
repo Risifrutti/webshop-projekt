@@ -1,5 +1,5 @@
 //Funktion som ritar ut produkten man klickat på
-async function drawCurrentCategory() {
+async function drawCurrentProduct() {
     
     const data = await fetchFile("/webshop-projekt/Javascript/data/products.json");
 
@@ -33,7 +33,7 @@ async function drawCurrentCategory() {
     })    
 }
 
-drawCurrentCategory();
+drawCurrentProduct();
 
 //Funktion som sparar den produkt man klickat på i local storage
 async function saveToCartFromProdSite() {
