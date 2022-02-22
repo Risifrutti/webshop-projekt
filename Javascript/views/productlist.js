@@ -10,7 +10,7 @@ async function showProducts() {
         const product =
             `<article class="product-article">
                 <section class="product-image">
-                <a href="/webshop-projekt/HTML/productsite.html" class="noLinkStyle">
+                <a href="/webshop-projekt/HTML/productsite.html?category=${element.category}&name=${element.name}" class="noLinkStyle">
                 <img id="productimage" src=${element.prodImageURL}
                 alt="Product image"> 
                 </a>
