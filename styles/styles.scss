@@ -809,14 +809,13 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     margin: 0px auto;
     padding: 5px;
     border: 1px solid black;
-   
 }
 
 .signInButton {
     background-color: $darkblue;
     color: white;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .becomeMemberButton {
     background-color: $brown;
@@ -848,12 +847,14 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     text-align: center;
     padding-top: 15px;
     padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     position: relative;
     font-family: Viga, "sans-serif";
     color: $darkblue;
 }
 .becomeMemberHR {
-    width: 80%;
+    width: 90%;
 }
 .memberInput {
     border: 1px solid $darkblue;

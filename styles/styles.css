@@ -1203,7 +1203,7 @@ textarea[name="billingAndShippingInfo"] {
   background-color: #424D55;
   color: white;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .becomeMemberButton {
@@ -1244,13 +1244,15 @@ textarea[name="billingAndShippingInfo"] {
   text-align: center;
   padding-top: 15px;
   padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   position: relative;
   font-family: Viga, "sans-serif";
   color: #424D55;
 }
 
 .becomeMemberHR {
-  width: 80%;
+  width: 90%;
 }
 
 .memberInput {
