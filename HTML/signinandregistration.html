@@ -28,7 +28,8 @@
         </a>
 
         <div class="headerElements">
-            <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle hideHeaderElements signInHeader">Sign
+            <a href="/webshop-projekt/HTML/signinandregistration.html"
+                class="noLinkStyle hideHeaderElements signInHeader">Sign
                 in</a>
 
             <a href="/webshop-projekt/HTML/shoppingcart.html">
@@ -69,7 +70,7 @@
 
     <!-- End of Hamburger Menu -->
     <main>
-
+        <!------Popups ------>
         <div class="background-modal">
             <div class="signIn-content">
                 <form action="">
@@ -94,23 +95,32 @@
                     <h2 class="becomeMemberh2">Become a member</h2>
                     <h3>Become a member — don't miss out on deals, offers, discounts and bonus vouchers.</h3>
                     <hr class="becomeMemberHR">
-                    
-                    <input class="memberInput" type="text" placeholder="Name *">
-                    <input class="memberInput" type="email" placeholder="Email *">
-                    <input class="memberInput" type="text" placeholder="Street Address">
-                    <input class="memberInput" type="password" placeholder="Create Password *">
-                    
-                    <input class="memberInput" type="number" placeholder="Postcode / ZIP *">
-                    <input class="memberInput" type="date" placeholder="Birthday dd/mm/yyyy ">
-                    <input class="memberInput" type="text" placeholder="Town / City *">
-                    <input class="memberInput" type="tel" placeholder="Phone number">
-                    
+
+                    <table class="inputsTable">
+                        <tr>
+                            <td><input class="memberInput" type="text" placeholder="Name *"></td>
+                            <td><input class="memberInput" type="email" placeholder="Email *"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="memberInput" type="text" placeholder="Street Address *"></td>
+                            <td><input class="memberInput" type="password" placeholder="Create Password *"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="memberInput" type="text" placeholder="Town / City *"></td>
+                            <td><input class="memberInput" type="number" placeholder="Postcode / ZIP *"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="memberInput" type="tel" placeholder="Phone number"></td>
+                            <td><input class="memberInput" type="date" placeholder="Birthday dd/mm/yyyy "></td>
+                        </tr>
+
+                    </table>
                     <button class="signInButton popupBtn">Become a member</button><br>
                     <button class="becomeMemberButton popupBtn backToSignInButton">Back to Sign in</button>
                 </form>
             </div>
         </div>
-
+        <!--End of Popups-->
 
     </main>
     <footer class="footer">
@@ -133,8 +143,8 @@
         </nav>
     </footer>
 
-   <script src=""></script> 
-    <script src = "/webshop-projekt/Javascript/views/signup.js"></script>
+    <script src="/webshop-projekt/Javascript/views/hamburger.js"></script>
+    <script src="/webshop-projekt/Javascript/views/signup.js"></script>
 </body>
 
 </html>

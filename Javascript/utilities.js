@@ -1,6 +1,6 @@
 const searchButton = document.getElementById("searchbutton");
 
-searchButton.addEventListener("click", (e) => {
+searchButton.addEventListener("click", (e), async function () {
     e.preventDefault();
 
     const product = document.getElementById("product-article");
