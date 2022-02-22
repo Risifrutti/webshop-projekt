@@ -9,7 +9,7 @@ async function showProducts() {
     data.products.forEach(element => {
 
         const product =
-            `<article class="product-article">
+            `<article class="product-article" id="product-article">
                 <section class="product-image">
                 <a href="/webshop-projekt/HTML/productsite.html" class="noLinkStyle">
                 <img id="productimage" src=${element.prodImageURL}
