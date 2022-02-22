@@ -1,12 +1,11 @@
+//Funktion som ritar ut alla produkter som finns i products.json filen
 const productContainer = document.getElementById("productlist-container");
-
 
 async function showProducts() {
 
-    const response = await fetch("/webshop-projekt/Javascript/data/products.json");
-    const data = await response.json();
+    const data = await fetchFile("/webshop-projekt/Javascript/data/products.json");
 
-    data.products.forEach(element => {
+    data.products.forEach((element, index) => {
 
         const product =
             `<article class="product-article">
@@ -24,7 +23,7 @@ async function showProducts() {
                 </section>
                 
 
-                <img id="addToCartIcon" src="/webshop-projekt/pictures/Icons/addtocarticon2.png" alt="add to cart"
+                <img id="addToCartIcon ${index}" src="/webshop-projekt/pictures/Icons/addtocarticon2.png" alt="add to cart"
                     class="articleIcon">
             </article>
         `
@@ -36,4 +35,24 @@ async function showProducts() {
 
 }
 
-showProducts(); 
+//Funktion som sparar den produkt man klickat på i local storage
+async function saveToCartFromProdList() {
+
+    const data = await fetchFile("/webshop-projekt/Javascript/data/products.json");
+    
+    const addProdToCartIcons = document.querySelectorAll(".articleIcon");
+    let i;
+
+    addProdToCartIcons.forEach(icon => {
+        icon.addEventListener("click", (e) => {
+
+            i = e.target.id;
+            console.log(i);
+            console.log("klick " + e.target.id);
+
+            
+        })
+    })
+}
+
+showProducts().then(saveToCartFromProdList()); 
