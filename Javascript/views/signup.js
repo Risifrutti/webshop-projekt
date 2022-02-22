@@ -17,7 +17,7 @@ signInButtonHeader.forEach(button => {
 		e.preventDefault();
 		console.log("Sign in clicked");
 		signInPopup.style.display = "flex";
-		hamburgerMenu.classList.add("hide-ham");
+		hamburgerMenu.classList.add("hide-ham"); 
 	});
 });
 
