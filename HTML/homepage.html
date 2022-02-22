@@ -59,7 +59,7 @@
                     <h4>Shop</h4>
                 </div>
             </a>
-            <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle">
+            <a href="#" class="noLinkStyle signInHeader">
                 <div class="menu-item">
                     <h4>Sign in</h4>
                 </div>
@@ -114,7 +114,7 @@
 
         <div class="bg-modal">
             <div class="becomeMember-content">
-                <form action="">
+                <form action="" id="userForm">
                     <div id="popupClose" class="closePopup closeBecomeMember">+</div>
                     <h2 class="becomeMemberh2">Become a member</h2>
                     <h3>Become a member — don't miss out on deals, offers, discounts and bonus vouchers.</h3>
@@ -122,24 +122,43 @@
                     
                     <table class="inputsTable"> 
                         <tr>
-                            <td><input class="memberInput" type="text" placeholder="Name *"></td>
-                            <td><input class="memberInput" type="email" placeholder="Email *"></td>
+                            <td>
+                                <input class="memberInput" type="text" placeholder="Name *">
+                                <span class="errorMessage errors">Name field is required</span>
+                            </td>
+                            
+                            <td>
+                                <input class="memberInput" type="email" placeholder="Email *">
+                                <span class="errorMessage errors">Email is required</span>
+                            </td>   
                         </tr>
                         <tr>
-                            <td><input class="memberInput" type="text" placeholder="Street Address *"></td>
-                            <td><input class="memberInput" type="password" placeholder="Create Password *"></td>
+                            <td>
+                                <input class="memberInput" type="text" placeholder="Street Address *">
+                                <span class="errorMessage errors">Street address is required</span>
+                            </td>
+                            <td>
+                                <input class="memberInput" type="password" placeholder="Create Password *">
+                                <span class="errorMessage errors">Password is required</span>
+                            </td>
                         </tr>
                         <tr>
-                            <td><input class="memberInput" type="text" placeholder="Town / City *"></td>
-                            <td><input class="memberInput" type="number" placeholder="Postcode / ZIP *"></td>
+                            <td>
+                                <input class="memberInput" type="text" placeholder="Town / City *">
+                                <span class="errorMessage errors">This field is required</span>
+                            </td>
+                            <td>
+                                <input class="memberInput" type="number" placeholder="Postcode / ZIP *">
+                                <span class="errorMessage errors">This field is required</span>
+                            </td>
                         </tr>
                         <tr>
                             <td><input class="memberInput" type="tel" placeholder="Phone number"></td>
-                            <td><input class="memberInput" type="date" placeholder="Birthday dd/mm/yyyy "></td>
+                            <td><input class="memberInput" type="text" placeholder="Birthday dd/mm/yyyy "></td>
                         </tr>
                         
                     </table>
-                    <button class="signInButton popupBtn">Become a member</button><br>
+                    <button class="signInButton popupBtn memberBtn">Become a member</button><br>
                     <button class="becomeMemberButton popupBtn backToSignInButton">Back to Sign in</button>
                 </form>
             </div>
@@ -169,6 +188,7 @@
     <script src=""></script>
     <script src="/webshop-projekt/Javascript/views/hamburger.js"></script>
     <script src="/webshop-projekt/Javascript/views/signup.js"></script>
+    <script src="/webshop-projekt/Javascript/views/registration.js"></script>
 </body>
 
 </html>
