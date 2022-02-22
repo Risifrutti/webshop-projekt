@@ -15,11 +15,11 @@ signInButtonHeader.addEventListener("click", (e) => {
 	e.preventDefault();
 	console.log("Sign in clicked");
 	signInPopup.style.display = "flex";
-})
+});
 
 /*Closing sign in for with "X"*/ 
 closePopupButton.addEventListener("click", () => {
-	console.log("clicked");
+	console.log("clicked close");
 	signInPopup.style.display = "none"; //Döljer sign in popup
 });
 
