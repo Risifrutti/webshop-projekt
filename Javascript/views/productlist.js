@@ -10,7 +10,7 @@ async function showProducts() {
         const product =
             `<article class="product-article">
                 <section class="product-image">
-                <a href="/webshop-projekt/HTML/productsite.html" class="noLinkStyle">
+                <a href="/webshop-projekt/HTML/productsite.html?category=${element.category}&name=${element.name}" class="noLinkStyle">
                 <img id="productimage" src=${element.prodImageURL}
                 alt="Product image"> 
                 </a>
@@ -38,25 +38,37 @@ async function showProducts() {
 //Funktion som sparar den produkt man klickat på i local storage
 async function saveToCartFromProdList() {
 
+    //Hämtar fil och sparar promise 
     const data = await fetchFile("/webshop-projekt/Javascript/data/products.json");
 
+    //Hämtar alla varukorgsikoner 
     const addProdToCartIcons = document.querySelectorAll(".articleIcon");
-    let i;
+    
+    //Skapar variabel som ska hålla id:et på varukorgen vi klickar på
+    let cartID;
+    
+    //Skapar en tom array för att pusha in produkterna vi adderar i varukorgen
+    const arrayWProducts = [];
 
+    //forEach som går igenom varje ikon 
     addProdToCartIcons.forEach(icon => {
         icon.addEventListener("click", (e) => {
 
-            i = e.target.id;
-            let prodstring = "";
+            //Sparar ned varukorgens id som vi klickat på
+            cartID = e.target.id;
             
-            if (data.products[i]) {
+            //Om id:et matchar index i produktlistan
+            if (data.products[cartID]) {
 
-                prodString =+ JSON.stringify(data.products[i]);
+                //Pushar in objektet från produktlistan till den nya tomma arrayen
+                arrayWProducts.push(JSON.stringify(data.products[cartID]));
 
-                localStorage.setItem(`product`, prodString);
+                //Sparar arrayen i localstorage under nyckeln "product" 
+               localStorage.setItem(`product`, arrayWProducts);
             }
         })
     })
 }
 
+//Kör showProducts funktion först och när den är klar kör vi saceToCartFromProdList funktionen
 showProducts().then(saveToCartFromProdList()); 
