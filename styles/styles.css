@@ -1127,15 +1127,19 @@ textarea[name="billingAndShippingInfo"] {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0px;
+  padding-top: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+@media (min-width: 769px) {
+  .background-modal {
+    padding-top: 50px;
+  }
 }
 
 /*Popupfönstret*/
@@ -1214,16 +1218,21 @@ textarea[name="billingAndShippingInfo"] {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
-  top: 0;
+  top: 0px;
+  padding-top: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  /*align-items: center;*/
+}
+
+@media (min-width: 769px) {
+  .bg-modal {
+    padding-top: 80px;
+  }
 }
 
 .becomeMember-content {

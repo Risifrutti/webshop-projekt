@@ -750,9 +750,12 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0px;
+    padding-top: 150px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    @include for-small-screen {
+        padding-top: 50px;
+    }
     
 }
 /*Popupfönstret*/
@@ -827,10 +830,14 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
-    top: 0;
+    top: 0px;
+    padding-top: 180px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
+    @include for-small-screen{
+        padding-top: 80px;
+    }
 }
 .becomeMember-content {
     width: 500px;
