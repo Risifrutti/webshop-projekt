@@ -23,7 +23,7 @@ async function showProducts() {
                 </section>
                 
 
-                <img id="addToCartIcon ${index}" src="/webshop-projekt/pictures/Icons/addtocarticon2.png" alt="add to cart"
+                <img id="${index}" src="/webshop-projekt/pictures/Icons/addtocarticon2.png" alt="add to cart"
                     class="articleIcon">
             </article>
         `
@@ -39,7 +39,7 @@ async function showProducts() {
 async function saveToCartFromProdList() {
 
     const data = await fetchFile("/webshop-projekt/Javascript/data/products.json");
-    
+
     const addProdToCartIcons = document.querySelectorAll(".articleIcon");
     let i;
 
@@ -47,10 +47,14 @@ async function saveToCartFromProdList() {
         icon.addEventListener("click", (e) => {
 
             i = e.target.id;
-            console.log(i);
-            console.log("klick " + e.target.id);
-
+            let prodstring = "";
             
+            if (data.products[i]) {
+
+                prodString =+ JSON.stringify(data.products[i]);
+
+                localStorage.setItem(`product`, prodString);
+            }
         })
     })
 }
