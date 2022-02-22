@@ -41,19 +41,23 @@ async function saveToCartFromProdList() {
     const data = await fetchFile("/webshop-projekt/Javascript/data/products.json");
 
     const addProdToCartIcons = document.querySelectorAll(".articleIcon");
-    let i;
+    
+    let cartID;
+    
+    const arrayWProducts = [];
 
     addProdToCartIcons.forEach(icon => {
         icon.addEventListener("click", (e) => {
 
-            i = e.target.id;
-            let prodstring = "";
+            cartID = e.target.id;
             
-            if (data.products[i]) {
+            if (data.products[cartID]) {
 
-                prodString =+ JSON.stringify(data.products[i]);
+                arrayWProducts.push(JSON.stringify(data.products[cartID]));
 
-                localStorage.setItem(`product`, prodString);
+                console.log(arrayWProducts)
+
+               localStorage.setItem(`product`, arrayWProducts);
             }
         })
     })
