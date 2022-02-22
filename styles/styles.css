@@ -1126,16 +1126,20 @@ textarea[name="billingAndShippingInfo"] {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
-  top: 0;
+  top: 0px;
+  padding-top: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+@media (min-width: 769px) {
+  .background-modal {
+    padding-top: 50px;
+  }
 }
 
 /*Popupfönstret*/
@@ -1146,8 +1150,9 @@ textarea[name="billingAndShippingInfo"] {
   border-radius: 4px;
   text-align: center;
   padding-top: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 400px;
   position: relative;
+  margin-top: 50px;
   font-family: Viga, "sans-serif";
   color: #424D55;
 }
@@ -1198,6 +1203,7 @@ textarea[name="billingAndShippingInfo"] {
   background-color: #424D55;
   color: white;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .becomeMemberButton {
@@ -1213,16 +1219,21 @@ textarea[name="billingAndShippingInfo"] {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
-  top: 0;
+  top: 0px;
+  padding-top: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  /*align-items: center;*/
+}
+
+@media (min-width: 769px) {
+  .bg-modal {
+    padding-top: 80px;
+  }
 }
 
 .becomeMember-content {
@@ -1233,13 +1244,15 @@ textarea[name="billingAndShippingInfo"] {
   text-align: center;
   padding-top: 15px;
   padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   position: relative;
   font-family: Viga, "sans-serif";
   color: #424D55;
 }
 
 .becomeMemberHR {
-  width: 30%;
+  width: 90%;
 }
 
 .memberInput {
@@ -1261,13 +1274,19 @@ textarea[name="billingAndShippingInfo"] {
           align-items: center;
 }
 
-/*
-.inputsTable {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
 }
-*/
+
 /*End of become a member popup---------------------*/
 /*End of Sign in popup form///////////////////////////
 
