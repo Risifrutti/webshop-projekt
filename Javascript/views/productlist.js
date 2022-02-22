@@ -48,8 +48,8 @@ async function saveToCartFromProdList() {
     let cartID;
     
     //Skapar en tom array för att pusha in produkterna vi adderar i varukorgen
-    const arrayWProducts = [];
-
+    let arrayWProducts = [];
+    
     //forEach som går igenom varje ikon 
     addProdToCartIcons.forEach(icon => {
         icon.addEventListener("click", (e) => {
@@ -64,11 +64,15 @@ async function saveToCartFromProdList() {
                 arrayWProducts.push(JSON.stringify(data.products[cartID]));
 
                 //Sparar arrayen i localstorage under nyckeln "product" 
-               localStorage.setItem(`product`, arrayWProducts);
+               localStorage.setItem("products", arrayWProducts);
             }
+
+            console.log(localStorage.getItem("products"));
         })
     })
 }
+
+
 
 //Kör showProducts funktion först och när den är klar kör vi saceToCartFromProdList funktionen
 showProducts().then(saveToCartFromProdList()); 

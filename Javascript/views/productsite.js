@@ -45,9 +45,27 @@ async function saveToCartFromProdSite() {
     //Hämtar knappen
     const addToCartButtons = document.querySelectorAll(".addToCartButton");
 
+    let arrayWProducts = [];
+
+    //skapar variabel där id:et för knappen sparas
+    let cartID;
+
     addToCartButtons.forEach(button => {
+
         button.addEventListener("click", (e) => {
 
+            //Sparar ned varukorgens id som vi klickat på
+            cartID = e.target.id;
+            
+            //Om id:et matchar index i produktlistan
+            if (data.products[cartID]) {
+            
+                //Pushar in objektet från produktlistan till den nya tomma arrayen
+                arrayWProducts.push(JSON.stringify(data.products[cartID]));
+                
+                //Sparar arrayen i localstorage under nyckeln "product" 
+                localStorage.setItem("products", arrayWProducts);
+            }
         })
     })
 }
