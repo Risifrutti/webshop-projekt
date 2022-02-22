@@ -5,3 +5,4 @@ async function fetchFile(file) {
     
     return data;
 }
+
