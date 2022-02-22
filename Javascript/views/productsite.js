@@ -34,6 +34,7 @@ async function drawCurrentProduct() {
 }
 
 drawCurrentProduct();
+//
 
 //Funktion som sparar den produkt man klickat på i local storage
 async function saveToCartFromProdSite() {
@@ -53,4 +54,4 @@ async function saveToCartFromProdSite() {
     })
 }
 
-//saveToCartFromProdSite();
+saveToCartFromProdSite();
