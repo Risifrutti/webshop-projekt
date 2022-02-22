@@ -17,10 +17,9 @@ signInButtonHeader.forEach(button => {
 		e.preventDefault();
 		console.log("Sign in clicked");
 		signInPopup.style.display = "flex";
+		hamburgerMenu.classList.add("hide-ham");
 	});
-	
 });
-
 
 /*Closing sign in for with "X"*/ 
 closePopupButton.addEventListener("click", () => {

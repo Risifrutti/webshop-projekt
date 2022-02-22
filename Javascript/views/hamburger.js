@@ -9,5 +9,3 @@ hamburgerIcon.addEventListener("click", (e) => {
 closeHamIcon.addEventListener("click", (e) => {
     hamburgerMenu.classList.add("hide-ham");
 });
-
-
