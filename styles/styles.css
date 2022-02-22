@@ -1244,7 +1244,7 @@ textarea[name="billingAndShippingInfo"] {
   border-radius: 4px;
   text-align: center;
   padding-top: 15px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   padding-left: 10px;
   padding-right: 10px;
   position: relative;
@@ -1286,6 +1286,12 @@ table {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 5px;
+}
+
+/*Error messages text*/
+.errors {
+  font-size: 12px;
+  color: red;
 }
 
 /*End of become a member popup---------------------*/

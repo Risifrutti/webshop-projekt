@@ -15,21 +15,19 @@ signInPopup.style.display = "none"; //Gämmer Sign in popup
 signInButtonHeader.forEach(button => {
 	button.addEventListener("click", (e) => {
 		e.preventDefault();
-		console.log("Sign in clicked");
 		signInPopup.style.display = "flex";
-		hamburgerMenu.classList.add("hide-ham"); 
+		hamburgerMenu.classList.add("hide-ham"); //Döljer hamburgare meny
 	});
 });
 
 /*Closing sign in for with "X"*/ 
 closePopupButton.addEventListener("click", () => {
-	console.log("clicked close");
-	signInPopup.style.display = "none"; //Döljer sign in popup
+	signInPopup.style.display = "none";
 });
 
 /*Become a member form comes up on click to "Become a member" button*/
 becomeMemberButton.addEventListener("click", (e)=> {
-	e.preventDefault(); //Stoppar att "refresha" sida
+	e.preventDefault();
 	signInPopup.style.display = "none"; //Döljer sign in form popup
 	becomeMemberPopup.style.display = "flex"; //Visar become member popup
 }); 
@@ -41,7 +39,6 @@ backToSignInButton.addEventListener("click", (e) => {
 });
 
 closeBecomeMember.addEventListener("click", () => {
-	console.log("clicked");
 	becomeMemberPopup.style.display = "none"; //Döljer member popup
 });
 
