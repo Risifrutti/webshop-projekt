@@ -749,7 +749,7 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
-    top: 0;
+    top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -763,8 +763,9 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     border-radius: 4px;
     text-align: center;
     padding-top: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 400px;
     position: relative;
+    margin-top: 50px;
     font-family: Viga, "sans-serif";
     color: $darkblue;
 }
@@ -844,7 +845,7 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     color: $darkblue;
 }
 .becomeMemberHR {
-    width: 30%;
+    width: 80%;
 }
 .memberInput {
     border: 1px solid $darkblue;
@@ -855,13 +856,6 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     justify-content: center;
     align-items: center;
 }
-/*
-.inputsTable {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-*/
 
 /*End of become a member popup---------------------*/
 
