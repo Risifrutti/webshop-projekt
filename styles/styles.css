@@ -236,7 +236,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   background: #424D55;
-  position: relative;
+  /*position: relative; */
   bottom: 0;
   width: 100%;
   height: 390px;
@@ -1232,22 +1232,42 @@ textarea[name="billingAndShippingInfo"] {
   border-radius: 4px;
   text-align: center;
   padding-top: 15px;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   position: relative;
   font-family: Viga, "sans-serif";
   color: #424D55;
 }
 
 .becomeMemberHR {
-  width: 90%;
+  width: 30%;
 }
 
 .memberInput {
   border: 1px solid #424D55;
   border-radius: 5px;
-  padding: 5px;
+  /*padding: 5px;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
+/*
+.inputsTable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+*/
 /*End of become a member popup---------------------*/
 /*End of Sign in popup form///////////////////////////
 
