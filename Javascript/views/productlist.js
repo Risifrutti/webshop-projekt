@@ -35,3 +35,5 @@ async function showProducts() {
     });
 
 }
+
+showProducts(); 
