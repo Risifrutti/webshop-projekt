@@ -158,7 +158,7 @@ main {
     flex-direction: column;
     align-items: center;
     background: $darkblue;
-    position: relative;
+    /*position: relative; */ //För att popup background i mobile/dekstop view för komma över på footer
     bottom: 0;
     width: 100%;
     height: 390px;
@@ -838,20 +838,30 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     border-radius: 4px;
     text-align: center;
     padding-top: 15px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     position: relative;
     font-family: Viga, "sans-serif";
     color: $darkblue;
 }
 .becomeMemberHR {
-    width: 90%;
+    width: 30%;
 }
 .memberInput {
     border: 1px solid $darkblue;
     border-radius: 5px;
-    padding: 5px;
-    
+    /*padding: 5px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+/*
+.inputsTable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+*/
 
 /*End of become a member popup---------------------*/
 
