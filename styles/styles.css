@@ -572,6 +572,7 @@ input[type="search"]::placeholder {
   margin: 5px;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  cursor: pointer;
 }
 
 @media (min-width: 769px) {
