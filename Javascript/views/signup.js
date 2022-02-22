@@ -5,8 +5,17 @@ const signInPopup = document.querySelector(".background-modal"); //Hämtar sign 
 const becomeMemberPopup = document.querySelector(".bg-modal"); //Hämtar become a member popup form
 const backToSignInButton = document.querySelector(".backToSignInButton"); //Hämtar back to sign in button
 const closeBecomeMember = document.querySelector(".closeBecomeMember"); //Hämtar close "x" member form
+const signInButtonHeader = document.querySelector(".signInHeader"); //Sign in header
 
-becomeMemberPopup.style.display = "none"; //Gömma Become member popup när sign in sida laddas
+becomeMemberPopup.style.display = "none"; //Gömmer Become member popup när sign in sida laddas
+signInPopup.style.display = "none"; //Gämmer Sign in popup
+
+/* Sign in - header */
+signInButtonHeader.addEventListener("click", (e) => {
+	e.preventDefault();
+	console.log("Sign in clicked");
+	signInPopup.style.display = "flex";
+})
 
 /*Closing sign in for with "X"*/ 
 closePopupButton.addEventListener("click", () => {
