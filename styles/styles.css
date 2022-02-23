@@ -1233,13 +1233,12 @@ textarea[name="billingAndShippingInfo"] {
 
 .categoryText {
   position: absolute;
-  top: 35%;
+  top: 0%;
   left: 50%;
   -webkit-transform: translate(-50%, -60%);
           transform: translate(-50%, -60%);
-  font-size: 25px;
-  border: 3px inset whitesmoke;
-  padding: 10px;
+  font-size: 22px;
+  text-decoration: underline;
 }
 
 @media (min-width: 769px) {
@@ -1247,21 +1246,68 @@ textarea[name="billingAndShippingInfo"] {
     top: 42%;
     border: 3px outset whitesmoke;
     padding: 15px;
-    color: #22272b;
+    color: #000000;
     font-size: 35px;
+    text-decoration: none;
   }
 }
 
 .homepageImages {
   max-width: 100%;
   max-height: 100%;
-  opacity: 65%;
+  opacity: 75%;
+  -webkit-filter: invert(25%);
+          filter: invert(25%);
 }
 
 @media (min-width: 769px) {
   .homepageImages {
     width: 100vw;
     height: 40vh;
+    -webkit-filter: invert(0%);
+            filter: invert(0%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
+}
+
+/* Hover effect on desktop category images */
+@media (min-width: 769px) {
+  .homepageCategory:hover {
+    -webkit-filter: invert(33%);
+            filter: invert(33%);
+  }
+}
+
+.categoryDesc {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  width: 95vw;
+  font-size: 11px;
+  color: #fff;
+  text-shadow: 1px 2px 13px black;
+}
+
+#jsonCassettes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  width: 100vw;
+  font-size: 11px;
+}
+
+#jsonVHS {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  width: 100vw;
+  font-size: 11px;
 }
 /*# sourceMappingURL=styles.css.map */
