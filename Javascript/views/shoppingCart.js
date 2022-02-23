@@ -1,3 +1,12 @@
+//Ritar ut produkterna i varukorgen som man lagt till i varukorgen
+function drawProdsInCart() {
+    
+    console.log(arrayWProducts);
+}
+
+drawProdsInCart();
+
+
 //Dölja och visa Billing and shipping 
 const proceedToCheckoutButton = document.querySelector(".proceedToCheckoutButton"); //Hämtar proceed knappen
 const billingAndShippingBox = document.querySelector(".billingAndShippingBox"); //Hämtar billing&Shipping boxen
@@ -21,4 +30,5 @@ proceedToCheckoutButton.addEventListener("click", () => {
     })
 
 })
+
 
