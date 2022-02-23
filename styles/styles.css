@@ -236,7 +236,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   background: #424D55;
-  position: relative;
+  /*position: relative; */
   bottom: 0;
   width: 100%;
   height: 390px;
@@ -542,31 +542,49 @@ input[type="search"]::placeholder {
   }
 }
 
+.product-info p {
+  margin-bottom: 0;
+}
+
 .product-image {
-  border: 1px solid #424D55;
-  height: 180px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-image img {
+  height: 150px;
+  margin: 10px;
 }
 
 @media (min-width: 769px) {
-  .product-image {
+  .product-image img {
     height: 240px;
   }
 }
 
 .articleIcon {
   height: 20px;
-  margin-right: 5px;
-  margin-bottom: 5px;
+  margin: 5px;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  cursor: pointer;
 }
 
 @media (min-width: 769px) {
   .articleIcon {
     height: 30px;
     margin: 10px;
+    margin-top: 5px;
   }
+}
+
+.hideProduct {
+  display: none;
 }
 
 .productCard {
@@ -686,6 +704,7 @@ input[type="search"]::placeholder {
   -webkit-box-shadow: 0px 8px 5px #424D55;
           box-shadow: 0px 8px 5px #424D55;
   font-family: Viga, "sans-serif";
+  cursor: pointer;
 }
 
 .productCard input[type=number]::-webkit-inner-spin-button,
@@ -1105,8 +1124,146 @@ textarea[name="billingAndShippingInfo"] {
 }
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
-.popupForm {
-  background: #E8DBCE;
+/*------------------------------Sign in popup form---------------------*/
+/*Den svarta transparent background in popupforms*/
+.background-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0px;
+  padding-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 769px) {
+  .background-modal {
+    padding-top: 50px;
+  }
+}
+
+/*Popupfönstret*/
+.signIn-content {
+  width: 500px;
+  height: 400px;
+  background-color: #E8DBCE;
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 15px;
+  margin-bottom: 400px;
+  position: relative;
+  margin-top: 50px;
+  font-family: Viga, "sans-serif";
+  color: #424D55;
+}
+
+/*close popup styling*/
+.closePopup {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+  color: #424D55;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  cursor: pointer;
+  /*handen visas på close "X" knappen*/
+}
+
+.inputSignIn {
+  width: 50%;
+  display: block;
+  margin: 0px auto;
+  padding: 5px;
+  border: 1px solid #424D55;
+  border-radius: 5px;
+}
+
+.smallText {
+  font-size: 12px;
+}
+
+.textLeft {
+  font-size: 12px;
+  position: relative;
+  float: left;
+  margin-left: 25%;
+}
+
+.popupBtn {
+  border-radius: 5px;
+  width: 50%;
+  display: block;
+  margin: 0px auto;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.signInButton {
+  background-color: #424D55;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.becomeMemberButton {
+  background-color: #CFA48D;
+  color: black;
+  cursor: pointer;
+}
+
+/*End of Sign in popup---------------------*/
+/*------------------------------Become a member popup---------------------*/
+.bg-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0px;
+  padding-top: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*align-items: center;*/
+}
+
+@media (min-width: 769px) {
+  .bg-modal {
+    padding-top: 80px;
+  }
+}
+
+.becomeMember-content {
+  width: 500px;
+  height: 400px;
+  background-color: #E8DBCE;
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  font-family: Viga, "sans-serif";
+  color: #424D55;
+}
+
+.becomeMemberHR {
+  width: 90%;
+}
+
+.memberInput {
+  border: 1px solid #424D55;
+  border-radius: 5px;
+  /*padding: 5px;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1114,72 +1271,34 @@ textarea[name="billingAndShippingInfo"] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding-top: 10px;
-  padding-bottom: 40px;
-  font-family: Viga, "sans-serif";
 }
 
-@media (min-width: 769px) {
-  .popupForm {
-    width: 350px;
-    padding-top: 20px;
-    position: relative;
-    margin: 0 auto;
-  }
+table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
 }
 
-.popupForm .closeIcon {
-  width: auto;
-  height: 18px;
-  /*
-        float: right;
-        padding: 8px;
-        */
-  margin-bottom: 30px;
-  padding: 8px;
-  position: absolute;
-  right: 20px;
-}
-
-.popupForm .centerText {
-  text-align: center;
-  color: #424D55;
-}
-
-.popupForm .litleText {
+/*Error messages text*/
+.errors {
   font-size: 12px;
-  color: #424D55;
+  color: red;
 }
 
-.popupForm .inputSignin {
-  border: 1px solid #424D55;
-  border-radius: 2px;
-  padding: 4px;
-}
-
-.popupForm .formBtn {
-  height: auto;
-  width: 170px;
-  border: 1px solid black;
-  border-radius: 2px;
-  padding: 4px;
-}
-
-.popupForm .signInBtn {
-  background: #424D55;
-  color: white;
-}
-
-.popupForm .becomeMemberBtn {
-  background: #CFA48D;
-  color: #252525;
-}
-
+/*End of become a member popup---------------------*/
 /*End of Sign in popup form///////////////////////////
 
 /* Main content in the home page */
@@ -1264,60 +1383,4 @@ textarea[name="billingAndShippingInfo"] {
     height: 40vh;
   }
 }
-
-/* BECOME A MEMBER - Victoria */
-.bg-modal {
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /*display: none;*/
-}
-
-.modal-contents {
-  height: 500px;
-  width: 400px;
-  background-color: #E8DBCE;
-  text-align: center;
-  border-radius: 4px;
-  padding: 20px;
-  position: relative;
-}
-
-h2 {
-  font-family: Viga, sans-serif;
-  color: #424D55;
-}
-
-h3 {
-  font-family: roboto-text, sans-serif;
-  color: #424D55;
-}
-
-input {
-  margin: 7px auto;
-}
-
-.close {
-  position: absolute;
-  top: 0;
-  right: 14px;
-  font-size: 42px;
-  color: #424D55;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  cursor: pointer;
-}
-
-/* Victoria */
 /*# sourceMappingURL=styles.css.map */
