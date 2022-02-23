@@ -34,11 +34,13 @@
   const userAddress = document.getElementById("address");
   const userPassword = document.getElementById("password");
   const userTown = document.getElementById("town");
-  const userZipCode = document.getElementById("zipCode");
+  const userZipCode = document.getElementById("zipCode"); 
+  const userPhone = document.getElementById("phoneNum");
+  
 
   let userArray = localStorage.getItem('user_Info')?
   JSON.parse(localStorage.getItem('user_Info')): [];
-
+  //skapar string till local storage
   function addNewUser(){
     const user_info = {
         'name': userName.value,
@@ -46,10 +48,13 @@
         'address': userAddress.value,
         'password': userPassword.value,
         'zipcode': userZipCode.value,
-        'city': userTown.value
+        'city': userTown.value,
+        'phone': userPhone.value 
+        
     }
 
     userArray.push(user_info); //pushar in user info
+    //localStorage.setItem(key, value); spara data i local storage
     localStorage.setItem('user_Info', JSON.stringify(userArray));
   }
   addNewUser();
@@ -57,7 +62,5 @@
   });
 
   hideErrorMessage(); //activerar
-
-
   
 })();
