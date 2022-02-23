@@ -29,7 +29,8 @@
         </a>
 
         <div class="headerElements">
-            <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle hideHeaderElements signInHeader">Sign
+            <a href="/webshop-projekt/HTML/signinandregistration.html"
+                class="noLinkStyle hideHeaderElements signInHeader">Sign
                 in</a>
 
             <a href="/webshop-projekt/HTML/shoppingcart.html">
@@ -76,8 +77,9 @@
         <nav class="categories columnSearch">
             <form class="searchForm">
                 <input type="search" placeholder="Search...">
-                <button type="submit" class="searchBtn"><img src="/webshop-projekt/Pictures/Icons/search-icon.png" alt="search icon"></button>
-              </form><br>
+                <button type="submit" class="searchBtn"><img src="/webshop-projekt/Pictures/Icons/search-icon.png"
+                        alt="search icon"></button>
+            </form><br>
             <ul class="categoriesList columnSearch">
                 <li>All</li>
                 <li>|</li>
@@ -90,7 +92,7 @@
         </nav>
     </div>
     <!-- End of Categories & search field -->
-    
+
     <!--Shopping cart content-->
     <main class="cartAndPayContent">
 
@@ -121,44 +123,22 @@
 
                 <div class="inputQuantityAndDeleteButtonWrapper">
 
-                    <input type="number" class="inputQuantityInCart" id="inputQuantity">
+                    <input type="number" value="1" class="inputQuantityInCart" id="inputQuantity">
 
                     <a href="#" class="deleteProdIconInCart">
                         <img src="/webshop-projekt/Pictures/Icons/krysset-svart.png" alt="Delete product icon"
-                        class="deleteProdIconInCart">
+                            class="deleteProdIconInCart">
                     </a>
 
                 </div>
 
-                <h4 class="priceHeadingInCart">$Price</h4>
+                <h4 class="priceHeadingInCart">
+                    <div>$</div>
+                    <div class="priceInCart">9</div>
+                </h4>
 
             </article>
 
-            <article class="cartTheProduct">
-
-                <div class="wrapperForProductImgCart">
-
-                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="The product image"
-                        class="productImageInCart">
-
-                </div>
-
-                <h4 class="cartProductNameHeading">Product name</h4>
-
-                <div class="inputQuantityAndDeleteButtonWrapper">
-
-                    <input type="number" class="inputQuantityInCart" id="inputQuantity">
-
-                    <a href="#" class="deleteProdIconInCart">
-                        <img src="/webshop-projekt/Pictures/Icons/krysset-svart.png" alt="Delete product icon"
-                        class="deleteProdIconInCart">
-                    </a>
-
-                </div>
-
-                <h4 class="priceHeadingInCart">$Price</h4>
-
-            </article>
 
             <hr class="cartAndPayLine">
 
@@ -190,17 +170,18 @@
 
                 <section class="requiredInfoBillingAndShippingForm">
 
-                    <input type="text" name="billingAndShippingInfo" placeholder="Name *" required>
+                    <input id="billingName" type="text" name="billingAndShippingInfo" placeholder="Name *" required>
 
-                    <input type="text" name="billingAndShippingInfo" placeholder="Street address *">
+                    <input id="billingAdress" type="text" name="billingAndShippingInfo" placeholder="Street address *">
 
-                    <input type="text" name="billingAndShippingInfo" placeholder="Postcode / ZIP *">
+                    <input id="billingPostcode" type="text" name="billingAndShippingInfo"
+                        placeholder="Postcode / ZIP *">
 
-                    <input type="text" name="billingAndShippingInfo" placeholder="Town / City *">
+                    <input id="billingCity" type="text" name="billingAndShippingInfo" placeholder="Town / City *">
 
-                    <input type="email" name="billingAndShippingInfo" placeholder="Email address *">
+                    <input id="billingEmail" type="email" name="billingAndShippingInfo" placeholder="Email address *">
 
-                    <input type="tel" name="billingAndShippingInfo" placeholder="Phone *">
+                    <input id="billingTel" type="tel" name="billingAndShippingInfo" placeholder="Phone *">
 
                 </section>
 
@@ -208,7 +189,8 @@
 
                     <textarea name="billingAndShippingInfo" cols="25" rows="7" placeholder="Order Notes..."></textarea>
 
-                    <button type="submit" class="checkoutAndPayButton">Confirm payment</button>
+                    <button type="submit" id="confirmPaymentButton" class="checkoutAndPayButton">Confirm
+                        payment</button>
 
                 </section>
 
@@ -216,6 +198,14 @@
 
         </article>
         <!--End of Billing and shipping-->
+
+        <!-- Reciept container -->
+
+        <article id="recieptContainer" class="recieptContainer">
+
+        </article>
+
+        <!-- End of Reciept container -->
 
         <!------Popups ------>
         <div class="background-modal">
@@ -242,8 +232,8 @@
                     <h2 class="becomeMemberh2">Become a member</h2>
                     <h3>Become a member — don't miss out on deals, offers, discounts and bonus vouchers.</h3>
                     <hr class="becomeMemberHR">
-                    
-                    <table class="inputsTable"> 
+
+                    <table class="inputsTable">
                         <tr>
                             <td>
                                 <input id="name" class="memberInput" type="text" placeholder="Name *" required>
@@ -279,7 +269,7 @@
                             <td><input class="memberInput" type="tel" placeholder="Phone number"></td>
                             <td><input class="memberInput" type="text" placeholder="Birthday dd/mm/yyyy "></td>
                         </tr>
-                        
+
                     </table>
                     <button  type="submit" class="signInButton popupBtn memberBtn">Become a member</button><br>
                     <button class="becomeMemberButton popupBtn backToSignInButton">Back to Sign in</button>
@@ -311,6 +301,10 @@
     <script src="/webshop-projekt/Javascript/views/signup.js"></script>
     <script src="/webshop-projekt/Javascript/views/shoppingcart.js"></script>
     <script src="/webshop-projekt/Javascript/views/hamburger.js"></script>
+<<<<<<< HEAD
+
+=======
     <script src="/webshop-projekt/Javascript/views/registration.js"></script>
     
+>>>>>>> 5c26903b415f451914662934f03cab16b085c41b
 </body>

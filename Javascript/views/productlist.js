@@ -43,13 +43,13 @@ async function saveToCartFromProdList() {
 
     //Hämtar alla varukorgsikoner 
     const addProdToCartIcons = document.querySelectorAll(".articleIcon");
-    
+
     //Skapar variabel som ska hålla id:et på varukorgen vi klickar på
     let cartID;
-    
+
     //Skapar en tom array för att pusha in produkterna vi adderar i varukorgen
     //let arrayWProducts = [];
-    
+
     //forEach som går igenom varje ikon 
     addProdToCartIcons.forEach(icon => {
         icon.addEventListener("click", (e) => {
@@ -57,11 +57,11 @@ async function saveToCartFromProdList() {
             if (localStorage.getItem("products")) {
                 arrayWProducts = JSON.parse(localStorage.getItem("products"));
                 console.log(arrayWProducts);
-            } 
+            }
 
             //Sparar ned varukorgens id som vi klickat på
             cartID = e.target.id;
-            
+
             //Om id:et matchar index i produktlistan
             if (data.products[cartID]) {
 
@@ -69,9 +69,9 @@ async function saveToCartFromProdList() {
                 arrayWProducts.push(data.products[cartID]);
 
                 //Sparar arrayen i localstorage under nyckeln "product" 
-               localStorage.setItem("products", JSON.stringify(arrayWProducts));
+                localStorage.setItem("products", JSON.stringify(arrayWProducts));
 
-               console.log(arrayWProducts);
+                console.log(arrayWProducts);
             }
         })
     })
