@@ -1142,7 +1142,6 @@ textarea[name="billingAndShippingInfo"] {
 }
 
 .recieptContainer {
-  background: #E8DBCE;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1153,6 +1152,7 @@ textarea[name="billingAndShippingInfo"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #E8DBCE;
   width: 80%;
   padding: 10px;
   padding-bottom: 40px;
@@ -1161,18 +1161,45 @@ textarea[name="billingAndShippingInfo"] {
 
 @media (min-width: 769px) {
   .recieptContainer {
+    width: 60%;
+  }
+}
+
+.recieptContainer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 600px;
+  margin: 10px;
+}
+
+@media (min-width: 769px) {
+  .recieptContainer div {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    width: 60%;
   }
 }
 
 .recieptContainer section {
-  margin: 20px;
+  font-family: Roboto, "sans-serif";
+  font-weight: bold;
+  color: #424D55;
+  font-size: 15px;
+  margin: 50px;
 }
 
 /*End of Shopping Cart, Billing & Shipping, Recepit/Order confirmation*/
