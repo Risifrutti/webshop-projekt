@@ -227,7 +227,7 @@
 
         <div class="bg-modal">
             <div class="becomeMember-content">
-                <form action="">
+                <form id="userForm" novalidate>
                     <div id="popupClose" class="closePopup closeBecomeMember">+</div>
                     <h2 class="becomeMemberh2">Become a member</h2>
                     <h3>Become a member — don't miss out on deals, offers, discounts and bonus vouchers.</h3>
@@ -235,16 +235,35 @@
 
                     <table class="inputsTable">
                         <tr>
-                            <td><input class="memberInput" type="text" placeholder="Name *"></td>
-                            <td><input class="memberInput" type="email" placeholder="Email *"></td>
+                            <td>
+                                <input id="name" class="memberInput" type="text" placeholder="Name *" required>
+                                <span class="errorMessage" id="nameerrorMessage">Name field is required</span>
+                            </td>
+                            
+                            <td>
+                                <input id="email" class="memberInput" type="email" placeholder="Email *" required>
+                                <span class="errorMessage" id="emailerrorMessage">Email is required</span>
+                            </td>   
                         </tr>
                         <tr>
-                            <td><input class="memberInput" type="text" placeholder="Street Address *"></td>
-                            <td><input class="memberInput" type="password" placeholder="Create Password *"></td>
+                            <td>
+                                <input id="address" class="memberInput" type="text" placeholder="Street Address *" required>
+                                <span class="errorMessage" id="addresserrorMessage">Street address is required</span>
+                            </td>
+                            <td>
+                                <input id="password" class="memberInput" type="password" placeholder="Create Password *" required>
+                                <span class="errorMessage" id="passworderrorMessage">Password is required</span>
+                            </td>
                         </tr>
                         <tr>
-                            <td><input class="memberInput" type="text" placeholder="Town / City *"></td>
-                            <td><input class="memberInput" type="number" placeholder="Postcode / ZIP *"></td>
+                            <td>
+                                <input id="town" class="memberInput" type="text" placeholder="Town / City *" required>
+                                <span class="errorMessage" id="townerrorMessage">This field is required</span>
+                            </td>
+                            <td>
+                                <input id="zipCode" class="memberInput" type="number" placeholder="Postcode / ZIP *" required>
+                                <span class="errorMessage" id="zipCodeerrorMessage">This field is required</span>
+                            </td>
                         </tr>
                         <tr>
                             <td><input class="memberInput" type="tel" placeholder="Phone number"></td>
@@ -252,7 +271,7 @@
                         </tr>
 
                     </table>
-                    <button class="signInButton popupBtn">Become a member</button><br>
+                    <button  type="submit" class="signInButton popupBtn memberBtn">Become a member</button><br>
                     <button class="becomeMemberButton popupBtn backToSignInButton">Back to Sign in</button>
                 </form>
             </div>
@@ -282,5 +301,10 @@
     <script src="/webshop-projekt/Javascript/views/signup.js"></script>
     <script src="/webshop-projekt/Javascript/views/shoppingcart.js"></script>
     <script src="/webshop-projekt/Javascript/views/hamburger.js"></script>
+<<<<<<< HEAD
 
+=======
+    <script src="/webshop-projekt/Javascript/views/registration.js"></script>
+    
+>>>>>>> 5c26903b415f451914662934f03cab16b085c41b
 </body>
