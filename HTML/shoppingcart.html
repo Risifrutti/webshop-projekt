@@ -61,7 +61,7 @@
                     <h4>Shop</h4>
                 </div>
             </a>
-            <a href="#" class="noLinkStyle">
+            <a href="#" class="noLinkStyle signInHeader">
                 <div class="menu-item">
                     <h4>Sign in</h4>
                 </div>
@@ -139,29 +139,6 @@
 
             </article>
 
-            <article class="cartTheProduct">
-
-                <div class="wrapperForProductImgCart">
-
-                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="The product image"
-                        class="productImageInCart">
-
-                </div>
-
-                <h4 class="cartProductNameHeading">Product name</h4>
-
-                <div class="inputQuantityAndDeleteButtonWrapper">
-
-                    <input type="number" class="inputQuantityInCart" id="inputQuantity">
-
-                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="Delete product icon"
-                        class="deleteProdIconInCart">
-
-                </div>
-
-                <h4 class="priceHeadingInCart">$Price</h4>
-
-            </article>
 
             <hr class="cartAndPayLine">
 
@@ -180,33 +157,31 @@
             </section>
 
         </article>
+        <!--End of shopping cart-->
 
+        <!--Start of billing and shipping-->
         <article class="cartAndPayContentBox billingAndShippingBox">
 
             <h3 class="cartAndPayHeading">Billing & Shipping</h3>
 
             <hr class="cartAndPayLine">
 
-            <form class="billingAndShippingForm" novalidate>
+            <form action="" class="billingAndShippingForm">
 
                 <section class="requiredInfoBillingAndShippingForm">
 
-                    <input class="billingAndShippingInput" type="text" name="billingAndShippingInfo" placeholder="Name *" id="nameB" required>
-                    <span class="error errors" id="nameBerror">Name is required</span>
+                    <input id="billingName" type="text" name="billingAndShippingInfo" placeholder="Name *" required>
 
-                    <input class="billingAndShippingInput" type="text" name="billingAndShippingInfo" placeholder="Street address *" id="addressB" required>
-                    <span class="error errors" id="addressBerror"> Street Adress is required</span>
+                    <input id="billingAdress" type="text" name="billingAndShippingInfo" placeholder="Street address *">
 
-                    <input class="billingAndShippingInput" type="text" name="billingAndShippingInfo" placeholder="Postcode / ZIP *" id="postcodeB" required>
-                    <span class="error errors" id="postcodeBerror"> Postcode/ZIP is required</span>
+                    <input id="billingPostcode" type="text" name="billingAndShippingInfo"
+                        placeholder="Postcode / ZIP *">
 
-                    <input class="billingAndShippingInput" type="text" name="billingAndShippingInfo" placeholder="Town / City *" id="cityB" required>
-                    <span class="error errors" id="cityBerror"> Town/City is required</span>
+                    <input id="billingCity" type="text" name="billingAndShippingInfo" placeholder="Town / City *">
 
-                    <input class="billingAndShippingInput" type="email" name="billingAndShippingInfo" placeholder="Email address *" id="emailB" required>
-                    <span class="error errors" id="emailBerror"> E-mail address is required</span>
+                    <input id="billingEmail" type="email" name="billingAndShippingInfo" placeholder="Email address *">
 
-                    <input type="tel" name="billingAndShippingInfo" placeholder="Phone">
+                    <input id="billingTel" type="tel" name="billingAndShippingInfo" placeholder="Phone *">
 
                 </section>
 
@@ -222,6 +197,7 @@
             </form>
 
         </article>
+        <!--End of Billing and shipping-->
 
         <!-- Reciept container -->
 
@@ -322,15 +298,9 @@
         </nav>
     </footer>
 
+    <script src="/webshop-projekt/Javascript/views/signup.js"></script>
     <script src="/webshop-projekt/Javascript/views/shoppingcart.js"></script>
     <script src="/webshop-projekt/Javascript/views/hamburger.js"></script>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
     <script src="/webshop-projekt/Javascript/views/registration.js"></script>
     
->>>>>>> 5c26903b415f451914662934f03cab16b085c41b
->>>>>>> f57c0964d5ae829bd732edcfeb4824c8b2cfb5dc
 </body>
