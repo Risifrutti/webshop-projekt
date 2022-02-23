@@ -29,3 +29,5 @@ userRegistrationForm.addEventListener('submit', (e) => {
 });
 
 hideErrorMessage(); //activerar
+
+/*Lägger inputs till local storage*/
