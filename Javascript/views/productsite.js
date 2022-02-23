@@ -43,31 +43,37 @@ async function saveToCartFromProdSite() {
     const data = await fetchFile("/webshop-projekt/Javascript/data/products.json");
 
     //Hämtar knappen
-    const addToCartButtons = document.querySelectorAll(".addToCartButton");
-
-    let arrayWProducts = [];
+    const addToCartButton = document.querySelector(".addToCartButton");
 
     //skapar variabel där id:et för knappen sparas
-    let cartID;
+    let buttonID;
 
-    addToCartButtons.forEach(button => {
+    //Skapar en tom array
+    //let arrayWProducts = [];
 
-        button.addEventListener("click", (e) => {
+    addToCartButton.addEventListener("click", (e) => {
 
-            //Sparar ned varukorgens id som vi klickat på
-            cartID = e.target.id;
+        if (localStorage.getItem("products")) {
+            arrayWProducts.push(JSON.stringify(localStorage.getItem("products")));
+            console.log(localStorage.getItem("products"));
+        } 
+             
+        //Sparar ned varukorgens id som vi klickat på
+        buttonID = e.target.id;
             
-            //Om id:et matchar index i produktlistan
-            if (data.products[cartID]) {
+        //Om id:et matchar index i produktlistan
+        if (data.products[buttonID]) {
             
-                //Pushar in objektet från produktlistan till den nya tomma arrayen
-                arrayWProducts.push(JSON.stringify(data.products[cartID]));
+            //Pushar in objektet från produktlistan till arreyen
+            arrayWProducts.push(JSON.stringify(data.products[buttonID]));
                 
-                //Sparar arrayen i localstorage under nyckeln "product" 
-                localStorage.setItem("products", arrayWProducts);
-            }
-        })
+            //Sparar arrayen i localstorage under nyckeln "product" 
+            localStorage.setItem("products", arrayWProducts);
+            
+            console.log(localStorage.getItem("products"));
+        }
     })
 }
 
 saveToCartFromProdSite();
+//

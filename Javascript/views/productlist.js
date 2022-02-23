@@ -48,7 +48,7 @@ async function saveToCartFromProdList() {
     let cartID;
     
     //Skapar en tom array för att pusha in produkterna vi adderar i varukorgen
-    let arrayWProducts = [];
+    //let arrayWProducts = [];
     
     //forEach som går igenom varje ikon 
     addProdToCartIcons.forEach(icon => {
@@ -72,7 +72,8 @@ async function saveToCartFromProdList() {
     })
 }
 
-showProducts().then(saveToCartFromProdList());
+//Kör showProducts funktion först och när den är klar kör vi saveToCartFromProdList funktionen
+showProducts().then(saveToCartFromProdList()); 
 
 
 //--Sökfunktionen--
@@ -109,6 +110,5 @@ searchButton.addEventListener("click", async function (e) {
     });
 });
 
-//Kör showProducts funktion först och när den är klar kör vi saceToCartFromProdList funktionen
-showProducts().then(saveToCartFromProdList()); 
+
 
