@@ -72,7 +72,43 @@ async function saveToCartFromProdList() {
     })
 }
 
+showProducts().then(saveToCartFromProdList());
 
+
+//--Sökfunktionen--
+const searchButton = document.getElementById("searchbutton");
+
+searchButton.addEventListener("click", async function (e) {
+    e.preventDefault();
+
+    const searchField = document.getElementById("searchfield");
+    const searchInput = searchField.value.toUpperCase();
+    const productList = document.querySelectorAll(".product-article");
+
+    const data = await fetchFile("/webshop-projekt/Javascript/data/products.json");
+
+    //Tar bort hideproduct-klassen från föregående sökningar
+    productList.forEach(element => {
+        if (element.classList.contains("hideProduct")) {
+            element.classList.remove("hideProduct");
+        }
+    });
+
+    //Jämför det användaren sökt på med produktens namn och beskrivning 
+    //och lägger till klassen "hideProduct" på de produkter som inte matchar.
+    data.products.forEach(element => {
+        if (!element.name.toUpperCase().includes(searchInput) && !element.prodDescription.toUpperCase().includes(searchInput)) {
+            productList.forEach(product => {
+                const productName = product.childNodes[3].childNodes[1].childNodes[1];
+                if (element.name.toUpperCase().includes(productName.innerText.toUpperCase())) {
+                    product.classList.add("hideProduct");
+                    console.log(product);
+                }
+            });
+        }
+    });
+});
 
 //Kör showProducts funktion först och när den är klar kör vi saceToCartFromProdList funktionen
 showProducts().then(saveToCartFromProdList()); 
+
