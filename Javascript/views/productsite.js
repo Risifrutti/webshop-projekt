@@ -54,23 +54,23 @@ async function saveToCartFromProdSite() {
     addToCartButton.addEventListener("click", (e) => {
 
         if (localStorage.getItem("products")) {
-            arrayWProducts.push(JSON.stringify(localStorage.getItem("products")));
-            console.log(localStorage.getItem("products"));
+            arrayWProducts = JSON.parse(localStorage.getItem("products"));
+            console.log(arrayWProducts);
         } 
              
         //Sparar ned varukorgens id som vi klickat på
         buttonID = e.target.id;
             
         //Om id:et matchar index i produktlistan
-        if (data.products[buttonID]) {
-            
+        if (data.products[buttonID]) {;
+
             //Pushar in objektet från produktlistan till arreyen
-            arrayWProducts.push(JSON.stringify(data.products[buttonID]));
+            arrayWProducts.push(data.products[buttonID]);
                 
             //Sparar arrayen i localstorage under nyckeln "product" 
-            localStorage.setItem("products", arrayWProducts);
+            localStorage.setItem("products", JSON.stringify(arrayWProducts));
             
-            console.log(localStorage.getItem("products"));
+            console.log(arrayWProducts);
         }
     })
 }

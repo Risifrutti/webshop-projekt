@@ -55,8 +55,8 @@ async function saveToCartFromProdList() {
         icon.addEventListener("click", (e) => {
 
             if (localStorage.getItem("products")) {
-                arrayWProducts.push(JSON.stringify(localStorage.getItem("products")));
-                console.log(localStorage.getItem("products"));
+                arrayWProducts = JSON.parse(localStorage.getItem("products"));
+                console.log(arrayWProducts);
             } 
 
             //Sparar ned varukorgens id som vi klickat på
@@ -66,13 +66,13 @@ async function saveToCartFromProdList() {
             if (data.products[cartID]) {
 
                 //Pushar in objektet från produktlistan till den nya tomma arrayen
-                arrayWProducts.push(JSON.stringify(data.products[cartID]));
+                arrayWProducts.push(data.products[cartID]);
 
                 //Sparar arrayen i localstorage under nyckeln "product" 
-               localStorage.setItem("products", arrayWProducts);
-            }
+               localStorage.setItem("products", JSON.stringify(arrayWProducts));
 
-            console.log(localStorage.getItem("products"));
+               console.log(arrayWProducts);
+            }
         })
     })
 }
