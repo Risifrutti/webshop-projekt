@@ -170,18 +170,22 @@
 
                 <section class="requiredInfoBillingAndShippingForm">
 
-                    <input id="billingName" type="text" name="billingAndShippingInfo" placeholder="Name *" required>
+                    <input class="billingAndShippingInput" type="text" name="billingAndShippingInfo" placeholder="Name *" id="nameB" required>
+                    <span class="error errors" id="nameBerror">Name is required</span>
 
-                    <input id="billingAdress" type="text" name="billingAndShippingInfo" placeholder="Street address *">
+                    <input class="billingAndShippingInput" type="text" name="billingAndShippingInfo" placeholder="Street address *" id="addressB" required>
+                    <span class="error errors" id="addressBerror"> Street Adress is required</span>
 
-                    <input id="billingPostcode" type="text" name="billingAndShippingInfo"
-                        placeholder="Postcode / ZIP *">
+                    <input class="billingAndShippingInput" type="text" name="billingAndShippingInfo" placeholder="Postcode / ZIP *" id="postcodeB" required>
+                    <span class="error errors" id="postcodeBerror"> Postcode/ZIP is required</span>
 
-                    <input id="billingCity" type="text" name="billingAndShippingInfo" placeholder="Town / City *">
+                    <input class="billingAndShippingInput" type="text" name="billingAndShippingInfo" placeholder="Town / City *" id="cityB" required>
+                    <span class="error errors" id="cityBerror"> Town/City is required</span>
 
-                    <input id="billingEmail" type="email" name="billingAndShippingInfo" placeholder="Email address *">
+                    <input class="billingAndShippingInput" type="email" name="billingAndShippingInfo" placeholder="Email address *" id="emailB" required>
+                    <span class="error errors" id="emailBerror"> E-mail address is required</span>
 
-                    <input id="billingTel" type="tel" name="billingAndShippingInfo" placeholder="Phone *">
+                    <input type="tel" name="billingAndShippingInfo" placeholder="Phone" id="phoneB">
 
                 </section>
 

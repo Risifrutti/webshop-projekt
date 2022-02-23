@@ -1,3 +1,10 @@
+//Ritar ut produkterna i varukorgen som man lagt till i varukorgen
+function drawProdsInCart() {
+    
+}
+drawProdsInCart();
+
+
 //Dölja och visa Billing and shipping 
 const proceedToCheckoutButton = document.querySelector(".proceedToCheckoutButton"); //Hämtar proceed knappen
 const billingAndShippingBox = document.querySelector(".billingAndShippingBox"); //Hämtar billing&Shipping boxen
@@ -36,6 +43,7 @@ billingandshippingform.addEventListener('submit', (e) => {
 
 
 hideError();
+
 let inputQuantityInCart = document.querySelectorAll(".inputQuantityInCart"); //Hämtar input antal
 const deleteProdInCart = document.querySelectorAll(".deleteProdIconInCart"); //Hämtar krysset i varukorgen som tar bort produkt
 const confirmPaymentButton = document.getElementById("confirmPaymentButton");// Hämtar knappen i beställningsformuläret.
@@ -70,12 +78,12 @@ confirmPaymentButton.addEventListener("click", (e) => {
     billingAndShippingBox.style.display = "none";
 
     const recieptContainer = document.getElementById("recieptContainer");
-    const customerName = document.getElementById("billingName").value;
-    const adress = document.getElementById("billingAdress").value;
-    const postcode = document.getElementById("billingPostcode").value;
-    const city = document.getElementById("billingCity").value;
-    const email = document.getElementById("billingEmail").value;
-    const tel = document.getElementById("billingTel").value;
+    const customerName = document.getElementById("nameB").value;
+    const adress = document.getElementById("addressB").value;
+    const postcode = document.getElementById("postcodeB").value;
+    const city = document.getElementById("cityB").value;
+    const email = document.getElementById("emailB").value;
+    const tel = document.getElementById("phoneB").value;
 
 
 
