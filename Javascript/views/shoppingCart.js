@@ -45,6 +45,7 @@ confirmPaymentButton.addEventListener("click", (e) => {
 
 
     let recieptContent = `
+        <div> 
        <section> <h3>
         Your contact info:
         </h3>
@@ -76,8 +77,11 @@ confirmPaymentButton.addEventListener("click", (e) => {
         <p>5-12 days</p>
 
         </section>
-
+        </div>
+        
+        <div>
         <button class="closeRecieptButton">Close</button>
+        </div>
     `
 
     recieptContainer.innerHTML = recieptContent;
