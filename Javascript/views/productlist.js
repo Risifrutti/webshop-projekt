@@ -16,7 +16,7 @@ async function showProducts() {
                 </a>
                 </section>
                 <section class="product-info"> 
-                <a href="/webshop-projekt/HTML/productsite.html" class="noLinkStyle">
+                <a href="/webshop-projekt/HTML/productsite.html?category=${element.category}&name=${element.name}" class="noLinkStyle">
                     <h3 class="product-name">${element.name}</h3>
                     <p class="product-price">${element.price}</p>
                     </a>
@@ -43,43 +43,40 @@ async function saveToCartFromProdList() {
 
     //Hämtar alla varukorgsikoner 
     const addProdToCartIcons = document.querySelectorAll(".articleIcon");
-    
+
     //Skapar variabel som ska hålla id:et på varukorgen vi klickar på
     let cartID;
-    
+
     //Skapar en tom array för att pusha in produkterna vi adderar i varukorgen
-    const arrayWProducts = [];
+    //let arrayWProducts = [];
 
     //forEach som går igenom varje ikon 
     addProdToCartIcons.forEach(icon => {
         icon.addEventListener("click", (e) => {
 
-<<<<<<< HEAD
-            i = e.target.id;
-            let prodstring = "";
+            if (localStorage.getItem("products")) {
+                arrayWProducts = JSON.parse(localStorage.getItem("products"));
+                console.log(arrayWProducts);
+            }
 
-            if (data.products[i]) {
-
-                prodString = + JSON.stringify(data.products[i]);
-=======
             //Sparar ned varukorgens id som vi klickat på
             cartID = e.target.id;
-            
+
             //Om id:et matchar index i produktlistan
             if (data.products[cartID]) {
 
                 //Pushar in objektet från produktlistan till den nya tomma arrayen
-                arrayWProducts.push(JSON.stringify(data.products[cartID]));
->>>>>>> d74cb849faddf57f8cf4a053663aee7d2489cbfa
+                arrayWProducts.push(data.products[cartID]);
 
                 //Sparar arrayen i localstorage under nyckeln "product" 
-               localStorage.setItem(`product`, arrayWProducts);
+                localStorage.setItem("products", JSON.stringify(arrayWProducts));
+
+                console.log(arrayWProducts);
             }
         })
     })
 }
 
-<<<<<<< HEAD
 showProducts().then(saveToCartFromProdList());
 
 
@@ -117,7 +114,3 @@ searchButton.addEventListener("click", async function (e) {
     });
 });
 
-=======
-//Kör showProducts funktion först och när den är klar kör vi saceToCartFromProdList funktionen
-showProducts().then(saveToCartFromProdList()); 
->>>>>>> d74cb849faddf57f8cf4a053663aee7d2489cbfa

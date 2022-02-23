@@ -1,27 +1,31 @@
 const userRegistrationForm = document.getElementById("userForm"); //Hämtar user registration form 
-const memberSubmitButton = document.getElementById("memberBtn");
 const allErrorMessages = document.querySelectorAll(".errorMessage"); //Hämtar alla fel meddelanden
-console.log("Hej");
+const memberSubmitButton = document.getElementById("memberBtn"); // Submit button, behövs ej radera sen
+console.log(allErrorMessages);
 
-/*--Function to hide error--*/
+/*--Function to hide all error message--*/
 function hideErrorMessage(){
-  allErrorMessages.forEach((error)=> {
-    error.style.display = "none";
+  allErrorMessages.forEach((errorElement)=> {
+    errorElement.style.display = "none";
   });
-}
+} //funkar
 
-/*-----FORTSÄTT HÄR --------------------------------------------------------------*/
+
 //Lägger till event när man klickar på knappen "Become a member"
 userRegistrationForm.addEventListener('submit', (e) => {
   e.preventDefault();
   
-  const inputsRegForm = userRegistrationForm.querySelectorAll(".memberInput");
+  hideErrorMessage();
+
+  const inputsRegForm = userRegistrationForm.querySelectorAll(".memberInput"); //hämtar alla user inputs
   inputsRegForm.forEach((input) => {
-    if(!input.checkValidity()){ //Kollar if inputs are fild or not
-      const errorMsg = document.getElementById(input.id + 'errors');
-      errorMsg.style.display = "block";
+    if(!input.checkValidity()) { //Kollar if inputs finns eller inte
+      const errorElement = document.getElementById(input.id + 'errorMessage');
+      console.log(input.id); //radera sen
+      errorElement.style.display = 'flex';
     }
   });
   
 });
+
 hideErrorMessage(); //activerar

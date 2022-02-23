@@ -10,7 +10,7 @@ async function drawCurrentProduct() {
 
     console.log(prodCategory + " " + prodName);
 
-    data.products.forEach(element => {
+    data.products.forEach((element, index) => {
 
         if (prodCategory === element.category && prodName === element.name) {
             
@@ -23,7 +23,7 @@ async function drawCurrentProduct() {
                     <p class="price">${element.price}</p>
                     <p class="productDescriptionText">${element.prodDescription}</p>
                     <p><input type="number" id="quantity" class="quantity" min="1" placeholder="1"></p>
-                    <p><button class="addToCartButton">Add to cart</button></p>
+                    <p><button id="${index}" class="addToCartButton">Add to cart</button></p>
                 </section>
             `
 
@@ -43,15 +43,37 @@ async function saveToCartFromProdSite() {
     const data = await fetchFile("/webshop-projekt/Javascript/data/products.json");
 
     //Hämtar knappen
-    const addToCartButtons = document.querySelectorAll(".addToCartButton");
+    const addToCartButton = document.querySelector(".addToCartButton");
 
-    addToCartButtons.forEach(button => {
-        button.addEventListener("click", () => {
+    //skapar variabel där id:et för knappen sparas
+    let buttonID;
 
-            console.log("klick");
+    //Skapar en tom array
+    //let arrayWProducts = [];
 
-        })
+    addToCartButton.addEventListener("click", (e) => {
+
+        if (localStorage.getItem("products")) {
+            arrayWProducts = JSON.parse(localStorage.getItem("products"));
+            console.log(arrayWProducts);
+        } 
+             
+        //Sparar ned varukorgens id som vi klickat på
+        buttonID = e.target.id;
+            
+        //Om id:et matchar index i produktlistan
+        if (data.products[buttonID]) {;
+
+            //Pushar in objektet från produktlistan till arreyen
+            arrayWProducts.push(data.products[buttonID]);
+                
+            //Sparar arrayen i localstorage under nyckeln "product" 
+            localStorage.setItem("products", JSON.stringify(arrayWProducts));
+            
+            console.log(arrayWProducts);
+        }
     })
 }
 
 saveToCartFromProdSite();
+//
