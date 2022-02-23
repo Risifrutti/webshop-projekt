@@ -28,7 +28,7 @@
         </a>
 
         <div class="headerElements">
-            <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle hideHeaderElements">Sign
+            <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle hideHeaderElements signInHeader">Sign
                 in</a>
 
             <a href="/webshop-projekt/HTML/shoppingcart.html">
@@ -58,7 +58,7 @@
                     <h4>Shop</h4>
                 </div>
             </a>
-            <a href="#" class="noLinkStyle">
+            <a href="#" class="noLinkStyle signInHeader">
                 <div class="menu-item">
                     <h4>Sign in</h4>
                 </div>
@@ -91,19 +91,78 @@
 
     <main class="mainContent">
         <div class="productCard">
-            <div class="textInfo">
-                <img class="productImg" src="/webshop-projekt/Pictures/Images/LionKingVHS.png" alt="lion img">
-            </div>
-            <section class="textInfo">
-                <h2 class="productName">Product Name</h2>
-                <p class="price">$19.99</p>
-                <p class="productDescriptionText">Here comes som text about products... Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit. Harum quae maiores soluta impedit quos.Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit. Harum quae maiores soluta impedit quos.</p>
-                <p><input type="number" id="quantity" class="quantity" min="1" placeholder="1"></p>
-                <p><button class="addToCartButton">Add to cart</button></p>
-            </section>
         </div>
+
+         <!------Popups ------>
+         <div class="background-modal">
+            <div class="signIn-content">
+                <form action="">
+                    <div id="popupClose" class="closePopup">+</div>
+                    <h2 class="sigInText">Sig in</h2>
+                    <label class="smallText textLeft" for="email">Email *</label><br>
+                    <input type="email" placeholder="Email address" class="inputSignIn"><br>
+                    <label class="smallTex textLeft" for="password">Password *</label><br>
+                    <input type="password" placeholder="Password" class="inputSignIn"><br>
+                    <p class="smallText">Forgot password?</p><br>
+                    <button class="signInButton popupBtn">Sign in</button><br>
+                    <button class="becomeMemberButton popupBtn">Become a member</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="bg-modal">
+            <div class="becomeMember-content">
+                <form id="userForm" novalidate>
+                    <div id="popupClose" class="closePopup closeBecomeMember">+</div>
+                    <h2 class="becomeMemberh2">Become a member</h2>
+                    <h3>Become a member — don't miss out on deals, offers, discounts and bonus vouchers.</h3>
+                    <hr class="becomeMemberHR">
+                    
+                    <table class="inputsTable"> 
+                        <tr>
+                            <td>
+                                <input id="name" class="memberInput" type="text" placeholder="Name *" required>
+                                <span class="errorMessage" id="nameerrorMessage">Name field is required</span>
+                            </td>
+                            
+                            <td>
+                                <input id="email" class="memberInput" type="email" placeholder="Email *" required>
+                                <span class="errorMessage" id="emailerrorMessage">Email is required</span>
+                            </td>   
+                        </tr>
+                        <tr>
+                            <td>
+                                <input id="address" class="memberInput" type="text" placeholder="Street Address *" required>
+                                <span class="errorMessage" id="addresserrorMessage">Street address is required</span>
+                            </td>
+                            <td>
+                                <input id="password" class="memberInput" type="password" placeholder="Create Password *" required>
+                                <span class="errorMessage" id="passworderrorMessage">Password is required</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input id="town" class="memberInput" type="text" placeholder="Town / City *" required>
+                                <span class="errorMessage" id="townerrorMessage">This field is required</span>
+                            </td>
+                            <td>
+                                <input id="zipCode" class="memberInput" type="number" placeholder="Postcode / ZIP *" required>
+                                <span class="errorMessage" id="zipCodeerrorMessage">This field is required</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="memberInput" type="tel" placeholder="Phone number"></td>
+                            <td><input class="memberInput" type="text" placeholder="Birthday dd/mm/yyyy "></td>
+                        </tr>
+                        
+                    </table>
+                    <button  type="submit" class="signInButton popupBtn memberBtn">Become a member</button><br>
+                    <button class="becomeMemberButton popupBtn backToSignInButton">Back to Sign in</button>
+                </form>
+            </div>
+        </div>
+        <!--End of Popups-->
 
     </main>
 
@@ -126,8 +185,12 @@
         </nav>
     </footer>
 
-    <script src=""></script>
     <script src="/webshop-projekt/Javascript/views/hamburger.js"></script>
+    <script src="/webshop-projekt/Javascript/utilities.js"></script>
+    <script src="/webshop-projekt/Javascript/main.js"></script>
+    <script src="/webshop-projekt/Javascript/views/signup.js"></script>
+    <script src="/webshop-projekt/Javascript/views/productsite.js"></script>
+    <script src="/webshop-projekt/Javascript/views/registration.js"></script>
 </body>
 
 </html>

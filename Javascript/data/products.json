@@ -3,54 +3,63 @@
         {
             "category": "Books",
             "name": "Pride and Prejudice",
+            "prodImageURL": "/webshop-projekt/Pictures/Images/Bok_PrideandPrejudice.png",
             "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
             "price": "9.99$"
         },
         {
             "category": "Books",
-            "name": "Lorem Ipsum",
+            "name": "Alice in Wonderland",
+            "prodImageURL": "/webshop-projekt/Pictures/Images/Bok_AliceinWonderland.png",
             "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
             "price": "9.99$"
         },
         {
             "category": "Books",
-            "name": "Lorem Ipsum",
+            "name": "Sherlock Holmes",
+            "prodImageURL": "/webshop-projekt/Pictures/Images/Bok_SherlockHolmes.png",
             "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
             "price": "9.99$"
         },
         {
             "category": "Cassettes",
             "name": "Chess",
+            "prodImageURL": "/webshop-projekt/Pictures/Images/Kasett_Chess.png",
             "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
             "price": "4.99$"
         },
         {
             "category": "Cassettes",
             "name": "Carola",
+            "prodImageURL": "/webshop-projekt/Pictures/Images/Kasett_Carola.png",
             "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
             "price": "4.99$"
         },
         {
             "category": "Cassettes",
             "name": "Mr Music",
+            "prodImageURL": "/webshop-projekt/Pictures/Images/Kasett_MrMusic.png",
             "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
             "price": "4.99$"
         },
         {
             "category": "VHS",
             "name": "Star Wars",
+            "prodImageURL": "/webshop-projekt/Pictures/Images/VHS_StarWars.png",
             "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
             "price": "6.99$"
         },
         {
             "category": "VHS",
             "name": "Back to the Future",
+            "prodImageURL": "/webshop-projekt/Pictures/Images/VHS_BacktotheFuture.png",
             "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
             "price": "6.99$"
         },
         {
             "category": "VHS",
             "name": "Lion King",
+            "prodImageURL": "/webshop-projekt/Pictures/Images/VHS_LionKing.png",
             "prodDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. To ui totam nisi voluptatibus. Reiciendis sapiente explicabo possimus.",
             "price": "6.99$"
         }

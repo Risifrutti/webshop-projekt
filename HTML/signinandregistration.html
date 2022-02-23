@@ -28,7 +28,8 @@
         </a>
 
         <div class="headerElements">
-            <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle hideHeaderElements">Sign
+            <a href="/webshop-projekt/HTML/signinandregistration.html"
+                class="noLinkStyle hideHeaderElements signInHeader">Sign
                 in</a>
 
             <a href="/webshop-projekt/HTML/shoppingcart.html">
@@ -39,20 +40,93 @@
 
         </div>
     </header>
-    <main>
-        <div class="popupForm">
-            <form id="loginForm">
-                <img src="/webshop-projekt/Pictures/Icons/krysset-svart.png" alt="close popup" class="closeIcon"><br>
-                <h2 class="centerText">Sign in</h2>
-                <label for="email" class="email litleText">E-mail *</label><br>
-                <input type="text" id="email" class="inputSignin" placeholder="Email address"><br>
-                <label for="password" class="password litleText">Password *</label><br>
-                <input type="password" id="password" class="inputSignin" placeholder="Password"><br>
-                <p class="litleText centerText">Forgot password?</p>
-                <p><button class="signInBtn formBtn">Sign in</button></p>
-                <p><button class="becomeMemberBtn formBtn">Become a member</button></p>
-            </form>
+
+    <!----------- Hamburger menu --------------->
+
+    <nav id="hamburger-nav" class="hide-ham ham-nav">
+        <div id="ham-top">
+            <img id="ham-close" src="/webshop-projekt/pictures/Icons/krysset.png" alt="close hamburger menu "
+                class="headerIcons">
         </div>
+        <div id="menu-items">
+            <a href="/webshop-projekt/HTML/homepage.html" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Home</h4>
+                </div>
+            </a>
+            <a href="/webshop-projekt/HTML/productlist.html" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Shop</h4>
+                </div>
+            </a>
+            <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle">
+                <div class="menu-item">
+                    <h4>Sign in</h4>
+                </div>
+            </a>
+            </a>
+        </div>
+    </nav>
+
+    <!-- End of Hamburger Menu -->
+    <main>
+        <!------Popups ------>
+        <div class="background-modal">
+            <div class="signIn-content">
+                <form action="">
+                    <div id="popupClose" class="closePopup">+</div>
+                    <h2 class="sigInText">Sig in</h2>
+                    <label class="smallText textLeft" for="email">Email *</label><br>
+                    <input type="email" placeholder="Email address" class="inputSignIn"><br>
+                    <label class="smallTex textLeft" for="password">Password *</label><br>
+                    <input type="password" placeholder="Password" class="inputSignIn"><br>
+                    <p class="smallText">Forgot password?</p><br>
+                    <button class="signInButton popupBtn">Sign in</button><br>
+                    <button class="becomeMemberButton popupBtn">Become a member</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="bg-modal">
+            <div class="becomeMember-content">
+                <form action="">
+                    <div id="popupClose" class="closePopup closeBecomeMember">+</div>
+                    <h2 class="becomeMemberh2">Become a member</h2>
+                    <h3>Become a member — don't miss out on deals, offers, discounts and bonus vouchers.</h3>
+                    <hr class="becomeMemberHR">
+<<<<<<< HEAD
+
+                    <table class="inputsTable">
+=======
+                    
+                    <table id="memberRegistration" class="inputsTable"> 
+>>>>>>> d74cb849faddf57f8cf4a053663aee7d2489cbfa
+                        <tr>
+                            <td><input class="memberInput" type="text" placeholder="Name *"></td>
+                            <td><input class="memberInput" type="email" placeholder="Email *"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="memberInput" type="text" placeholder="Street Address *"></td>
+                            <td><input class="memberInput" type="password" placeholder="Create Password *"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="memberInput" type="text" placeholder="Town / City *"></td>
+                            <td><input class="memberInput" type="number" placeholder="Postcode / ZIP *"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="memberInput" type="tel" placeholder="Phone number"></td>
+                            <td><input class="memberInput" type="text" placeholder="Birthday dd/mm/yyyy "></td>
+                        </tr>
+
+                    </table>
+                    <button class="signInButton popupBtn">Become a member</button><br>
+                    <button class="becomeMemberButton popupBtn backToSignInButton">Back to Sign in</button>
+                </form>
+            </div>
+        </div>
+        <!--End of Popups-->
+
     </main>
     <footer class="footer">
         <div class="retroIcons">
@@ -74,7 +148,14 @@
         </nav>
     </footer>
 
-    <script src=""></script>
+<<<<<<< HEAD
+    <script src="/webshop-projekt/Javascript/views/hamburger.js"></script>
+    <script src="/webshop-projekt/Javascript/views/signup.js"></script>
+=======
+    <script src="/webshop-projekt/Javascript/views/hamburger.js"></script> 
+    <script src = "/webshop-projekt/Javascript/views/signup.js"></script>
+    <script src="/webshop-projekt/Javascript/views/registration.js"></script>
+>>>>>>> d74cb849faddf57f8cf4a053663aee7d2489cbfa
 </body>
 
 </html>
