@@ -54,14 +54,6 @@ async function saveToCartFromProdList() {
     addProdToCartIcons.forEach(icon => {
         icon.addEventListener("click", (e) => {
 
-<<<<<<< HEAD
-            i = e.target.id;
-            let prodstring = "";
-
-            if (data.products[i]) {
-
-                prodString = + JSON.stringify(data.products[i]);
-=======
             //Sparar ned varukorgens id som vi klickat på
             cartID = e.target.id;
             
@@ -70,7 +62,6 @@ async function saveToCartFromProdList() {
 
                 //Pushar in objektet från produktlistan till den nya tomma arrayen
                 arrayWProducts.push(JSON.stringify(data.products[cartID]));
->>>>>>> d74cb849faddf57f8cf4a053663aee7d2489cbfa
 
                 //Sparar arrayen i localstorage under nyckeln "product" 
                localStorage.setItem(`product`, arrayWProducts);
@@ -79,7 +70,6 @@ async function saveToCartFromProdList() {
     })
 }
 
-<<<<<<< HEAD
 showProducts().then(saveToCartFromProdList());
 
 
@@ -117,7 +107,3 @@ searchButton.addEventListener("click", async function (e) {
     });
 });
 
-=======
-//Kör showProducts funktion först och när den är klar kör vi saceToCartFromProdList funktionen
-showProducts().then(saveToCartFromProdList()); 
->>>>>>> d74cb849faddf57f8cf4a053663aee7d2489cbfa
