@@ -54,6 +54,11 @@ async function saveToCartFromProdList() {
     addProdToCartIcons.forEach(icon => {
         icon.addEventListener("click", (e) => {
 
+            if (localStorage.getItem("products")) {
+                arrayWProducts.push(JSON.stringify(localStorage.getItem("products")));
+                console.log(localStorage.getItem("products"));
+            } 
+
             //Sparar ned varukorgens id som vi klickat på
             cartID = e.target.id;
             
