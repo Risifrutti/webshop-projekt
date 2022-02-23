@@ -1293,7 +1293,7 @@ table {
 }
 
 /*Error messages text*/
-.errors {
+.errorMessage {
   font-size: 12px;
   color: red;
 }
