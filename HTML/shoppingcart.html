@@ -61,7 +61,7 @@
                     <h4>Shop</h4>
                 </div>
             </a>
-            <a href="#" class="noLinkStyle">
+            <a href="#" class="noLinkStyle signInHeader">
                 <div class="menu-item">
                     <h4>Sign in</h4>
                 </div>
@@ -139,29 +139,6 @@
 
             </article>
 
-            <article class="cartTheProduct">
-
-                <div class="wrapperForProductImgCart">
-
-                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="The product image"
-                        class="productImageInCart">
-
-                </div>
-
-                <h4 class="cartProductNameHeading">Product name</h4>
-
-                <div class="inputQuantityAndDeleteButtonWrapper">
-
-                    <input type="number" class="inputQuantityInCart" id="inputQuantity">
-
-                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="Delete product icon"
-                        class="deleteProdIconInCart">
-
-                </div>
-
-                <h4 class="priceHeadingInCart">$Price</h4>
-
-            </article>
 
             <hr class="cartAndPayLine">
 
@@ -180,14 +157,16 @@
             </section>
 
         </article>
+        <!--End of shopping cart-->
 
+        <!--Start of billing and shipping-->
         <article class="cartAndPayContentBox billingAndShippingBox">
 
             <h3 class="cartAndPayHeading">Billing & Shipping</h3>
 
             <hr class="cartAndPayLine">
 
-            <form class="billingAndShippingForm" novalidate>
+            <form action="" class="billingAndShippingForm">
 
                 <section class="requiredInfoBillingAndShippingForm">
 
@@ -206,7 +185,7 @@
                     <input class="billingAndShippingInput" type="email" name="billingAndShippingInfo" placeholder="Email address *" id="emailB" required>
                     <span class="error errors" id="emailBerror"> E-mail address is required</span>
 
-                    <input type="tel" name="billingAndShippingInfo" placeholder="Phone">
+                    <input type="tel" name="billingAndShippingInfo" placeholder="Phone" id="phoneB">
 
                 </section>
 
@@ -222,6 +201,7 @@
             </form>
 
         </article>
+        <!--End of Billing and shipping-->
 
         <!-- Reciept container -->
 
@@ -322,7 +302,9 @@
         </nav>
     </footer>
 
+    <script src="/webshop-projekt/Javascript/views/signup.js"></script>
     <script src="/webshop-projekt/Javascript/views/shoppingcart.js"></script>
     <script src="/webshop-projekt/Javascript/views/hamburger.js"></script>
     <script src="/webshop-projekt/Javascript/views/registration.js"></script>
+    
 </body>
