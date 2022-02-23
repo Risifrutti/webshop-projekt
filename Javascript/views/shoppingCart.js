@@ -1,6 +1,6 @@
 //Ritar ut produkterna i varukorgen som man lagt till i varukorgen
 function drawProdsInCart() {
-    
+
 }
 drawProdsInCart();
 
@@ -21,8 +21,8 @@ const billingandshippingform = document.querySelector(".billingAndShippingForm")
 const errorMessages = document.querySelectorAll(".error");
 
 
-function hideError(){
-    errorMessages.forEach((e) =>{
+function hideError() {
+    errorMessages.forEach((e) => {
         e.style.display = "none";
     })
 }
@@ -30,16 +30,16 @@ function hideError(){
 billingandshippingform.addEventListener('submit', (e) => {
     e.preventDefault();
     hideError();
-    
+
     const inputsRegForm = billingandshippingform.querySelectorAll(".billingAndShippingInput");
     inputsRegForm.forEach((input) => {
-      if(!input.checkValidity()){ //Kollar if inputs are fild or not
-        const errorMsg = document.getElementById(input.id + 'error');
-        errorMsg.style.display = "block";
-      }
+        if (!input.checkValidity()) { //Kollar if inputs are fild or not
+            const errorMsg = document.getElementById(input.id + 'error');
+            errorMsg.style.display = "block";
+        }
     });
-    
-  });
+
+});
 
 
 hideError();
@@ -88,6 +88,7 @@ confirmPaymentButton.addEventListener("click", (e) => {
 
 
     let recieptContent = `
+        <div> 
        <section> <h3>
         Your contact info:
         </h3>
@@ -119,8 +120,11 @@ confirmPaymentButton.addEventListener("click", (e) => {
         <p>5-12 days</p>
 
         </section>
-
+        </div>
+        
+        <div>
         <button class="closeRecieptButton">Close</button>
+        </div>
     `
 
     recieptContainer.innerHTML = recieptContent;
