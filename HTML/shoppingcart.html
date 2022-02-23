@@ -29,7 +29,7 @@
         </a>
 
         <div class="headerElements">
-            <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle hideHeaderElements signInHeader">Sign
+            <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle hideHeaderElements">Sign
                 in</a>
 
             <a href="/webshop-projekt/HTML/shoppingcart.html">
@@ -60,7 +60,7 @@
                     <h4>Shop</h4>
                 </div>
             </a>
-            <a href="#" class="noLinkStyle signInHeader">
+            <a href="#" class="noLinkStyle">
                 <div class="menu-item">
                     <h4>Sign in</h4>
                 </div>
@@ -91,7 +91,6 @@
     </div>
     <!-- End of Categories & search field -->
     
-    <!--Shopping cart content-->
     <main class="cartAndPayContent">
 
         <h2 class="cartAndPayMainHeading">Shopping Cart</h2>
@@ -123,10 +122,8 @@
 
                     <input type="number" class="inputQuantityInCart" id="inputQuantity">
 
-                    <a href="#" class="deleteProdIconInCart">
-                        <img src="/webshop-projekt/Pictures/Icons/krysset-svart.png" alt="Delete product icon"
+                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="Delete product icon"
                         class="deleteProdIconInCart">
-                    </a>
 
                 </div>
 
@@ -149,10 +146,8 @@
 
                     <input type="number" class="inputQuantityInCart" id="inputQuantity">
 
-                    <a href="#" class="deleteProdIconInCart">
-                        <img src="/webshop-projekt/Pictures/Icons/krysset-svart.png" alt="Delete product icon"
+                    <img src="/webshop-projekt/Pictures/Images/placeholderImage.png" alt="Delete product icon"
                         class="deleteProdIconInCart">
-                    </a>
 
                 </div>
 
@@ -177,30 +172,33 @@
             </section>
 
         </article>
-        <!--End of shopping cart-->
 
-        <!--Start of billing and shipping-->
         <article class="cartAndPayContentBox billingAndShippingBox">
 
             <h3 class="cartAndPayHeading">Billing & Shipping</h3>
 
             <hr class="cartAndPayLine">
 
-            <form action="" class="billingAndShippingForm">
+            <form class="billingAndShippingForm" novalidate>
 
                 <section class="requiredInfoBillingAndShippingForm">
 
-                    <input type="text" name="billingAndShippingInfo" placeholder="Name *" required>
+                    <input class="billingAndShippingInput" type="text" name="billingAndShippingInfo" placeholder="Name *" id="nameB" required>
+                    <span class="error errors" id="nameBerror">Name is required</span>
 
-                    <input type="text" name="billingAndShippingInfo" placeholder="Street address *">
+                    <input class="billingAndShippingInput" type="text" name="billingAndShippingInfo" placeholder="Street address *" id="addressB" required>
+                    <span class="error errors" id="addressBerror"> Street Adress is required</span>
 
-                    <input type="text" name="billingAndShippingInfo" placeholder="Postcode / ZIP *">
+                    <input class="billingAndShippingInput" type="text" name="billingAndShippingInfo" placeholder="Postcode / ZIP *" id="postcodeB" required>
+                    <span class="error errors" id="postcodeBerror"> Postcode/ZIP is required</span>
 
-                    <input type="text" name="billingAndShippingInfo" placeholder="Town / City *">
+                    <input class="billingAndShippingInput" type="text" name="billingAndShippingInfo" placeholder="Town / City *" id="cityB" required>
+                    <span class="error errors" id="cityBerror"> Town/City is required</span>
 
-                    <input type="email" name="billingAndShippingInfo" placeholder="Email address *">
+                    <input class="billingAndShippingInput" type="email" name="billingAndShippingInfo" placeholder="Email address *" id="emailB" required>
+                    <span class="error errors" id="emailBerror"> E-mail address is required</span>
 
-                    <input type="tel" name="billingAndShippingInfo" placeholder="Phone *">
+                    <input type="tel" name="billingAndShippingInfo" placeholder="Phone">
 
                 </section>
 
@@ -215,59 +213,7 @@
             </form>
 
         </article>
-        <!--End of Billing and shipping-->
 
-        <!------Popups ------>
-        <div class="background-modal">
-            <div class="signIn-content">
-                <form action="">
-                    <div id="popupClose" class="closePopup">+</div>
-                    <h2 class="sigInText">Sig in</h2>
-                    <label class="smallText textLeft" for="email">Email *</label><br>
-                    <input type="email" placeholder="Email address" class="inputSignIn"><br>
-                    <label class="smallTex textLeft" for="password">Password *</label><br>
-                    <input type="password" placeholder="Password" class="inputSignIn"><br>
-                    <p class="smallText">Forgot password?</p><br>
-                    <button class="signInButton popupBtn">Sign in</button><br>
-                    <button class="becomeMemberButton popupBtn">Become a member</button>
-                </form>
-            </div>
-
-        </div>
-
-        <div class="bg-modal">
-            <div class="becomeMember-content">
-                <form action="">
-                    <div id="popupClose" class="closePopup closeBecomeMember">+</div>
-                    <h2 class="becomeMemberh2">Become a member</h2>
-                    <h3>Become a member — don't miss out on deals, offers, discounts and bonus vouchers.</h3>
-                    <hr class="becomeMemberHR">
-                    
-                    <table class="inputsTable"> 
-                        <tr>
-                            <td><input class="memberInput" type="text" placeholder="Name *"></td>
-                            <td><input class="memberInput" type="email" placeholder="Email *"></td>
-                        </tr>
-                        <tr>
-                            <td><input class="memberInput" type="text" placeholder="Street Address *"></td>
-                            <td><input class="memberInput" type="password" placeholder="Create Password *"></td>
-                        </tr>
-                        <tr>
-                            <td><input class="memberInput" type="text" placeholder="Town / City *"></td>
-                            <td><input class="memberInput" type="number" placeholder="Postcode / ZIP *"></td>
-                        </tr>
-                        <tr>
-                            <td><input class="memberInput" type="tel" placeholder="Phone number"></td>
-                            <td><input class="memberInput" type="text" placeholder="Birthday dd/mm/yyyy "></td>
-                        </tr>
-                        
-                    </table>
-                    <button class="signInButton popupBtn">Become a member</button><br>
-                    <button class="becomeMemberButton popupBtn backToSignInButton">Back to Sign in</button>
-                </form>
-            </div>
-        </div>
-        <!--End of Popups-->
     </main>
 
     <footer class="footer">
@@ -289,8 +235,6 @@
         </nav>
     </footer>
 
-    <script src="/webshop-projekt/Javascript/views/signup.js"></script>
     <script src="/webshop-projekt/Javascript/views/shoppingcart.js"></script>
     <script src="/webshop-projekt/Javascript/views/hamburger.js"></script>
-    
 </body>
