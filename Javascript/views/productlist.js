@@ -72,8 +72,7 @@ async function saveToCartFromProdList() {
     })
 }
 
-//Kör showProducts funktion först och när den är klar kör vi saveToCartFromProdList funktionen
-showProducts().then(saveToCartFromProdList()); 
+showProducts().then(saveToCartFromProdList());
 
 
 //--Sökfunktionen--
@@ -109,6 +108,4 @@ searchButton.addEventListener("click", async function (e) {
         }
     });
 });
-
-
 
