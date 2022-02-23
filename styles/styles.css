@@ -35,6 +35,7 @@ body {
   min-height: 100vh;
   position: relative;
   border: 0;
+  overflow-x: hidden;
 }
 
 /* Styling for header */
@@ -140,6 +141,21 @@ body {
 /*Page Href text styling*/
 .noLinkStyle {
   text-decoration: none;
+}
+
+@media (min-width: 769px) {
+  .noLinkStyle:link {
+    text-decoration: none;
+  }
+  .noLinkStyle:visited {
+    text-decoration: none;
+  }
+  .noLinkStyle:hover {
+    text-decoration: underline;
+  }
+  .noLinkStyle:active {
+    text-decoration: none;
+  }
 }
 
 /**/
@@ -1340,9 +1356,8 @@ table {
 /* Main content in the home page */
 #welcomeText {
   font-family: rock salt;
-  font-size: 18px;
+  font-size: 15px;
   text-align: center;
-  padding: 35px;
 }
 
 @media (min-width: 769px) {
@@ -1393,17 +1408,19 @@ table {
   -webkit-transform: translate(-50%, -60%);
           transform: translate(-50%, -60%);
   font-size: 22px;
-  text-decoration: underline;
 }
 
 @media (min-width: 769px) {
   .categoryText {
     top: 42%;
     border: 3px outset whitesmoke;
-    padding: 15px;
-    color: #000000;
-    font-size: 35px;
+    padding-inline: 20px;
+    padding-block: 5px;
+    color: black;
+    font-size: 42px;
     text-decoration: none;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
 }
 
@@ -1428,9 +1445,25 @@ table {
 
 /* Hover effect on desktop category images */
 @media (min-width: 769px) {
+  .homepageCategory {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
   .homepageCategory:hover {
-    -webkit-filter: invert(33%);
-            filter: invert(33%);
+    -webkit-filter: contrast(60%);
+            filter: contrast(60%);
+  }
+  .homepageCategory:hover .categoryText {
+    opacity: 0%;
+  }
+  .homepageCategory:hover #jsonBooks {
+    opacity: 100%;
+  }
+  .homepageCategory:hover #jsonCassettes {
+    opacity: 100%;
+  }
+  .homepageCategory:hover #jsonVHS {
+    opacity: 100%;
   }
 }
 
@@ -1446,6 +1479,16 @@ table {
   text-shadow: 1px 2px 13px black;
 }
 
+@media (min-width: 769px) {
+  .categoryDesc {
+    top: 50%;
+    opacity: 0;
+    font-size: 33px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+
 #jsonCassettes {
   position: absolute;
   top: 50%;
@@ -1456,6 +1499,16 @@ table {
   font-size: 11px;
 }
 
+@media (min-width: 769px) {
+  #jsonCassettes {
+    top: 42%;
+    opacity: 0;
+    font-size: 33px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+
 #jsonVHS {
   position: absolute;
   top: 42%;
@@ -1464,5 +1517,14 @@ table {
           transform: translate(-50%, -60%);
   width: 100vw;
   font-size: 11px;
+}
+
+@media (min-width: 769px) {
+  #jsonVHS {
+    opacity: 0;
+    font-size: 33px;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

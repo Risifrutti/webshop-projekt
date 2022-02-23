@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
     position: relative;
     border: 0;
+    overflow-x: hidden;
 }
 
 /* Styling for header */
@@ -86,6 +87,24 @@ body {
 /*Page Href text styling*/
 .noLinkStyle {
     text-decoration: none;
+}
+
+@include for-small-screen {
+    .noLinkStyle:link {
+        text-decoration: none;
+    }
+
+    .noLinkStyle:visited {
+        text-decoration: none;
+    }
+
+    .noLinkStyle:hover {
+        text-decoration: underline;
+    }
+
+    .noLinkStyle:active {
+        text-decoration: none;
+    }
 }
 
 /**/
@@ -916,9 +935,8 @@ table {
 /* Main content in the home page */
 #welcomeText {
     font-family: rock salt;
-    font-size: 18px;
+    font-size: 15px;
     text-align: center;
-    padding: 35px;
 
     @include for-small-screen {
         font-size: 32px;
@@ -965,15 +983,16 @@ table {
     left: 50%;
     transform: translate(-50%, -60%);
     font-size: 22px;
-    text-decoration: underline;
 
     @include for-small-screen {
         top: 42%;
         border: 3px outset whitesmoke;
-        padding: 15px;
-        color: #000000;
-        font-size: 35px;
+        padding-inline: 20px;
+        padding-block: 5px;
+        color: rgb(0, 0, 0);
+        font-size: 42px;
         text-decoration: none;
+        transition: 0.4s;
     }
 }
 
@@ -982,9 +1001,6 @@ table {
     max-height: 100%;
     opacity: 75%;
     filter: invert(25%);
-
-
-
 
     @include for-small-screen {
         width: 100vw;
@@ -997,8 +1013,27 @@ table {
 /* Hover effect on desktop category images */
 
 @include for-small-screen {
+    .homepageCategory {
+        transition: 0.4s;
+    }
     .homepageCategory:hover {
-        filter: invert(33%);
+        filter: contrast(60%);
+
+            .categoryText {
+                opacity: 0%;
+            }
+
+                #jsonBooks {
+                    opacity: 100%;
+                }
+
+                #jsonCassettes {
+                    opacity: 100%;
+                }
+
+                #jsonVHS {
+                    opacity: 100%;
+                }
     }
 }
 
@@ -1011,6 +1046,13 @@ table {
     font-size: 11px;
     color: #fff;
     text-shadow: 1px 2px 13px rgba(0,0,0,1);
+    
+    @include for-small-screen {
+        top: 50%;
+        opacity: 0;
+        font-size: 33px;
+        transition: 0.4s;
+    }
 }
 
 #jsonCassettes {
@@ -1020,6 +1062,13 @@ table {
     transform: translate(-50%, -60%);
     width: 100vw;
     font-size: 11px;
+
+    @include for-small-screen {
+        top: 42%;
+        opacity: 0;
+        font-size: 33px;
+        transition: 0.4s;
+    }
 }
 
 #jsonVHS {
@@ -1029,4 +1078,10 @@ table {
     transform: translate(-50%, -60%);
     width: 100vw;
     font-size: 11px;
+
+    @include for-small-screen {
+        opacity: 0;
+        font-size: 33px;
+        transition: 0.35s;
+    }
 }
