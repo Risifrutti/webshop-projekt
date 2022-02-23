@@ -16,7 +16,7 @@ async function showProducts() {
                 </a>
                 </section>
                 <section class="product-info"> 
-                <a href="/webshop-projekt/HTML/productsite.html" class="noLinkStyle">
+                <a href="/webshop-projekt/HTML/productsite.html?category=${element.category}&name=${element.name}" class="noLinkStyle">
                     <h3 class="product-name">${element.name}</h3>
                     <p class="product-price">${element.price}</p>
                     </a>
@@ -48,8 +48,8 @@ async function saveToCartFromProdList() {
     let cartID;
     
     //Skapar en tom array för att pusha in produkterna vi adderar i varukorgen
-    const arrayWProducts = [];
-
+    //let arrayWProducts = [];
+    
     //forEach som går igenom varje ikon 
     addProdToCartIcons.forEach(icon => {
         icon.addEventListener("click", (e) => {
@@ -64,8 +64,10 @@ async function saveToCartFromProdList() {
                 arrayWProducts.push(JSON.stringify(data.products[cartID]));
 
                 //Sparar arrayen i localstorage under nyckeln "product" 
-               localStorage.setItem(`product`, arrayWProducts);
+               localStorage.setItem("products", arrayWProducts);
             }
+
+            console.log(localStorage.getItem("products"));
         })
     })
 }
