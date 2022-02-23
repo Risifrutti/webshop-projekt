@@ -25,12 +25,9 @@
         errorElement.style.display = 'flex';
       }
     });
-    
-  });
 
-  hideErrorMessage(); //activerar
 
-  /*Lägger inputs till local storage*/
+      /*Lägger inputs till local storage*/
   //hämtar user inputs värje fält
   const userName = document.getElementById("name");
   const userEmail = document.getElementById("email");
@@ -39,10 +36,10 @@
   const userTown = document.getElementById("town");
   const userZipCode = document.getElementById("zipCode");
 
-  let userArray = localStorage.getItem('user')?
-  JSON.parse(localStorage.getItem('user')): [];
+  let userArray = localStorage.getItem('user_Info')?
+  JSON.parse(localStorage.getItem('user_Info')): [];
 
-  function addUser(){
+  function addNewUser(){
     const user_info = {
         'name': userName.value,
         'email': userEmail.value,
@@ -52,9 +49,15 @@
         'city': userTown.value
     }
 
-    userArray.push(user_info);
-    localStorage.setItem('user', JSON.stringify(userArray));
+    userArray.push(user_info); //pushar in user info
+    localStorage.setItem('user_Info', JSON.stringify(userArray));
   }
-  addUser();
+  addNewUser();
+    
+  });
+
+  hideErrorMessage(); //activerar
+
+
   
 })();
