@@ -111,6 +111,11 @@ body {
 /**/
 main {
     margin: 0px;
+
+    @include for-small-screen {
+    margin-top: 100px;
+    margin-bottom:100px;
+    }
 }
 
 
@@ -516,6 +521,10 @@ input[type="search"]::placeholder {
         @include roboto-text(22px);
         text-decoration: underline;
         margin: 20px 0px 20px 0px; 
+
+        @include for-small-screen {
+            @include roboto-text(28px);
+        }
     }
 }
 
@@ -1010,6 +1019,7 @@ table {
     @include for-small-screen {
         font-size: 32px;
         padding: 55px;
+        padding-top:0px;
         color: #424D55;
     }
 }
