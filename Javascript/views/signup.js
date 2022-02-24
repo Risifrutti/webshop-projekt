@@ -42,20 +42,40 @@ closeBecomeMember.addEventListener("click", () => {
 	becomeMemberPopup.style.display = "none"; //Döljer member popup
 });
 
+///////////////////////////////////////////////////////////////////////////////////////
 /*------------------WORKING----------------------*/
 /*Hämtar key=user_info från local storage*/
 const userData = JSON.parse(localStorage.getItem("user_Info"));
 
 console.log("Hämtat user data från local storage", userData);
-//skriver ut 'Name' & 'Email' from local storage
-const userNameFromLocalStorage = userData.map( user => user.name);
-const userName = userNameFromLocalStorage[0]; //user name from local storage
+//skriver ut 'password' & 'email' from local storage
+const userPassFromLocalStorage = userData.map( user => user.password);
+const userPass = userPassFromLocalStorage[0]; //user name from local storage
 
 const userEmailFromLocalStorage = userData.map( user => user.email);
 const userEmail = userEmailFromLocalStorage[0];
 
-console.log(userName, userEmail);
+console.log(userPass, userEmail);
 
 /*Hämtar log in info */
-const signInButton = document.getElementsByClassName("signInButton");
-console.log(signInButton);
+const emailInput = document.getElementById("emailSignIn");
+const passwordInput = document.getElementById("passwordSignIn");
+const signInButton = document.getElementById("sigInBtn"); //Hämtar sign in button
+
+signInButton.addEventListener("click", (e) => {
+	e.preventDefault();
+
+	//Kollar om fälltet är infylda
+	if(emailInput.value === "" || passwordInput.value === ""){
+		passwordInput.value = "";
+		alert("Please fill in email & password!"); //Kan andra det till snyggare
+	}
+	else if(emailInput.value === userEmail || passwordInput.value === userPass){
+		console.log("User inlogat");
+	}
+	else{
+		console.log("Create a user!");
+	}
+
+	
+});
