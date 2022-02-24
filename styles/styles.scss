@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
     position: relative;
     border: 0;
+    overflow-x: hidden;
 }
 
 /* Styling for header */
@@ -86,6 +87,24 @@ body {
 /*Page Href text styling*/
 .noLinkStyle {
     text-decoration: none;
+}
+
+@include for-small-screen {
+    .noLinkStyle:link {
+        text-decoration: none;
+    }
+
+    .noLinkStyle:visited {
+        text-decoration: none;
+    }
+
+    .noLinkStyle:hover {
+        text-decoration: underline;
+    }
+
+    .noLinkStyle:active {
+        text-decoration: none;
+    }
 }
 
 /**/
@@ -573,8 +592,12 @@ input[type="search"]::placeholder {
     }
 }
 
-.cartTheProduct { /*Sektionen från ena linjen till nedersta linjen*/
+.wrappingTheProds {
     width: 90%;
+}
+
+.cartTheProduct { /*Varje produkt box i varukorgen*/
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -605,7 +628,13 @@ input[type="search"]::placeholder {
         @include roboto-text(15px);
         overflow-wrap: break-word;
         max-width: 100px;
+        min-width: 100px;
         margin-top: 0px;
+        text-align: end;
+
+        @include for-small-screen {
+            text-align: unset;
+        }
     }
 
     .inputQuantityAndDeleteButtonWrapper { /*Wrappar input antal och delete ikon*/
@@ -969,9 +998,8 @@ table {
 /* Main content in the home page */
 #welcomeText {
     font-family: rock salt;
-    font-size: 18px;
+    font-size: 15px;
     text-align: center;
-    padding: 35px;
 
     @include for-small-screen {
         font-size: 32px;
@@ -1014,34 +1042,109 @@ table {
 
 .categoryText {
     position: absolute;
-    top: 35%;
+    top: 0%;
     left: 50%;
     transform: translate(-50%, -60%);
-    font-size: 25px;
-    border: 3px inset whitesmoke;
-    padding: 10px;
+    font-size: 22px;
 
     @include for-small-screen {
         top: 42%;
         border: 3px outset whitesmoke;
-        padding: 15px;
-        color: #22272b;
-        font-size: 35px;
+        padding-inline: 20px;
+        padding-block: 5px;
+        color: rgb(0, 0, 0);
+        font-size: 42px;
+        text-decoration: none;
+        transition: 0.4s;
     }
 }
 
 .homepageImages {
     max-width: 100%;
     max-height: 100%;
-    opacity: 65%;
-
-
-
+    opacity: 75%;
+    filter: invert(25%);
 
     @include for-small-screen {
         width: 100vw;
         height: 40vh;
+        filter: invert(0%);
+        transition: 0.5s;
     }
 }
 
+/* Hover effect on desktop category images */
 
+@include for-small-screen {
+    .homepageCategory {
+        transition: 0.4s;
+    }
+    .homepageCategory:hover {
+        filter: contrast(60%);
+
+            .categoryText {
+                opacity: 0%;
+            }
+
+                #jsonBooks {
+                    opacity: 100%;
+                }
+
+                #jsonCassettes {
+                    opacity: 100%;
+                }
+
+                #jsonVHS {
+                    opacity: 100%;
+                }
+    }
+}
+
+.categoryDesc {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 95vw;
+    font-size: 11px;
+    color: #fff;
+    text-shadow: 1px 2px 13px rgba(0,0,0,1);
+    
+    @include for-small-screen {
+        top: 50%;
+        opacity: 0;
+        font-size: 33px;
+        transition: 0.4s;
+    }
+}
+
+#jsonCassettes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 100vw;
+    font-size: 11px;
+
+    @include for-small-screen {
+        top: 42%;
+        opacity: 0;
+        font-size: 33px;
+        transition: 0.4s;
+    }
+}
+
+#jsonVHS {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 100vw;
+    font-size: 11px;
+
+    @include for-small-screen {
+        opacity: 0;
+        font-size: 33px;
+        transition: 0.35s;
+    }
+}
