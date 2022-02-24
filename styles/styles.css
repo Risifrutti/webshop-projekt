@@ -164,6 +164,13 @@ main {
   margin: 0px;
 }
 
+@media (min-width: 769px) {
+  main {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
 .ham-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -754,6 +761,15 @@ input[type="search"]::placeholder {
   font-size: 22px;
   text-decoration: underline;
   margin: 20px 0px 20px 0px;
+}
+
+@media (min-width: 769px) {
+  .cartAndPayContent .cartAndPayMainHeading {
+    font-family: Roboto, "sans-serif";
+    font-weight: bold;
+    color: #424D55;
+    font-size: 28px;
+  }
 }
 
 .cartAndPayContentBox {
@@ -1461,6 +1477,7 @@ table {
   #welcomeText {
     font-size: 32px;
     padding: 55px;
+    padding-top: 0px;
     color: #424D55;
   }
 }
