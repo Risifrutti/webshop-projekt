@@ -16,7 +16,7 @@ function drawProdsInCart() {
         console.log(arrayWProducts);
 
         arrayWProducts.forEach(element => {
-        
+
             const prod = ` 
                 <article class="cartTheProduct">
     
@@ -48,9 +48,9 @@ function drawProdsInCart() {
                 </article>
     
             `
-    
+
             theProdArticle.innerHTML += prod;
-    
+
             insertAfter(theProdArticle, cartAndPayLineSibling.nextSibling);
         })
     }
@@ -99,15 +99,20 @@ confirmButton.addEventListener('click', (e) => {
     hideError();
 
     const inputsRegForm = billingandshippingform.querySelectorAll(".billingAndShippingInput");
+
+    let errorCount = 0;
+
     inputsRegForm.forEach((input) => {
 
         if (!input.checkValidity()) { //Kollar if inputs are fild or not
             const errorMsg = document.getElementById(input.id + 'error');
             errorMsg.style.display = "block";
-        } else {
-            showReciept();
+            errorCount++;
         }
     });
+    if (errorCount === 0) {
+        showReciept();
+    }
 
 });
 
