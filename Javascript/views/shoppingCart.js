@@ -169,6 +169,7 @@ const closeRecieptBtn = document.querySelector(".closeRecieptButton");
 
 closeRecieptBtn.addEventListener("click", (e) => {
     location.replace("/webshop-projekt/HTML/homepage.html");
+    localStorage.removeItem("products");
 });
 
 
@@ -225,5 +226,6 @@ function showReciept() {
     recieptInfoContainer.innerHTML = recieptContent;
 
 };
+
 
 
