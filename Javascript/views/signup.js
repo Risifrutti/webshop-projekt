@@ -47,7 +47,7 @@ closeBecomeMember.addEventListener("click", () => {
 const userData = JSON.parse(localStorage.getItem("user_Info"));
 
 console.log("Hämtat user data från local storage", userData);
-//skriver ut 'Name*' input fältet from local storage from registration from
+//skriver ut 'Name' & 'Email' from local storage
 const userNameFromLocalStorage = userData.map( user => user.name);
 const userName = userNameFromLocalStorage[0]; //user name from local storage
 
@@ -56,3 +56,6 @@ const userEmail = userEmailFromLocalStorage[0];
 
 console.log(userName, userEmail);
 
+/*Hämtar log in info */
+const signInButton = document.getElementsByClassName("signInButton");
+console.log(signInButton);
