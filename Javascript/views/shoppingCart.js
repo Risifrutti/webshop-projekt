@@ -8,11 +8,6 @@ const inputQuantityAndDelete = document.querySelectorAll(".inputQuantityAndDelet
 
 //Ritar ut produkterna i varukorgen som man lagt till i varukorgen
 
-//Funktion för att sätta ett element som next sibling 
-function insertAfter(newNode, existingNode) {
-    existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
-}
-
 //const prodContainer = document.querySelector(".wrapperForProductImgCart")
 function drawProdsInCart() {
 

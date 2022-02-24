@@ -84,6 +84,7 @@ body {
 .header .headerIcons {
   width: auto;
   height: 35px;
+  cursor: pointer;
 }
 
 @media (min-width: 769px) {
@@ -214,6 +215,7 @@ main {
   margin: 40px;
   margin-top: 50px;
   height: 25px;
+  cursor: pointer;
 }
 
 #menu-items {
