@@ -1,7 +1,7 @@
 const cartAndPayLineSibling = document.querySelector(".cartAndPayLine");
 const cartAndPayContentParent = document.querySelector(".cartAndPayContent");
 const theProdArticle = document.createElement("article");
-theProdArticle.classList.add("cartTheProduct");
+theProdArticle.classList.add("wrappingTheProds");
 const proceedToCheckoutButton = document.querySelector(".proceedToCheckoutButton"); //Hämtar proceed knappen
 const billingAndShippingBox = document.querySelector(".billingAndShippingBox"); //Hämtar billing&Shipping boxen
 const inputQuantityAndDelete = document.querySelectorAll(".inputQuantityAndDeleteButtonWrapper"); //Hämtar input antal och delete knapp
