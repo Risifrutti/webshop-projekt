@@ -17,36 +17,44 @@ proceedToCheckoutButton.addEventListener("click", () => {
 
 })
 
+const confirmButton = document.getElementById("confirmPaymentButton");
 const billingandshippingform = document.querySelector(".billingAndShippingForm");
 const errorMessages = document.querySelectorAll(".error");
 
-
+//Funktion som gömmer errormeddelanden.
 function hideError() {
     errorMessages.forEach((e) => {
         e.style.display = "none";
     })
 }
 
-billingandshippingform.addEventListener('submit', (e) => {
+hideError();
+//Vid klick på confirm på billing & shipping sker validering och 
+//om godkänd så visas ett kvitto. 
+confirmButton.addEventListener('click', (e) => {
     e.preventDefault();
     hideError();
 
     const inputsRegForm = billingandshippingform.querySelectorAll(".billingAndShippingInput");
     inputsRegForm.forEach((input) => {
+
         if (!input.checkValidity()) { //Kollar if inputs are fild or not
             const errorMsg = document.getElementById(input.id + 'error');
             errorMsg.style.display = "block";
+        } else {
+            showReciept();
         }
     });
 
 });
 
 
-hideError();
+
+
 
 let inputQuantityInCart = document.querySelectorAll(".inputQuantityInCart"); //Hämtar input antal
 const deleteProdInCart = document.querySelectorAll(".deleteProdIconInCart"); //Hämtar krysset i varukorgen som tar bort produkt
-const confirmPaymentButton = document.getElementById("confirmPaymentButton");// Hämtar knappen i beställningsformuläret.
+
 
 //Lägger till event när man klickar på knappen. Visar billing&Shipping box
 proceedToCheckoutButton.addEventListener("click", () => {
@@ -65,19 +73,45 @@ proceedToCheckoutButton.addEventListener("click", () => {
 
 })
 
-//Räkna ut totalt pris för alla items i varukorgen. --EJ FÄRDIG--
-inputQuantityInCart.forEach(quantity => {
+//-----Kvitto----
 
-    let productQuantity
+//Körs inuti showReciept(). Ny styling för cart
+function restyleCart() {
+    const cartContainer = document.querySelector(".cartAndPayContentBox");
+    if (!cartContainer.classList.contains("cartRecieptStyle")) {
+        cartContainer.classList.add("cartRecieptStyle");
+
+        const cartHeading = document.querySelector(".cartAndPayMainHeading");
+        cartHeading.innerText = "Reciept";
+    }
+}
+
+
+
+//Körs inuti showReciept(). Visar reciept containern
+function showRecieptContainer() {
+    const recieptContainer = document.getElementById("recieptContainer");
+    if (recieptContainer.classList.contains("hideReciept")) {
+        (recieptContainer.classList.remove("hideReciept"));
+    }
+}
+
+//Close-knappen tar användaren till homepage OCH ska kanske rensa sparade artiklarna???
+const closeRecieptBtn = document.querySelector(".closeRecieptButton");
+
+closeRecieptBtn.addEventListener("click", (e) => {
+    location.replace("/webshop-projekt/HTML/homepage.html");
 });
 
-//----Kvitto----
 
-confirmPaymentButton.addEventListener("click", (e) => {
-    e.preventDefault();
+function showReciept() {
     billingAndShippingBox.style.display = "none";
 
-    const recieptContainer = document.getElementById("recieptContainer");
+    restyleCart();
+    showRecieptContainer();
+
+    const recieptInfoContainer = document.getElementById("recieptInfo");
+
     const customerName = document.getElementById("nameB").value;
     const adress = document.getElementById("addressB").value;
     const postcode = document.getElementById("postcodeB").value;
@@ -86,48 +120,42 @@ confirmPaymentButton.addEventListener("click", (e) => {
     const tel = document.getElementById("phoneB").value;
 
 
-
     let recieptContent = `
+        <div><h2>Thank you for your purchase!</h2></div>
         <div> 
-       <section> <h3>
+        <section> <h3>
         Your contact info:
         </h3>
         <p>${email}</p>
         <p>${tel}</p>
         </section>
-
         <section>
         <h3>
         Shipping adresss:
         </h3>
-       <p>${customerName}</p> 
-       <p>${adress}</p>
-       <p>${postcode}</p>
-       <p>${city}</p>
+        <p>${customerName}</p> 
+        <p>${adress}</p>
+        <p>${postcode}</p>
+        <p>${city}</p>
         </section>
-
         <section>
         <h3>
         Shipping method:
         </h3>
         <p>Economy Shipping</p>
         </section>
-
         <section>
         <h3>
         Estimated arrival: 
         </h3>
         <p>5-12 days</p>
-
         </section>
         </div>
         
-        <div>
-        <button class="closeRecieptButton">Close</button>
-        </div>
-    `
+        `
 
-    recieptContainer.innerHTML = recieptContent;
+    recieptInfoContainer.innerHTML = recieptContent;
 
-});
+};
+
 
