@@ -177,8 +177,13 @@
 
         <!-- Reciept container -->
 
-        <article id="recieptContainer" class="recieptContainer">
+        <article id="recieptContainer" class="recieptContainer hideReciept">
+            <div id="recieptInfo">
 
+            </div>
+            <div>
+                <button class="closeRecieptButton hideRecieptButton">Close and go to homepage</button>
+            </div>
         </article>
 
         <!-- End of Reciept container -->
@@ -215,7 +220,6 @@
                                 <input id="name" class="memberInput" type="text" placeholder="Name *" required>
                                 <span class="errorMessage" id="nameerrorMessage">Name field is required</span>
                             </td>
-
                             <td>
                                 <input id="email" class="memberInput" type="email" placeholder="Email *" required>
                                 <span class="errorMessage" id="emailerrorMessage">Email is required</span>
