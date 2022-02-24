@@ -65,6 +65,14 @@ if (theProdArticle.innerHTML === "") {
 
     proceedToCheckoutButton.style.display = "none";
 
+    // Skriver ut meddelande om varukorgen är tom
+    const emptyCartMessage = document.createElement("h2");
+    emptyCartMessage.textContent = "The cart is empty, add a product from the shopping list!";
+    const emptyMessage = document.getElementById("emptyCartMessage");
+    emptyMessage.appendChild(emptyCartMessage);
+
+    emptyCartMessage.style.fontFamily = "viga";
+
 } else {
     console.log("den är inte tom")
 
@@ -226,4 +234,8 @@ function showReciept() {
 
 };
 
+// Funktion för att visa totalkostnaden för produkter i varukorgen
 
+const showTotalCost = () => {
+    
+}
