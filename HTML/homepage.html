@@ -76,21 +76,30 @@
 
         </div>
 
-        <div class="homepageCateogry" id="categoryBooks">
-            <img class="homepageImages" src="/webshop-projekt/Pictures/Images/Frontpage pics/books_fixed.jpg" alt="books in a row">
-            <p class="categoryText">Books</p>
+        <div class="homepageCategory" id="categoryBooks">
+            <a href="/">
+                <img class="homepageImages" src="/webshop-projekt/Pictures/Images/Frontpage pics/books_fixed.jpg" alt="books in a row">
+            </a>
+            <p class="categoryText categoryData" id="books"></p>
+            <p class="categoryDesc" id="jsonBooks"></p>
 
         </div>
 
-        <div class="homepageCateogry" id="categoryCassettes">
-            <img class="homepageImages" src="/webshop-projekt/Pictures/Images/Frontpage pics/cassettes_fixed_FORREAL.jpg" alt="cassettes">
-            <p class="categoryText">Cassettes</p>
+        <div class="homepageCategory" id="categoryCassettes">
+            <a href="">
+                <img class="homepageImages" src="/webshop-projekt/Pictures/Images/Frontpage pics/cassettes_fixed_FORREAL.jpg" alt="cassettes">
+            </a>
+            <p class="categoryText categoryData" id="cassettes"></p>
+            <p class="categoryDesc" id="jsonCassettes"></p>
 
         </div>
 
-        <div class="homepageCateogry" id="categoryVHS">
-            <img class="homepageImages" id="imageVHS" src="/webshop-projekt/Pictures/Images/Frontpage pics/VHS_fixed.jpg" alt="VHS tapes">
-            <p class="categoryText">VHS</p>
+        <div class="homepageCategory" id="categoryVHS">
+            <a href="">
+                <img class="homepageImages" id="imageVHS" src="/webshop-projekt/Pictures/Images/Frontpage pics/VHS_fixed.jpg" alt="VHS tapes">
+            </a>
+            <p class="categoryText categoryData" id="vhs"></p>
+            <p class="categoryDesc" id="jsonVHS"></p>
 
         </div>
 
@@ -153,8 +162,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><input class="memberInput" type="tel" placeholder="Phone number"></td>
-                            <td><input class="memberInput" type="text" placeholder="Birthday dd/mm/yyyy "></td>
+                            <td><input id="phoneNum" class="memberInput" type="tel" placeholder="Phone number"></td>
+                            <td><input id="birthday" class="memberInput" type="text" placeholder="Birthday dd/mm/yyyy "></td>
                         </tr>
                         
                     </table>
@@ -185,10 +194,12 @@
         </nav>
     </footer>
 
-    <script src=""></script>
+    <script src="/webshop-projekt/Javascript/utilities.js"></script>
+    <script src="/webshop-projekt/Javascript/views/homepage.js"></script>
     <script src="/webshop-projekt/Javascript/views/hamburger.js"></script>
     <script src="/webshop-projekt/Javascript/views/signup.js"></script>
     <script src="/webshop-projekt/Javascript/views/registration.js"></script>
+    <script src="/webshop-projekt/Javascript/main.js"></script>
 </body>
 
 </html>

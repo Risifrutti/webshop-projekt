@@ -80,13 +80,13 @@
                         src="/webshop-projekt/Pictures/Icons/search-icon.png" alt="search icon"></button>
             </form><br>
             <ul class="categoriesList columnSearch">
-                <li>All</li>
+                <a href="/webshop-projekt/HTML/productlist.html" class="noLinkStyle"><li>All</li></a>
                 <li>|</li>
-                <li>Books</li>
+                <a href="" class="noLinkStyle"><li class="categoryData" id="books"></li></a>
                 <li>|</li>
-                <li>VHS</li>
+                <a href="" class="noLinkStyle"><li class="categoryData" id="cassettes"></li></a>
                 <li>|</li>
-                <li>Casettes</li>
+                <a href="" class="noLinkStyle"><li class="categoryData" id="vhs"></li></a>
             </ul>
         </nav>
     </div>
@@ -158,8 +158,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><input class="memberInput" type="tel" placeholder="Phone number"></td>
-                            <td><input class="memberInput" type="text" placeholder="Birthday dd/mm/yyyy "></td>
+                            <td><input id="phoneNum" class="memberInput" type="tel" placeholder="Phone number"></td>
+                            <td><input id="birthday" class="memberInput" type="text" placeholder="Birthday dd/mm/yyyy "></td>
                         </tr>
                         
                     </table>
