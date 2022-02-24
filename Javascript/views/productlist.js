@@ -114,3 +114,51 @@ searchButton.addEventListener("click", async function (e) {
     });
 });
 
+
+//Funktion som visar produkterna för vald kategori
+async function showChoosenCategoryProds() {
+    
+    const data = await fetchFile("/webshop-projekt/Javascript/data/products.json");
+
+    const params = new URLSearchParams(location.search);
+    const prodCategory = params.get("category");
+    const productList = document.querySelectorAll(".product-article");
+
+    //Om querystringen är tom (null) så gör vi inget
+    if (prodCategory === null) { 
+
+        return;
+
+    } else { //Men om den innehåller en kategori gör vi nedan
+    
+        data.products.forEach(element => {
+            
+            //Om produktens kategori är lika med den som är i querystring så gör vi inget 
+            if (element.category.toLowerCase() === prodCategory) {
+
+                return;
+    
+            } else {//Annars döljer vi den produkten då den inte hör till vald kategori
+    
+                productList.forEach(product => {
+                    
+                    const productName = product.childNodes[3].childNodes[1].childNodes[1];
+    
+                    if(productName.innerText == element.name) {
+    
+                        product.classList.add("hideProduct");
+    
+                    }
+                
+                })
+                
+            }
+    
+        });
+
+    }
+    
+}
+
+showChoosenCategoryProds();
+

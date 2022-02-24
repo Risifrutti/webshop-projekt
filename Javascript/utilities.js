@@ -8,3 +8,8 @@ async function fetchFile(file) {
     return data;
 }
 
+//Funktion för att sätta ett element som next sibling 
+function insertAfter(newNode, existingNode) {
+    existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+}
+
