@@ -2,6 +2,7 @@
 
   const userRegistrationForm = document.getElementById("userForm"); //Hämtar user registration form 
   const allErrorMessages = document.querySelectorAll(".errorMessage"); //Hämtar alla fel meddelanden
+  const popupWindow = document.querySelector(".bg-modal");
 
   /*--Function to hide all error message--*/
   function hideErrorMessage(){
@@ -21,46 +22,52 @@
     inputsRegForm.forEach((input) => {
       if(!input.checkValidity()) { //Kollar if inputs finns eller inte
         const errorElement = document.getElementById(input.id + 'errorMessage');
-        console.log(input.id); //radera sen
+        //console.log(input.id); //radera sen
         errorElement.style.display = 'flex';
+      }
+      else if(input.value !== ""){ //Kollar if alla inputs infylda
+        popupWindow.style.display="none"; //gömma registration form
+
+
+
+      }
+      else{
+        console.log("Ok");
       }
     });
 
 
-      /*Lägger inputs till local storage*/
-  //hämtar user inputs värje fält
-  const userName = document.getElementById("name");
-  const userEmail = document.getElementById("email");
-  const userAddress = document.getElementById("address");
-  const userPassword = document.getElementById("password");
-  const userTown = document.getElementById("town");
-  const userZipCode = document.getElementById("zipCode"); 
-  const userPhone = document.getElementById("phoneNum");
+    /*Lägger inputs till local storage*/
+    //hämtar user inputs värje fält som ska sparas i local storage
+    const userName = document.getElementById("name");
+    const userEmail = document.getElementById("email");
+    const userAddress = document.getElementById("address");
+    const userPassword = document.getElementById("password");
+    const userTown = document.getElementById("town");
+    const userZipCode = document.getElementById("zipCode"); 
+    const userPhone = document.getElementById("phoneNum");
   
 
-  let userArray = localStorage.getItem('user_Info')?
-  JSON.parse(localStorage.getItem('user_Info')): [];
-  //skapar string till local storage
-  function addNewUser(){
-    const user_info = {
-        'name': userName.value,
-        'email': userEmail.value,
-        'address': userAddress.value,
-        'password': userPassword.value,
-        'zipcode': userZipCode.value,
-        'city': userTown.value,
-        'phone': userPhone.value 
-        
-    }
+    let userArray = localStorage.getItem('user_Info')?JSON.parse(localStorage.getItem('user_Info')):[];
+    //skapar string till local storage
+    function addNewUser(){
+      const user_info = {
+          'name': userName.value,
+          'email': userEmail.value,
+          'address': userAddress.value,
+          'password': userPassword.value,
+          'zipcode': userZipCode.value,
+          'city': userTown.value,
+          'phone': userPhone.value   
+      }
 
-    userArray.push(user_info); //pushar in user info
-    //localStorage.setItem(key, value); spara data i local storage
-    localStorage.setItem('user_Info', JSON.stringify(userArray));
-  }
-  addNewUser();
+      userArray.push(user_info); //pushar in user info
+      //localStorage.setItem(key, value); spara data i local storage
+      localStorage.setItem('user_Info', JSON.stringify(userArray));
+    }
+    addNewUser(); //activerar
     
   });
-
   hideErrorMessage(); //activerar
   
 })();
