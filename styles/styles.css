@@ -864,9 +864,13 @@ input[type="search"]::placeholder {
   }
 }
 
-.cartTheProduct {
-  /*Sektionen från ena linjen till nedersta linjen*/
+.wrappingTheProds {
   width: 90%;
+}
+
+.cartTheProduct {
+  /*Varje produkt box i varukorgen*/
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -925,7 +929,15 @@ input[type="search"]::placeholder {
   font-size: 15px;
   overflow-wrap: break-word;
   max-width: 100px;
+  min-width: 100px;
   margin-top: 0px;
+  text-align: end;
+}
+
+@media (min-width: 769px) {
+  .cartTheProduct .cartProductNameHeading {
+    text-align: unset;
+  }
 }
 
 .cartTheProduct .inputQuantityAndDeleteButtonWrapper {

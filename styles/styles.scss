@@ -592,8 +592,12 @@ input[type="search"]::placeholder {
     }
 }
 
-.cartTheProduct { /*Sektionen från ena linjen till nedersta linjen*/
+.wrappingTheProds {
     width: 90%;
+}
+
+.cartTheProduct { /*Varje produkt box i varukorgen*/
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -624,7 +628,13 @@ input[type="search"]::placeholder {
         @include roboto-text(15px);
         overflow-wrap: break-word;
         max-width: 100px;
+        min-width: 100px;
         margin-top: 0px;
+        text-align: end;
+
+        @include for-small-screen {
+            text-align: unset;
+        }
     }
 
     .inputQuantityAndDeleteButtonWrapper { /*Wrappar input antal och delete ikon*/
