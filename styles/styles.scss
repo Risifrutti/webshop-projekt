@@ -294,17 +294,15 @@ input[type="search"]::placeholder {
     padding-left: 20px;
     @include roboto-text(20px);
     
-    @include for-small-screen {
-        /*
-        position: relative;
-        float: left;
-        left: 150px;
-        */
-        margin-right: 200px;
-        
+    @include for-small-screen{
+        margin-right:200px;
     }
-
 } 
+
+.categoryStyle{
+    margin-right: 0;
+}
+
 
 //----------------End of categories &search input----------------------
 

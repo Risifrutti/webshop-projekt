@@ -456,13 +456,12 @@ input[type="search"]::placeholder {
 
 @media (min-width: 769px) {
   .categoriesList {
-    /*
-        position: relative;
-        float: left;
-        left: 150px;
-        */
     margin-right: 200px;
   }
+}
+
+.categoryStyle {
+  margin-right: 0;
 }
 
 .product-list-main {
