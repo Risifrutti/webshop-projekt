@@ -774,7 +774,7 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     }
 }
 
-//----Receipt start----
+//-------Receipt start-------
 
 
 
@@ -798,18 +798,56 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
         align-items: center;
         justify-content: center;
         max-width:600px;
+        max-height: 70%;
         margin:10px;
+
+        h2 {
+            font-family: Viga, "sans-serif";
+            color: $darkblue;
+            margin-top:0;
+
+        }
 
         @include for-small-screen {
             flex-direction: row;
             flex-wrap: wrap;
+            align-items:baseline;
         }
 
     }
     section{
         @include roboto-text(15px);
-        margin: 50px;
+        margin: 10px;
+
+        @include for-small-screen {
+        margin: 40px;
+        }
     }
+
+    button {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 30px;
+        border: none;
+        font-family: Viga;
+        padding: 10px;
+        background-color: $brown;
+        color: $darkblue;
+        font-size:18px;
+        box-shadow: 1px 1px 4px $darkblue;
+        cursor: pointer;
+    }
+}
+
+.cartRecieptStyle{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.hideReciept{
+    display: none;
 }
 
 
