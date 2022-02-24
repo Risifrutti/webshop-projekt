@@ -776,6 +776,11 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     }
 }
 
+.errors {
+    @include roboto-text(12px);
+    color:red;
+}
+
 //-------Receipt start-------
 
 
@@ -804,6 +809,7 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
         margin:10px;
 
         h2 {
+            text-align: center;
             font-family: Viga, "sans-serif";
             color: $darkblue;
             margin-top:0;
