@@ -41,7 +41,6 @@ backToSignInButton.addEventListener("click", (e) => {
 closeBecomeMember.addEventListener("click", () => {
 	becomeMemberPopup.style.display = "none"; //Döljer member popup
 });
-
 ///////////////////////////////////////////////////////////////////////////////////////
 /*------------------WORKING----------------------*/
 /*Hämtar key=user_info från local storage*/
