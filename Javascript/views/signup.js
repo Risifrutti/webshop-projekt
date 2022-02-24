@@ -42,3 +42,17 @@ closeBecomeMember.addEventListener("click", () => {
 	becomeMemberPopup.style.display = "none"; //Döljer member popup
 });
 
+/*------------------WORKING----------------------*/
+/*Hämtar key=user_info från local storage*/
+const userData = JSON.parse(localStorage.getItem("user_Info"));
+
+console.log("Hämtat user data från local storage", userData);
+//skriver ut 'Name*' input fältet from local storage from registration from
+const userNameFromLocalStorage = userData.map( user => user.name);
+const userName = userNameFromLocalStorage[0]; //user name from local storage
+
+const userEmailFromLocalStorage = userData.map( user => user.email);
+const userEmail = userEmailFromLocalStorage[0];
+
+console.log(userName, userEmail);
+
