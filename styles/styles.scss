@@ -521,6 +521,10 @@ input[type="search"]::placeholder {
         @include roboto-text(22px);
         text-decoration: underline;
         margin: 20px 0px 20px 0px; 
+
+        @include for-small-screen {
+            @include roboto-text(28px);
+        }
     }
 }
 
