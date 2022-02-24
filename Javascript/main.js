@@ -25,20 +25,3 @@ async function showCategoryText() {
 }
 
 showCategoryText();
-
-/*
-    <li>|</li>
-                <a href="" class="noLinkStyle" id="linkBooks">
-                    <li class="categoryData" id="books"></li>
-                </a>
-                <li>|</li>
-                <a href="" class="noLinkStyle" id="linkCassettes">
-                    <li class="categoryData" id="cassettes"></li>
-                </a>
-                <li>|</li>
-                <a href="" class="noLinkStyle" id="linkVHS">
-                    <li class="categoryData" id="vhs"></li>
-                </a>
-
-*/
-
