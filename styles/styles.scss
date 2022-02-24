@@ -302,6 +302,15 @@ input[type="search"]::placeholder {
     @include for-small-screen{
         margin-right:200px;
     }
+
+    a {
+        color: $darkblue;
+        font-size: 18px;
+
+        :hover {
+            text-decoration: underline;
+        }
+    }
 } 
 
 .categoryStyle{
@@ -382,6 +391,7 @@ input[type="search"]::placeholder {
     }
     p {
         margin-bottom:0 ;
+        color: $darkblue;
     }
 }
 

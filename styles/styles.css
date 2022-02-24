@@ -467,6 +467,15 @@ input[type="search"]::placeholder {
   }
 }
 
+.categoriesList a {
+  color: #424D55;
+  font-size: 18px;
+}
+
+.categoriesList a :hover {
+  text-decoration: underline;
+}
+
 .categoryStyle {
   margin-right: 0;
 }
@@ -568,6 +577,7 @@ input[type="search"]::placeholder {
 
 .product-info p {
   margin-bottom: 0;
+  color: #424D55;
 }
 
 .product-image {
