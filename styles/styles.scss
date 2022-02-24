@@ -111,6 +111,11 @@ body {
 /**/
 main {
     margin: 0px;
+
+    @include for-small-screen {
+    margin-top: 100px;
+    margin-bottom:100px;
+    }
 }
 
 
@@ -1010,6 +1015,7 @@ table {
     @include for-small-screen {
         font-size: 32px;
         padding: 55px;
+        padding-top:0px;
         color: #424D55;
     }
 }
