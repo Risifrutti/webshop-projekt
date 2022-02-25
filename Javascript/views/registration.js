@@ -45,23 +45,24 @@
       //localStorage.setItem(key, value); spara data i local storage
       localStorage.setItem('user_Info', JSON.stringify(userArray));
     }
-    //addNewUser(); //activerar
+
+    let errorCount = 0;
 
     const inputsRegForm = userRegistrationForm.querySelectorAll(".memberInput"); //hämtar alla user inputs
     inputsRegForm.forEach((input) => {
+
       if(!input.checkValidity()) { //Kollar if inputs finns eller inte
         const errorElement = document.getElementById(input.id + 'errorMessage');
         //console.log(input.id); //radera sen
         errorElement.style.display = 'flex';
-      }
-      else if(input.value !== ""){ //Kollar if alla inputs infylda
-        popupWindow.style.display="none"; //gömma registration form
-        addNewUser(); //kallar funktion
-      }
-      else{
-        console.log("Ok");
+        errorCount++;
       }
     });
+
+    if (errorCount === 0) {
+      popupWindow.style.display="none"; //gömma registration form
+      addNewUser();
+    }
 
   });
   hideErrorMessage(); //activerar

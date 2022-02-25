@@ -159,6 +159,29 @@ body {
   }
 }
 
+@media (min-width: 769px) {
+  .changeToUserName {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .changeToUserName img {
+    width: auto;
+    height: 25px;
+    margin-right: 5px;
+  }
+  .changeToUserName h4 {
+    margin-right: 25px;
+  }
+}
+
 /**/
 main {
   margin: 0px;
@@ -246,6 +269,27 @@ main {
   font-weight: bold;
   color: #424D55;
   font-size: 24px;
+}
+
+#userSignIn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#userSignIn img {
+  width: auto;
+  height: 40px;
 }
 
 /* Styling for footer */
