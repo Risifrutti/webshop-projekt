@@ -9,13 +9,44 @@ const inputQuantityAndDelete = document.querySelectorAll(".inputQuantityAndDelet
 //Ritar ut produkterna i varukorgen som man lagt till i varukorgen
 
 //const prodContainer = document.querySelector(".wrapperForProductImgCart")
+
+const name = [];
+
+const countProductQuantity = (array) => {
+    let arrayQuantity = [];
+
+    array.forEach(object => {
+        let name = object.name;
+
+        const count = arrayWProducts.filter((object) => object.name === name).length;
+
+        // console.log(count);
+        arrayQuantity.push(count)
+
+        console.log(count + "pc " + object.name);
+    })
+    console.log(arrayQuantity);
+    return arrayQuantity;
+}
+
 function drawProdsInCart() {
 
     if (localStorage.getItem("products")) {
         arrayWProducts = JSON.parse(localStorage.getItem("products"));
+        console.log(arrayWProducts);;
+
+        // Funktion för att endast visa en produkt ifall det är flera av samma i varukorgen
+        const uniqueArray = Array.from(new Set(arrayWProducts.map(object => object.name)))
+        .map(name => {
+        return arrayWProducts.find(object => object.name === name)
+        })
+        console.log(uniqueArray);
         console.log(arrayWProducts);
 
-        arrayWProducts.forEach(element => {
+        
+        const productQttArray = countProductQuantity(uniqueArray);
+
+        uniqueArray.forEach((element, index) => {
 
             const prod = ` 
                 <article class="cartTheProduct">
@@ -31,7 +62,7 @@ function drawProdsInCart() {
     
                 <div class="inputQuantityAndDeleteButtonWrapper">
     
-                    <input type="number" value="1" class="inputQuantityInCart" id="inputQuantity">
+                    <input type="number" value="${productQttArray[index]}" class="inputQuantityInCart" id="inputQuantity">
     
                     <a href="#" class="deleteProdIconInCart">
                         <img src="/webshop-projekt/Pictures/Icons/krysset-svart.png" alt="Delete product icon"
@@ -64,6 +95,14 @@ if (theProdArticle.innerHTML === "") {
     console.log("varukorgen är tom")
 
     proceedToCheckoutButton.style.display = "none";
+
+    // Skriver ut meddelande om varukorgen är tom
+    const emptyCartMessage = document.createElement("h2");
+    emptyCartMessage.textContent = "The cart is empty, add a product from the shopping list!";
+    const emptyMessage = document.getElementById("emptyCartMessage");
+    emptyMessage.appendChild(emptyCartMessage);
+
+    emptyCartMessage.style.fontFamily = "viga";
 
 } else {
     console.log("den är inte tom")
@@ -227,5 +266,7 @@ function showReciept() {
 
 };
 
+// Funktion för att visa totalkostnaden för produkter i varukorgen
 
-
+const totalAmount = document.getElementById("cartTotal");
+totalAmount.innerText = 0;
