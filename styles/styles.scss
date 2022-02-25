@@ -108,9 +108,32 @@ body {
     }
 }
 
+@include for-small-screen {
+    .changeToUserName {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    
+        img {
+            width: auto;
+            height: 25px;
+            margin-right: 5px;
+        }
+    
+        h4 {
+            margin-right: 25px;
+        }
+    }
+}
+
 /**/
 main {
     margin: 0px;
+
+    @include for-small-screen {
+    margin-top: 100px;
+    margin-bottom:100px;
+    }
 }
 
 
@@ -168,6 +191,18 @@ main {
             margin: 25px;
             @include roboto-text(24px);
         }
+    }
+}
+
+#userSignIn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: auto;
+        height: 40px;
     }
 }
 
@@ -294,17 +329,24 @@ input[type="search"]::placeholder {
     padding-left: 20px;
     @include roboto-text(20px);
     
-    @include for-small-screen {
-        /*
-        position: relative;
-        float: left;
-        left: 150px;
-        */
-        margin-right: 200px;
-        
+    @include for-small-screen{
+        margin-right:200px;
     }
 
+    a {
+        color: $darkblue;
+        font-size: 18px;
+
+        :hover {
+            text-decoration: underline;
+        }
+    }
 } 
+
+.categoryStyle{
+    margin-right: 0;
+}
+
 
 //----------------End of categories &search input----------------------
 
@@ -379,6 +421,7 @@ input[type="search"]::placeholder {
     }
     p {
         margin-bottom:0 ;
+        color: $darkblue;
     }
 }
 
@@ -518,6 +561,10 @@ input[type="search"]::placeholder {
         @include roboto-text(22px);
         text-decoration: underline;
         margin: 20px 0px 20px 0px; 
+
+        @include for-small-screen {
+            @include roboto-text(28px);
+        }
     }
 }
 
@@ -1012,6 +1059,7 @@ table {
     @include for-small-screen {
         font-size: 32px;
         padding: 55px;
+        padding-top:0px;
         color: #424D55;
     }
 }

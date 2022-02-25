@@ -29,7 +29,8 @@
         </a>
 
         <div class="headerElements">
-            <a href="/webshop-projekt/HTML/signinandregistration.html" class="noLinkStyle hideHeaderElements signInHeader">Sign
+            <a href="/webshop-projekt/HTML/signinandregistration.html"
+                class="noLinkStyle hideHeaderElements signInHeader changeToUserName">Sign
                 in</a>
 
             <a href="/webshop-projekt/HTML/shoppingcart.html">
@@ -60,7 +61,7 @@
                 </div>
             </a>
             <a href="#" class="noLinkStyle signInHeader">
-                <div class="menu-item">
+                <div class="menu-item" id="userSignIn">
                     <h4>Sign in</h4>
                 </div>
             </a>
@@ -78,24 +79,27 @@
 
         <div class="homepageCategory" id="categoryBooks">
             <a href="#">
-                <img class="homepageImages" src="/webshop-projekt/Pictures/Images/Frontpage pics/books_fixed.jpg" alt="books in a row">
+                <img class="homepageImages" src="/webshop-projekt/Pictures/Images/Frontpage pics/books_fixed.jpg"
+                    alt="books in a row">
             </a>
             <p class="categoryText categoryData" id="books"></p>
-            
+
         </div>
 
         <div class="homepageCategory" id="categoryCassettes">
             <a href="#">
-                <img class="homepageImages" src="/webshop-projekt/Pictures/Images/Frontpage pics/cassettes_fixed_FORREAL.jpg" alt="cassettes">
+                <img class="homepageImages"
+                    src="/webshop-projekt/Pictures/Images/Frontpage pics/cassettes_fixed_FORREAL.jpg" alt="cassettes">
             </a>
             <p class="categoryText categoryData" id="cassettes"></p>
-    
+
 
         </div>
 
         <div class="homepageCategory" id="categoryVHS">
             <a href="#">
-                <img class="homepageImages" id="imageVHS" src="/webshop-projekt/Pictures/Images/Frontpage pics/VHS_fixed.jpg" alt="VHS tapes">
+                <img class="homepageImages" id="imageVHS"
+                    src="/webshop-projekt/Pictures/Images/Frontpage pics/VHS_fixed.jpg" alt="VHS tapes">
             </a>
             <p class="categoryText categoryData" id="vhs"></p>
 
@@ -107,13 +111,13 @@
             <div class="signIn-content">
                 <form action="">
                     <div id="popupClose" class="closePopup">+</div>
-                    <h2 class="sigInText">Sig in</h2>
+                    <h2 class="sigInText">Sign in</h2>
                     <label class="smallText textLeft" for="email">Email *</label><br>
-                    <input type="email" placeholder="Email address" class="inputSignIn"><br>
+                    <input id="emailSignIn" type="email" placeholder="Email address" class="inputSignIn"><br>
                     <label class="smallTex textLeft" for="password">Password *</label><br>
-                    <input type="password" placeholder="Password" class="inputSignIn"><br>
+                    <input id="passwordSignIn" type="password" placeholder="Password" class="inputSignIn"><br>
                     <p class="smallText">Forgot password?</p><br>
-                    <button class="signInButton popupBtn">Sign in</button><br>
+                    <button id="sigInBtn" class="signInButton popupBtn">Sign in</button><br>
                     <button class="becomeMemberButton popupBtn">Become a member</button>
                 </form>
             </div>
@@ -127,26 +131,28 @@
                     <h2 class="becomeMemberh2">Become a member</h2>
                     <h3>Become a member — don't miss out on deals, offers, discounts and bonus vouchers.</h3>
                     <hr class="becomeMemberHR">
-                    
-                    <table class="inputsTable"> 
+
+                    <table class="inputsTable">
                         <tr>
                             <td>
                                 <input id="name" class="memberInput" type="text" placeholder="Name *" required>
                                 <span class="errorMessage" id="nameerrorMessage">Name field is required</span>
                             </td>
-                            
+
                             <td>
                                 <input id="email" class="memberInput" type="email" placeholder="Email *" required>
                                 <span class="errorMessage" id="emailerrorMessage">Email is required</span>
-                            </td>   
+                            </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="address" class="memberInput" type="text" placeholder="Street Address *" required>
+                                <input id="address" class="memberInput" type="text" placeholder="Street Address *"
+                                    required>
                                 <span class="errorMessage" id="addresserrorMessage">Street address is required</span>
                             </td>
                             <td>
-                                <input id="password" class="memberInput" type="password" placeholder="Create Password *" required>
+                                <input id="password" class="memberInput" type="password" placeholder="Create Password *"
+                                    required>
                                 <span class="errorMessage" id="passworderrorMessage">Password is required</span>
                             </td>
                         </tr>
@@ -156,17 +162,19 @@
                                 <span class="errorMessage" id="townerrorMessage">This field is required</span>
                             </td>
                             <td>
-                                <input id="zipCode" class="memberInput" type="number" placeholder="Postcode / ZIP *" required>
+                                <input id="zipCode" class="memberInput" type="number" placeholder="Postcode / ZIP *"
+                                    required>
                                 <span class="errorMessage" id="zipCodeerrorMessage">This field is required</span>
                             </td>
                         </tr>
                         <tr>
                             <td><input id="phoneNum" class="memberInput" type="tel" placeholder="Phone number"></td>
-                            <td><input id="birthday" class="memberInput" type="text" placeholder="Birthday dd/mm/yyyy "></td>
+                            <td><input id="birthday" class="memberInput" type="text" placeholder="Birthday dd/mm/yyyy ">
+                            </td>
                         </tr>
-                        
+
                     </table>
-                    <button  type="submit" class="signInButton popupBtn memberBtn">Become a member</button><br>
+                    <button type="submit" class="signInButton popupBtn memberBtn">Become a member</button><br>
                     <button class="becomeMemberButton popupBtn backToSignInButton">Back to Sign in</button>
                 </form>
             </div>

@@ -159,9 +159,39 @@ body {
   }
 }
 
+@media (min-width: 769px) {
+  .changeToUserName {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .changeToUserName img {
+    width: auto;
+    height: 25px;
+    margin-right: 5px;
+  }
+  .changeToUserName h4 {
+    margin-right: 25px;
+  }
+}
+
 /**/
 main {
   margin: 0px;
+}
+
+@media (min-width: 769px) {
+  main {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
 }
 
 .ham-nav {
@@ -239,6 +269,27 @@ main {
   font-weight: bold;
   color: #424D55;
   font-size: 24px;
+}
+
+#userSignIn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#userSignIn img {
+  width: auto;
+  height: 40px;
 }
 
 /* Styling for footer */
@@ -456,13 +507,21 @@ input[type="search"]::placeholder {
 
 @media (min-width: 769px) {
   .categoriesList {
-    /*
-        position: relative;
-        float: left;
-        left: 150px;
-        */
     margin-right: 200px;
   }
+}
+
+.categoriesList a {
+  color: #424D55;
+  font-size: 18px;
+}
+
+.categoriesList a :hover {
+  text-decoration: underline;
+}
+
+.categoryStyle {
+  margin-right: 0;
 }
 
 .product-list-main {
@@ -562,6 +621,7 @@ input[type="search"]::placeholder {
 
 .product-info p {
   margin-bottom: 0;
+  color: #424D55;
 }
 
 .product-image {
@@ -755,6 +815,15 @@ input[type="search"]::placeholder {
   font-size: 22px;
   text-decoration: underline;
   margin: 20px 0px 20px 0px;
+}
+
+@media (min-width: 769px) {
+  .cartAndPayContent .cartAndPayMainHeading {
+    font-family: Roboto, "sans-serif";
+    font-weight: bold;
+    color: #424D55;
+    font-size: 28px;
+  }
 }
 
 .cartAndPayContentBox {
@@ -1462,6 +1531,7 @@ table {
   #welcomeText {
     font-size: 32px;
     padding: 55px;
+    padding-top: 0px;
     color: #424D55;
   }
 }
