@@ -108,6 +108,24 @@ body {
     }
 }
 
+@include for-small-screen {
+    .changeToUserName {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    
+        img {
+            width: auto;
+            height: 25px;
+            margin-right: 5px;
+        }
+    
+        h4 {
+            margin-right: 25px;
+        }
+    }
+}
+
 /**/
 main {
     margin: 0px;
@@ -173,6 +191,18 @@ main {
             margin: 25px;
             @include roboto-text(24px);
         }
+    }
+}
+
+#userSignIn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: auto;
+        height: 40px;
     }
 }
 
@@ -302,6 +332,15 @@ input[type="search"]::placeholder {
     @include for-small-screen{
         margin-right:200px;
     }
+
+    a {
+        color: $darkblue;
+        font-size: 18px;
+
+        :hover {
+            text-decoration: underline;
+        }
+    }
 } 
 
 .categoryStyle{
@@ -382,6 +421,7 @@ input[type="search"]::placeholder {
     }
     p {
         margin-bottom:0 ;
+        color: $darkblue;
     }
 }
 
