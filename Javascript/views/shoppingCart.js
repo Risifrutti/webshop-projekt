@@ -4,9 +4,10 @@ const theProdArticle = document.createElement("article");
 theProdArticle.classList.add("wrappingTheProds");
 const proceedToCheckoutButton = document.querySelector(".proceedToCheckoutButton"); //Hämtar proceed knappen
 const billingAndShippingBox = document.querySelector(".billingAndShippingBox"); //Hämtar billing&Shipping boxen
-const inputQuantityAndDelete = document.querySelectorAll(".inputQuantityAndDeleteButtonWrapper"); //Hämtar input antal och delete knapp
+let arrayWProducts = JSON.parse(localStorage.getItem("products"));
 
 //Ritar ut produkterna i varukorgen som man lagt till i varukorgen
+
 
 //const prodContainer = document.querySelector(".wrapperForProductImgCart")
 
@@ -32,7 +33,7 @@ const countProductQuantity = (array) => {
 function drawProdsInCart() {
 
     if (localStorage.getItem("products")) {
-        arrayWProducts = JSON.parse(localStorage.getItem("products"));
+        //arrayWProducts = JSON.parse(localStorage.getItem("products"));
         console.log(arrayWProducts);;
 
         // Funktion för att endast visa en produkt ifall det är flera av samma i varukorgen
@@ -62,9 +63,9 @@ function drawProdsInCart() {
     
                 <div class="inputQuantityAndDeleteButtonWrapper">
     
-                    <input type="number" value="${productQttArray[index]}" class="inputQuantityInCart" id="inputQuantity">
+                    <input type="number" value="${productQttArray[index]}" class="inputQuantityInCart" id="cart${element.name}" min=1>
     
-                    <a href="#" class="deleteProdIconInCart">
+                    <a href="#" class="deleteProdIconInCart deleteBtn" id="closeBtn${element.name}">
                         <img src="/webshop-projekt/Pictures/Icons/krysset-svart.png" alt="Delete product icon"
                             class="deleteProdIconInCart">
                     </a>
@@ -89,6 +90,57 @@ function drawProdsInCart() {
 }
 
 drawProdsInCart();
+
+//Change quantity input
+const inputQuantity = document.querySelectorAll(".inputQuantityInCart"); //Hämtar input antal och delete knapp
+const deleteProdInCart = document.querySelectorAll(".deleteProdIconInCart"); //Hämtar krysset i varukorgen som tar bort produkt
+const deleteBtn = document.querySelectorAll(".deleteBtn");
+
+inputQuantity.forEach(input => {
+    //console.log(input);
+    input.addEventListener("change", (e)=>{
+        const quantityArray = [];
+        arrayWProducts.forEach(object => {
+            if("cart"+object.name == e.target.id){
+                quantityArray.push(object);
+            }
+        });
+        if(input.value > quantityArray.length){
+            let amount = input.value - quantityArray.length;
+            for(let i=0; i < amount; i++){
+                arrayWProducts.push(quantityArray[0]);
+                localStorage.setItem("products", JSON.stringify(arrayWProducts));
+                console.log(arrayWProducts);
+            }
+        }else if(input.value < quantityArray.length){
+            let amount = quantityArray.length - input.value;
+            for(let i=0; i < amount; i++){
+                let index = arrayWProducts.indexOf(quantityArray[0]);
+                arrayWProducts.splice(index, 1);
+                console.log(arrayWProducts);
+            }
+            localStorage.setItem("products", JSON.stringify(arrayWProducts));
+            //console.log("2 amount", amount);
+        }
+        //console.log(quantityArray);
+    });
+});
+
+deleteBtn.forEach(deleteButton => {
+    deleteButton.addEventListener("click", (e)=> {
+    
+        const newArray = arrayWProducts.map(object => {
+            if(!"closeBtn"+object.name == e.target.id){
+                return object;
+            }
+              
+        });
+        console.log(arrayWProducts);
+        console.log(newArray); 
+    });
+});
+
+
 
 //Döljer proceed to checkout knapp om det är tomt i varukorg
 if (theProdArticle.innerHTML === "") {
@@ -155,12 +207,6 @@ confirmButton.addEventListener('click', (e) => {
 
 });
 
-
-
-
-
-let inputQuantityInCart = document.querySelectorAll(".inputQuantityInCart"); //Hämtar input antal
-const deleteProdInCart = document.querySelectorAll(".deleteProdIconInCart"); //Hämtar krysset i varukorgen som tar bort produkt
 
 
 //Lägger till event när man klickar på knappen. Visar billing&Shipping box
@@ -270,3 +316,4 @@ function showReciept() {
 
 const totalAmount = document.getElementById("cartTotal");
 totalAmount.innerText = 0;
+
