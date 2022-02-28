@@ -19,10 +19,8 @@ async function showCategoryText() {
                     <li class="categoryData" id="${element.categoryName.toLowerCase()}">${element.categoryName}</li>
                 </a>
            `
-           
            container.innerHTML += categoryText;
         });
     });
 }
-
 showCategoryText();

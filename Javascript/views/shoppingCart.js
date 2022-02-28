@@ -171,17 +171,25 @@ if (theProdArticle.innerHTML === "") {
 proceedToCheckoutButton.addEventListener("click", () => {
     billingAndShippingBox.style.display = "flex";
     proceedToCheckoutButton.style.display = "none";
-
+    memberInfo();
 });
 
 //Add user info if user is logged in
 function memberInfo(){
     if(localStorage.getItem("inloggedUser")){
         let arrayWithUserInfo =JSON.parse(localStorage.getItem('user_Info'));
-        console.log(arrayWithUserInfo);
+        delete arrayWithUserInfo[0].password;
+
+        const inputsRegForm = billingandshippingform.querySelectorAll(".billingAndShippingInput");
+
+        for(let i=0; i<inputsRegForm.length; i++){
+            
+            let arrayOfSomething = Object.entries(arrayWithUserInfo[0]);
+            inputsRegForm[i].value = arrayOfSomething[i][1];
+            //console.log(arrayOfSomething[i][1]);
+        }
     }
 }
-memberInfo();
 
 const confirmButton = document.getElementById("confirmPaymentButton");
 const billingandshippingform = document.querySelector(".billingAndShippingForm");

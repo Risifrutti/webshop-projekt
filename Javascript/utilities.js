@@ -1,5 +1,3 @@
-
-
 //Funktion som hämtar json fil och returnerar dess data 
 async function fetchFile(file) {
     const response = await fetch(file);
@@ -12,4 +10,3 @@ async function fetchFile(file) {
 function insertAfter(newNode, existingNode) {
     existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
 }
-
