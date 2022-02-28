@@ -65,8 +65,8 @@ function drawProdsInCart() {
     
                     <input type="number" value="${productQttArray[index]}" class="inputQuantityInCart" id="cart${element.name}" min=1>
     
-                    <a href="#" class="deleteProdIconInCart deleteBtn" id="closeBtn${element.name}">
-                        <img src="/webshop-projekt/Pictures/Icons/krysset-svart.png" alt="Delete product icon"
+                    <a href="#" class="deleteProdIconInCart deleteBtn" >
+                        <img id="closeBtn${element.name}" src="/webshop-projekt/Pictures/Icons/krysset-svart.png" alt="Delete product icon"
                             class="deleteProdIconInCart">
                     </a>
     
@@ -126,17 +126,18 @@ inputQuantity.forEach(input => {
     });
 });
 
+//Remove items from cart
 deleteBtn.forEach(deleteButton => {
     deleteButton.addEventListener("click", (e)=> {
-    
-        const newArray = arrayWProducts.map(object => {
-            if(!"closeBtn"+object.name == e.target.id){
-                return object;
+        let newArray = [];
+        arrayWProducts.forEach(object => {
+            if("closeBtn"+object.name !== e.target.id){
+                newArray.push(object);
             }
-              
         });
-        console.log(arrayWProducts);
-        console.log(newArray); 
+        arrayWProducts = newArray;
+        localStorage.setItem("products", JSON.stringify(arrayWProducts));
+        location.reload();
     });
 });
 
