@@ -33,12 +33,13 @@
     function addNewUser(){
       const user_info = {
           'name': userName.value,
-          'email': userEmail.value,
           'address': userAddress.value,
-          'password': userPassword.value,
           'zipcode': userZipCode.value,
           'city': userTown.value,
-          'phone': userPhone.value   
+          'email': userEmail.value,
+          'phone': userPhone.value,  
+          'password': userPassword.value
+ 
       }
 
       userArray.push(user_info); //pushar in user info

@@ -1352,9 +1352,7 @@ textarea[name="billingAndShippingInfo"] {
   position: absolute;
   top: 0px;
   padding-top: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1445,9 +1443,7 @@ textarea[name="billingAndShippingInfo"] {
   position: absolute;
   top: 0px;
   padding-top: 180px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

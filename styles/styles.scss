@@ -919,7 +919,7 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     position: absolute;
     top: 0px;
     padding-top: 150px;
-    display: flex;
+    display: none;
     justify-content: center;
     @include for-small-screen {
         padding-top: 50px;
@@ -1000,7 +1000,7 @@ textarea[name="billingAndShippingInfo"] { /*Textarea*/
     position: absolute;
     top: 0px;
     padding-top: 180px;
-    display: flex;
+    display: none;
     justify-content: center;
     /*align-items: center;*/
     @include for-small-screen{
