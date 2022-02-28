@@ -1,5 +1,6 @@
 //Skapat array för produkterna som läggs till i varukorgen
 //let arrayWProducts = [];
+let arrayWProducts = localStorage.getItem('products')?JSON.parse(localStorage.getItem('products')):[];
 
 //Funktion som ritar ut kategorinamn samt lägger till en querystring
 const categoryContainers = document.querySelectorAll(".categoriesList");

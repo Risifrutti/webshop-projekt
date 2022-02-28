@@ -4,14 +4,14 @@ const theProdArticle = document.createElement("article");
 theProdArticle.classList.add("wrappingTheProds");
 const proceedToCheckoutButton = document.querySelector(".proceedToCheckoutButton"); //Hämtar proceed knappen
 const billingAndShippingBox = document.querySelector(".billingAndShippingBox"); //Hämtar billing&Shipping boxen
-let arrayWProducts = JSON.parse(localStorage.getItem("products"));
+const totalSum = document.getElementById("cartTotal");
 
 //Ritar ut produkterna i varukorgen som man lagt till i varukorgen
 
 
 //const prodContainer = document.querySelector(".wrapperForProductImgCart")
 
-const name = [];
+//const name = [];
 
 const countProductQuantity = (array) => {
     let arrayQuantity = [];
@@ -20,13 +20,8 @@ const countProductQuantity = (array) => {
         let name = object.name;
 
         const count = arrayWProducts.filter((object) => object.name === name).length;
-
-        // console.log(count);
         arrayQuantity.push(count)
-
-        console.log(count + "pc " + object.name);
-    })
-    console.log(arrayQuantity);
+    });
     return arrayQuantity;
 }
 
@@ -34,7 +29,7 @@ function drawProdsInCart() {
 
     if (localStorage.getItem("products")) {
         //arrayWProducts = JSON.parse(localStorage.getItem("products"));
-        console.log(arrayWProducts);;
+        console.log(arrayWProducts);
 
         // Funktion för att endast visa en produkt ifall det är flera av samma i varukorgen
         const uniqueArray = Array.from(new Set(arrayWProducts.map(object => object.name)))
@@ -86,13 +81,12 @@ function drawProdsInCart() {
             insertAfter(theProdArticle, cartAndPayLineSibling.nextSibling);
         })
     }
-
 }
-
 drawProdsInCart();
+calcTotalCosts();
 
 //Change quantity input
-const inputQuantity = document.querySelectorAll(".inputQuantityInCart"); //Hämtar input antal och delete knapp
+const inputQuantity = document.querySelectorAll(".inputQuantityInCart");
 const deleteProdInCart = document.querySelectorAll(".deleteProdIconInCart"); //Hämtar krysset i varukorgen som tar bort produkt
 const deleteBtn = document.querySelectorAll(".deleteBtn");
 
@@ -120,9 +114,8 @@ inputQuantity.forEach(input => {
                 console.log(arrayWProducts);
             }
             localStorage.setItem("products", JSON.stringify(arrayWProducts));
-            //console.log("2 amount", amount);
         }
-        //console.log(quantityArray);
+        calcTotalCosts();
     });
 });
 
@@ -141,7 +134,16 @@ deleteBtn.forEach(deleteButton => {
     });
 });
 
-
+//Function to calculate total costs
+function calcTotalCosts (){
+    let sum = 0;
+    
+    arrayWProducts.forEach(object => {
+        sum += parseInt(object.price);
+    });
+    console.log(sum);
+    totalSum.innerText ="$"+sum+".00";
+}
 
 //Döljer proceed to checkout knapp om det är tomt i varukorg
 if (theProdArticle.innerHTML === "") {
@@ -170,7 +172,16 @@ proceedToCheckoutButton.addEventListener("click", () => {
     billingAndShippingBox.style.display = "flex";
     proceedToCheckoutButton.style.display = "none";
 
-})
+});
+
+//Add user info if user is logged in
+function memberInfo(){
+    if(localStorage.getItem("inloggedUser")){
+        let arrayWithUserInfo =JSON.parse(localStorage.getItem('user_Info'));
+        console.log(arrayWithUserInfo);
+    }
+}
+memberInfo();
 
 const confirmButton = document.getElementById("confirmPaymentButton");
 const billingandshippingform = document.querySelector(".billingAndShippingForm");
@@ -215,7 +226,7 @@ proceedToCheckoutButton.addEventListener("click", () => {
 
     billingAndShippingBox.style.display = "flex"; //Visar billing and shipping  
     proceedToCheckoutButton.style.display = "none"; //Döljer proceed to checkout knapp
-
+    let inputQuantityInCart = document.querySelectorAll(".inputQuantityInCart");
     inputQuantityInCart.forEach(element => { //Gör alla input fältet disabled
 
         element.disabled = true;
@@ -312,9 +323,3 @@ function showReciept() {
     recieptInfoContainer.innerHTML = recieptContent;
 
 };
-
-// Funktion för att visa totalkostnaden för produkter i varukorgen
-
-const totalAmount = document.getElementById("cartTotal");
-totalAmount.innerText = 0;
-

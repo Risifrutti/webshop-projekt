@@ -1,6 +1,7 @@
 //Funktion som ritar ut alla produkter som finns i products.json filen
 const productContainer = document.getElementById("productlist-container");
 
+
 async function showProducts() {
 
     const data = await fetchFile("/webshop-projekt/Javascript/data/products.json");
