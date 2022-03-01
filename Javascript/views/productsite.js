@@ -20,7 +20,7 @@ async function drawCurrentProduct() {
                 </div>
                 <section class="textInfo">
                     <h2 class="productName">${element.name}</h2>
-                    <p class="price">${element.price}</p>
+                    <p class="price">$${element.price}</p>
                     <p class="productDescriptionText">${element.prodDescription}</p>
                     <p><input type="number" id="quantity" class="quantity" min="1" placeholder="1"></p>
                     <p><button id="${index}" class="addToCartButton">Add to cart</button></p>
